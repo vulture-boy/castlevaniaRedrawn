@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Editor Tool</title>
+    <script src="areas.js"></script>
+    <link rel="stylesheet" href="areatool.css">
+
+</head>
+<body>
+    <div class="area-editor">
+        <div class="area-editor__left"><!--Regions-->
+            <h4>Kanto Areas</h4>
+            <ul id="AreaListKanto">
+                <!--  -->
+            </ul>
+            <button onclick="addKantoArea()">Add</button>
+            <hr>
+            <h4>Interior Areas</h4>
+            <ul id="AreaListInterior">
+                <!--  -->
+            </ul>
+            <button onclick="addInteriorArea()">Add</button>
+            <hr>
+            <h4>Sevii Areas</h4>
+            <ul id="AreaListSevii">
+                <!--  -->
+            </ul>
+            <button onclick="addSeviiArea()">Add</button>
+
+        </div>
+        <div class="area-editor__right">
+            <div id="AreaEditorMain">
+                <div id="areaForm">
+                    <section class="area-editor__title">
+                        <button tabindex="-1" onclick="removeArea()">Delete</button>
+                        <label><span>Title</span>
+                            <input name="title" onchange="updateSelectedAreaIdent()" />
+                        </label>
+                        <label><span>Ident <small>(filename)</small></span> 
+                        <input name="ident" placeholder="e.g. viridian_forest"/>
+                    </label>
+                        <label><span>Type</span><!--Area Types-->
+                        <select name="type">
+                            <option value="town" selected>Town</option>
+                            <option value="forest">Forest</option>
+                            <option value="surfing">Surfing</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="route">Route</option>
+                            <option value="cottage">House</option>
+                            <option value="directions_boat">Boat</option>
+                            <option value="stadium">Gym</option>
+                            <option value="store">Shop</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Order</span>
+                        <input type="number" name="order">
+                    </label>
+                    </section>
+                    <section class="area-editor__artist"><!--Artist Thumbnail-->
+                        <label><span>Artist Tag <small>(Artist avatar filename)</small></span>
+                            <input name="artist" placeholder="e.g. @HyperJerk" />
+                        </label>
+
+                        <label><span>Artist URL</span>
+                            <input name="url" placeholder="e.g. https://twitter.com/hyperjerk" />
+                        </label>
+
+                        <label><span>Post URL</span>
+                            <input name="post_url" placeholder="e.g. https://twitter.com/HyperJerk/status/1402390849888174082" />
+                        </label>
+                    </section>
+                    <section class="area-editor__box">
+                        <div>
+                            <h4>Main Box</h4>
+                            <label><span>x</span><input name="box_x" type="number"></label>
+                            <label><span>y</span><input name="box_y" type="number"></label>
+                            <label><span>width</span><input name="box_width" type="number"></label>
+                            <label><span>height</span><input name="box_height" type="number"></label>
+                        </div>
+                        <div>
+                            <h4>Offset</h4>
+                            <p><small>If new image is larger than original, add offset here</small></p>
+                            <label><span>x</span><input name="offset_box_x" type="number"></label>
+                            <label><span>y</span><input name="offset_box_y" type="number"></label>
+                            <label><span>width</span><input name="offset_box_width" type="number"></label>
+                            <label><span>height</span><input name="offset_box_height" type="number"></label>
+                        </div>
+                        <div>
+                            <label><span>Pan Direction</span>
+                                <select name="pan">
+                                    <option value="vertical" selected>Vertical</option>
+                                    <option value="horizontal" selected>Horizontal</option>
+                                </select>
+                            </label>
+                            
+                            <label><span>Best Zoom Level</span>
+                                <select name="zoom">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </label>
+                        </div>
+                    </section>
+                    <section class="area-editor__teleporters">
+                        <h4>Teleporters</h4>
+                        <h5>Relative Coord Tool</h5>
+                        <label><span>x</span>
+                            <input type="number" id="TeleporterXTranslate" onchange="updateTeleporterTranslateTool()" value="0">
+                            <input type="number" id="TeleporterXTranslateOutput" value="0" disabled>
+                        </label>
+                        <label><span>y</span>
+                            <input type="number" id="TeleporterYTranslate" onchange="updateTeleporterTranslateTool()" value="0">
+                            <input type="number" id="TeleporterYTranslateOutput" value="0" disabled>
+                        </label>
+                        <ul id="teleporters">
+                            
+                        </ul>
+                        <button onclick="addTeleporter()">Add</button>
+
+                    </section>
+
+                    
+                </div>
+                <div class="area-editor__output">
+                    <h4>JSON</h4>
+                    <p>Export the JSON of the new areas objects and paste it into areas.js</p>
+                    <textarea id="output"></textarea>
+                    <div>
+                        <button onclick="doOutput()">Export</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="area_display.js"></script>
+</html>
