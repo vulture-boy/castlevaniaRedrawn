@@ -2,6 +2,7 @@ var selectedArea = null
 
 var elems = null
 
+// Template for an area
 var blankArea = {
     title: "New",
     ident: "",
@@ -47,6 +48,7 @@ function setEventOnStaticInputs () {
     }
 }
 
+// Registers elements for the area entry form
 function registerElems () {
     elems = {
         order: document.querySelector('#areaForm [name="order"]'),
@@ -69,19 +71,29 @@ function registerElems () {
     }
 }
 
+// Region area & associated CSS ID
+var regionAreas = [
+    [kantoAreas, '#AreaListKanto'],
+    [interiorAreas, '#AreaListInterior'],
+    [seviiAreas, '#AreaListSevii'],
+    [castleAreas, '#AreaListCastlevania']
+]
+
+// Updates each defined region area
 function updateAreaLists () {
-    generateKantoList()
-    generateInteriorList()
-    generateSeviiList()
+    regionAreas.forEach(element => {
+        generateRegionList(element[0], element[1])
+    });
 }
 
-function generateKantoList () {
-    kantoAreas.sort((a, b) => a.order - b.order)
-    var kantoListHTML = []
-    for (var i = 0; i < kantoAreas.length; i++) {
-        area = kantoAreas[i]
+// Generates a region's area list
+function generateRegionList (areas, cssId) {
+    areas.sort((a, b) => a.order - b.order)
+    var listHTML = []
+    for (var i = 0; i < areas.length; i++) {
+        area = areas[i]
         var className =  selectedArea && selectedArea.ident === area.ident ? 'selected' : !area.artist ? 'warning' : ''
-        kantoListHTML.push(`
+        listHTML.push(`
             <li>
                 <button onclick="clickArea('${area.ident}')" data-ident="${area.ident}" class="${className}">
                     <span>${area.title}</span>
@@ -89,42 +101,8 @@ function generateKantoList () {
             </li>
         `)
     }
-    var kantoListElem = document.querySelector('#AreaListKanto')
-    kantoListElem.innerHTML = kantoListHTML.join('')
-}
-function generateInteriorList () {
-    interiorAreas.sort((a, b) => a.order - b.order)
-    var interiorListHTML = []
-    for (var i = 0; i < interiorAreas.length; i++) {
-        area = interiorAreas[i]
-        var className = selectedArea && selectedArea.ident === area.ident ? 'selected' : !area.artist ? 'warning' : ''
-        interiorListHTML.push(`
-            <li>
-                <button onclick="clickArea('${area.ident}')" data-ident="${area.ident}" class="${className}">
-                    <span>${area.title}</span>
-                </button>
-            </li>
-        `)
-    }
-    var interiorListElem = document.querySelector('#AreaListInterior')
-    interiorListElem.innerHTML = interiorListHTML.join('')
-}
-function generateSeviiList () {
-    seviiAreas.sort((a, b) => a.order - b.order)
-    var seviiListHTML = []
-    for (var i = 0; i < seviiAreas.length; i++) {
-        area = seviiAreas[i]
-        var className =  selectedArea && selectedArea.ident === area.ident ? 'selected' : !area.artist ? 'warning' : ''
-        seviiListHTML.push(`
-            <li>
-                <button onclick="clickArea('${area.ident}')" data-ident="${area.ident}" class="${className}">
-                    <span>${area.title}</span>
-                </button>
-            </li>
-        `)
-    }
-    var seviiListElem = document.querySelector('#AreaListSevii')
-    seviiListElem.innerHTML = seviiListHTML.join('')
+    var listElem = document.querySelector(cssId)
+    listElem.innerHTML = listHTML.join('')
 }
 
 function clickArea (ident) {
@@ -135,19 +113,17 @@ function selectArea (area) {
     selectedArea = area
     loadSelectedAreaDataIntoElements()
     generateTeleporterList()
-    generateKantoList()
-    generateInteriorList()
-    generateSeviiList()
+    updateAreaLists()
 }
 
 function getAreaByIdent (ident) {
     var area = null
-    area = kantoAreas.find(x => x.ident === ident)
-    if (area) { return area }
-    area = interiorAreas.find(x => x.ident === ident)
-    if (area) { return area }
-    area = seviiAreas.find(x => x.ident === ident)
-    if (area) { return area }
+    if (regionAreas.length < 1)
+        return;
+    for (var i = 0; i< regionAreas.length; i++) {
+        area = regionAreas[i][0].find(x => x.ident === ident)
+        if (area) { return area }
+    }
 }
 
 function updateSelectedArea () {
@@ -186,6 +162,7 @@ function loadSelectedAreaDataIntoElements () {
         elems.zoom.value = selectedArea.zoom || null
     }
 }
+
 function saveData () {
     if (selectedArea) {
         selectedArea.order = parseInt(elems.order.value)
@@ -297,27 +274,12 @@ function removeArea () {
     }
 }
 
-function addKantoArea () {
+function addRegionArea (region) {
     selectedArea = null
-    kantoAreas.push(JSON.parse(JSON.stringify({...blankArea, order: kantoAreas.length})))
+    region[0].push(JSON.parse(JSON.stringify({...blankArea, order: region[0].length})))
     // clearElems()
-    generateKantoList()
-    selectArea(kantoAreas[kantoAreas.length - 1])
-}
-function addInteriorArea () {
-    selectedArea = null
-    interiorAreas.push(JSON.parse(JSON.stringify({...blankArea, order: interiorAreas.length})))
-    // clearElems()
-    generateInteriorList()
-    selectArea(interiorAreas[interiorAreas.length - 1])
-}
-function addSeviiArea () {
-    selectedArea = null
-    seviiAreas.push(JSON.parse(JSON.stringify({...blankArea, order: seviiAreas.length})))
-    // clearElems()
-    generateSeviiList()
-    selectArea(seviiAreas[seviiAreas.length - 1])
-    
+    generateRegionList(region[0], region[1])
+    selectArea(region[0][region[0].length - 1])
 }
 
 function doOutput () {
