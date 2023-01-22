@@ -1,3 +1,1782 @@
+var castleAreas = [
+  {
+    order: 1,
+    title: "1-1",
+    ident: "1-1",
+    artist: "Malleys",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 2,
+    title: "1-2",
+    ident: "1-2",
+    artist: "Juanito",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 3,
+    title: "1-3",
+    ident: "1-3",
+    artist: "Stefan",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 4,
+    title: "1-4",
+    ident: "1-4",
+    artist: "Scooter",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 5,
+    title: "1-5",
+    ident: "1-5",
+    artist: "Cheesy",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 6,
+    title: "1-6",
+    ident: "1-6",
+    artist: "Sinvilla",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 7,
+    title: "1-7A",
+    ident: "1-7A",
+    artist: "Sinvilla",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 8,
+    title: "1-7B",
+    ident: "1-7B",
+    artist: "Crowno",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 9,
+    title: "1-8",
+    ident: "1-8",
+    artist: "Retginn",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 10,
+    title: "1-9",
+    ident: "1-9",
+    artist: "Ghoulee",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 11,
+    title: "2-1",
+    ident: "2-1",
+    artist: "Narehop",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 12,
+    title: "2-2",
+    ident: "2-2",
+    artist: "Shaspio",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 13,
+    title: "2-3",
+    ident: "2-3",
+    artist: "PixelEric",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 14,
+    title: "2-4",
+    ident: "2-4",
+    artist: "Gato",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 15,
+    title: "2-5",
+    ident: "2-5",
+    artist: "MobyPixel",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 16,
+    title: "2-6",
+    ident: "2-6",
+    artist: "MobyPixel",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 17,
+    title: "2-7",
+    ident: "2-7",
+    artist: "Coelacamth",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 18,
+    title: "2-8",
+    ident: "2-8",
+    artist: "Marceles",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 19,
+    title: "2-9",
+    ident: "2-9",
+    artist: "Donpo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 20,
+    title: "2-10",
+    ident: "2-10",
+    artist: "Donpo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 21,
+    title: "3-1",
+    ident: "3-1",
+    artist: "RyanKeeton",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 22,
+    title: "3-2",
+    ident: "3-2",
+    artist: "Kyle",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 23,
+    title: "3-3",
+    ident: "3-3",
+    artist: "Toni M",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 24,
+    title: "3-4",
+    ident: "3-4",
+    artist: "Neko",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 25,
+    title: "3-5",
+    ident: "3-5",
+    artist: "Runtd",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 26,
+    title: "3-6",
+    ident: "3-6",
+    artist: "Gabe Fern",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 27,
+    title: "3-7",
+    ident: "3-7",
+    artist: "Juanito",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 28,
+    title: "3-8",
+    ident: "3-8",
+    artist: "Vierbit",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 29,
+    title: "3-9",
+    ident: "3-9",
+    artist: "Ashton Arnold",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 30,
+    title: "3-10",
+    ident: "3-10",
+    artist: "Foofarawr",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 31,
+    title: "3-11",
+    ident: "3-11",
+    artist: "nasCobolo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 32,
+    title: "3-12",
+    ident: "3-12",
+    artist: "Rudy Flores",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 33,
+    title: "P-1",
+    ident: "P-1",
+    artist: "",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 34,
+    title: "P-2",
+    ident: "P-2",
+    artist: "",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 34,
+    title: "P-3",
+    ident: "P-3",
+    artist: "",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 35,
+    title: "P-4",
+    ident: "P-4",
+    artist: "",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 36,
+    title: "P-5",
+    ident: "P-5",
+    artist: "",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 37,
+    title: "4-1",
+    ident: "4-1",
+    artist: "Kosena",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 38,
+    title: "4-2",
+    ident: "4-2",
+    artist: "8bitalo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 39,
+    title: "4-3",
+    ident: "4-3",
+    artist: "Joe",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 40,
+    title: "4-4",
+    ident: "4-4",
+    artist: "pinselschubser",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 41,
+    title: "4-5",
+    ident: "4-5",
+    artist: "SylverArts",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 42,
+    title: "4-6",
+    ident: "4-6",
+    artist: "Lyzerus",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 43,
+    title: "4-7",
+    ident: "4-7",
+    artist: "DAKU",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 44,
+    title: "4-8",
+    ident: "4-8",
+    artist: "HaywireJo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 45,
+    title: "4-9",
+    ident: "4-9",
+    artist: "Lyzerus",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 46,
+    title: "4-10",
+    ident: "4-10",
+    artist: "Xanday",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 47,
+    title: "4-11",
+    ident: "4-11",
+    artist: "Batfeula",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 48,
+    title: "5-1",
+    ident: "5-1",
+    artist: "Maruki",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 49,
+    title: "5-2",
+    ident: "5-2",
+    artist: "Jaquiox",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 50,
+    title: "5-3",
+    ident: "5-3",
+    artist: "Jaquiox",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 51,
+    title: "5-4",
+    ident: "5-4",
+    artist: "Seth",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 52,
+    title: "5-5",
+    ident: "5-5",
+    artist: "Figburn",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 53,
+    title: "5-6",
+    ident: "5-6",
+    artist: "SomecallmeMichelle",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 54,
+    title: "5-7",
+    ident: "5-7",
+    artist: "Azumon",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 55,
+    title: "5-8",
+    ident: "5-8",
+    artist: "Bobby",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 56,
+    title: "5-9",
+    ident: "5-9",
+    artist: "Looloopaa",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 57,
+    title: "5-10",
+    ident: "5-10",
+    artist: "DaNinjaMan",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 58,
+    title: "5-11",
+    ident: "5-11",
+    artist: "Steven",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 59,
+    title: "5-12",
+    ident: "5-12",
+    artist: "Strawbe",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 60,
+    title: "6-1",
+    ident: "6-1",
+    artist: "Zanuff",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 61,
+    title: "6-2",
+    ident: "6-2",
+    artist: "Kohemy",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 62,
+    title: "6-3",
+    ident: "6-3",
+    artist: "Rakun",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 63,
+    title: "6-4",
+    ident: "6-4",
+    artist: "Masashi",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 64,
+    title: "6-5",
+    ident: "6-5",
+    artist: "Skelly",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 65,
+    title: "6-6",
+    ident: "6-6",
+    artist: "Barosaros",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 66,
+    title: "6-7",
+    ident: "6-7",
+    artist: "Tanuki",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 67,
+    title: "6-8",
+    ident: "6-8",
+    artist: "Metarupx",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 68,
+    title: "6-9",
+    ident: "6-9",
+    artist: "Metarupx",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 69,
+    title: "6-10",
+    ident: "6-10",
+    artist: "Steven",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 70,
+    title: "7-1",
+    ident: "7-1",
+    artist: "JJ Haggar",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 71,
+    title: "7-2",
+    ident: "7-2",
+    artist: "JJ Haggar",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 72,
+    title: "7-3",
+    ident: "7-3",
+    artist: "nasCobolo",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 73,
+    title: "7-4",
+    ident: "7-4",
+    artist: "Zernek",
+    url: "",
+    box: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "Boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+]
+
 var kantoAreas = [
   {
     order: null,

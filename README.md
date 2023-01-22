@@ -20,7 +20,7 @@ area.js - Defines location regions and provides credit to artists
 - box: dimensions of the location. x,y refers to the top-left co-ordinate while width, height refer to the image's resolution
 - offset: position offset from _______. Can be null.
 - pan: ______ (options: vertical, horizontal )
-- type: type of the entry; visually styles the list entry
+- type: type of the entry; visually styles the list entry (Terrace, Castle, Underground, Boss)
 - zoom: zoom scale to use when focusing on the entry in the map
 - teleporters: list of ______
 - url: artist URL
