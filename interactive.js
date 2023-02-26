@@ -62,45 +62,61 @@ window.addEventListener('wheel', onMouseWheel)
 window.addEventListener('resize', onResize)
 //
 
-/// Loads new & old images pertaining to a single layer
+/** Loads new & old images pertaining to a single layer 
+ * 
+ * @param {Array} areaArray Array of areas particular to a layer.
+ * @param {string} layerSubfolder Subfolder directory name of the layer's new & old images.
+*/
 function loadLayer (areaArray, layerSubfolder) {
     for (var i = 0; i < areaArray.length; i++) 
     {
-        var area = areaArray[i]
-        var img = new Image()
-        img.src = `img/${layerSubfolder}/new/${area.ident}.png`
-        img.onload = checkImages
-        areaImages.push(img)
-        var oldimg = new Image()
-        oldimg.src = `img/${layerSubfolder}/old/${area.ident}.png`
-        oldimg.onload = checkImages
-        areaImages.push(oldimg)
+        var area = areaArray[i];
+        var img = new Image();
+        img.src = `img/${layerSubfolder}/new/${area.ident}.png`;
+        img.onload = onAreaImageLoaded;
+        areaImages.push(img);
+        var oldimg = new Image();
+        oldimg.src = `img/${layerSubfolder}/old/${area.ident}.png`;
+        oldimg.onload = onAreaImageLoaded;
+        areaImages.push(oldimg);
     }
 }
 
-/// Loads all new & old images pertaining to each layer
+/** Loads all new & old images pertaining to each layer */
 function loadImages () {
     loadLayer(kantoAreas, "kanto");
     loadLayer(interiorAreas, "interior");
     loadLayer(seviiAreas, "sevii");
 }
 
-function checkImages () {
+/** Callback triggered when an image is loaded; checks if images are done loading. */
+function onAreaImageLoaded () {
     var loadedImages = areaImages.filter(x => x.complete).length
     document.querySelector('.loading-bar__inner').style.width = `${(loadedImages / areaImages.length) * 100}%`
     if (loadedImages === areaImages.length && loading) {
-        loading = false
-        init()
+        completeLoading();
     }
 }
 
-function init () {
-    document.querySelector('#loading').classList.remove('active')
-    if (window.innerWidth < 768) {
-        toggleMenu()
+/** Completes the loading process. */
+function completeLoading () {
+    loading = false;
+
+    // Deactivate loading element
+    document.querySelector('#loading').classList.remove('active');
+    if (window.innerWidth < 768) {  // Hide the menu if screen is not wide enough
+        toggleMenu();
     }
+
+    init();
+}
+
+/** Initializes the canvas and its content. */
+function init () {
+
+    // Construct the PIXI canvas with pixel perfect settings
     try {
-        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST
+        PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST     // Nearest neighbour scaling
         app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, antialias: false, view: document.querySelector('#canvas'), autoResize: true })
     } catch (error) {
         // alert('Application cannot start - Please ensure Hardware Acceleration is enabled on your web browser.')
@@ -108,21 +124,27 @@ function init () {
         document.querySelector('#error').innerHTML =  '<p>Application cannot start - Please ensure Hardware Acceleration is enabled on your web browser.</p>'
         document.querySelector('#error').classList.add('active')
     }
-    setupCanvas()
 
-    
+    // Prepare the canvas display
+    setupCanvas();
+
+    // Select & focus on a random area & open it in DOM
     var startingArea = areas[Math.floor(Math.random() * areas.length)]
     focusOnArea(startingArea)
     openAreaInDOM(startingArea)
 
+    // Advance an animation frame
     requestAnimationFrame(tick)
 }
 
+/** Prepares the canvas display */ 
 function setupCanvas () {
     app.stage.removeChildren()
+
+    // Establish PIXI containers
     map = new PIXI.Container()
-    mapImages =  new PIXI.Container()
-    viewport =  new PIXI.Container({width: window.innerWidth, height: window.innerHeight})
+    mapImages = new PIXI.Container()
+    viewport = new PIXI.Container({width: window.innerWidth, height: window.innerHeight})
 
     buildMap()
     var mapbg = new PIXI.TilingSprite(new PIXI.Texture.from('grid_test.png'), canvasDimensions.width, canvasDimensions.height)
@@ -142,6 +164,7 @@ function setupCanvas () {
     map.interactive = true
     viewport.interactive = true
 
+    // Establish navigation listeners
     viewport.on('pointerdown', onDragStart)
     viewport.on('pointerup', onDragEnd)
     viewport.on('click', onClick)
@@ -150,11 +173,10 @@ function setupCanvas () {
 
     setUpAreas()
 
+    // Prepare filters
     blurFilter = new PIXI.filters.ZoomBlurFilter()
     bulgeFilter = new PIXI.filters.BulgePinchFilter()
     colorFilter = new PIXI.filters.AlphaFilter()
-
-
 
     // Set default position/zoom
     map.scale.set(0.25)
@@ -286,6 +308,8 @@ function getAreaBox (area) {
     }
 }
 
+// TODO: Make more generic & move references to a separate file. We want this script to be entirely generic, if possible.
+/** Fetches icon names corresponding to area type. */
 function getIcon (type) {
     switch (type) {
         case 'town':
@@ -303,6 +327,8 @@ function getIcon (type) {
     }
 }
 
+// TODO: As above.
+/** Fetches colors corresponding to area type. */
 function getColor (type) {
     switch (type) {
         case 'town':
@@ -318,6 +344,7 @@ function getColor (type) {
     }
 }
 
+/** Actions peformed on update (each frame). */
 function tick () {
     viewport.filters = []
     if (cameraAnimation.progress >= 1) {
@@ -406,11 +433,10 @@ function tick () {
         }
     }
     
-
-    
     requestAnimationFrame(tick)
 }
 
+/** Toggles active state of the menu, focusing on the active area. */
 function toggleMenu () {
     var elem = document.querySelector('.menu')
     elem.classList.toggle('active')
@@ -425,6 +451,8 @@ function toggleMenu () {
     }
     
 }
+
+/** Opens the menu. */
 function openMenu () {
     var elem = document.querySelector('.menu')
     elem.classList.add('active')
@@ -436,6 +464,7 @@ function blurIsDisabled () {
     return document.querySelector('#disableBlur').checked
 }
 
+/** Callback occurring when a drag action starts. */
 function onDragStart () {
     previousTouch = null
     previousPinchDistance = 0
@@ -443,6 +472,7 @@ function onDragStart () {
     dragVelocity = { x: 0, y: 0 }
 }
 
+/** Callback occurring when a drag action ends. */
 function onDragEnd () {
     previousTouch = null
     previousPinchDistance = 0
@@ -739,6 +769,7 @@ function initTour () {
         hideAreaZone(activeArea.obj)
     }
 }
+
 function endTour () {
     const button = document.querySelector('#tourButton')
     button.innerHTML = '<span class="material-icons">play_arrow</span> <span>Begin Tour</span>'
