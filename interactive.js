@@ -32,6 +32,7 @@ var areas = kantoAreas
 var areaImages = []
 var loading = true
 
+// TODO: Add Castlevania canvas
 var kantoCanvas = {width: 5472, height: 5904}
 var interiorCanvas = {width: 5504, height: 5744}
 var seviiCanvas = {width: 4448, height: 6784}
@@ -61,46 +62,27 @@ window.addEventListener('wheel', onMouseWheel)
 window.addEventListener('resize', onResize)
 //
 
+/// Loads new & old images pertaining to a single layer
+function loadLayer (areaArray, layerSubfolder) {
+    for (var i = 0; i < areaArray.length; i++) 
+    {
+        var area = areaArray[i]
+        var img = new Image()
+        img.src = `img/${layerSubfolder}/new/${area.ident}.png`
+        img.onload = checkImages
+        areaImages.push(img)
+        var oldimg = new Image()
+        oldimg.src = `img/${layerSubfolder}/old/${area.ident}.png`
+        oldimg.onload = checkImages
+        areaImages.push(oldimg)
+    }
+}
+
+/// Loads all new & old images pertaining to each layer
 function loadImages () {
-
-    // load Kanto
-    for (var i = 0; i < kantoAreas.length; i++) {
-        var area = kantoAreas[i]
-        var img = new Image()
-        img.src = `img/kanto/new/${area.ident}.png`
-        img.onload = checkImages
-        areaImages.push(img)
-        var oldimg = new Image()
-        oldimg.src = `img/kanto/old/${area.ident}.png`
-        oldimg.onload = checkImages
-        areaImages.push(oldimg)
-    }
-
-    // load Interior
-    for (var i = 0; i < interiorAreas.length; i++) {
-        var area = interiorAreas[i]
-        var img = new Image()
-        img.src = `img/interior/new/${area.ident}.png`
-        img.onload = checkImages
-        areaImages.push(img)
-        var oldimg = new Image()
-        oldimg.src = `img/interior/old/${area.ident}.png`
-        oldimg.onload = checkImages
-        areaImages.push(oldimg)
-    }
-
-    // load Sevii
-    for (var i = 0; i < seviiAreas.length; i++) {
-        var area = seviiAreas[i]
-        var img = new Image()
-        img.src = `img/sevii/new/${area.ident}.png`
-        img.onload = checkImages
-        areaImages.push(img)
-        var oldimg = new Image()
-        oldimg.src = `img/sevii/old/${area.ident}.png`
-        oldimg.onload = checkImages
-        areaImages.push(oldimg)
-    }
+    loadLayer(kantoAreas, "kanto");
+    loadLayer(interiorAreas, "interior");
+    loadLayer(seviiAreas, "sevii");
 }
 
 function checkImages () {
