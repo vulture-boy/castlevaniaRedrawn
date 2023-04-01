@@ -1776,7 +1776,6 @@ var castleAreas = [
     post_url: ""
   },
 ]
-
 var kantoAreas = [
   {
     order: null,

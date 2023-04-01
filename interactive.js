@@ -1,47 +1,54 @@
+/*
+*   Retro Redrawn Interactive
+*
+*   Originally written by Jerky.
+*   Refactored for reuse by Tyson Moll (vvvvvvv), 2023.
+*
+*/
+
+// Core
 var app = null
+var loading = true; // Whether data is being loaded (e.g. images)
+var layersLoaded = 0;
+var layersCount = 0;
+
+// Navigation
 var zoomLevel = 1 // must be whole number
 var currentZoom = 1 //lerp
 var zoomCenter = {x: 0, y: 0} // must be whole numbers
 var currentPos = {x: 0, y: 0} //lerp
-var map = null
-var mapImages = null
-var viewport = null
-var mouseDown = false
-var dragging = false
-var dragVelocity = { x: 0, y: 0 }
 
-var zoomMousePos = { x: 0, y: 0 }
+// Map
+const NEW_STYLE_NAME = 'new';
+const OLD_STYLE_NAME = 'old';
+var map = null;
+var mapImages = null;
+var currentMapStyle = NEW_STYLE_NAME;
+var viewport = null;
 
+// Filters
 var blurFilter = null
 var bulgeFilter = null
 var colorFilter = null
 
+// Interaction
+var mouseDown = false
+var dragging = false
+var dragVelocity = { x: 0, y: 0 }
+var zoomMousePos = { x: 0, y: 0 }
 var previousTouch = null
 var previousPinchDistance = 0
 var pinchForTick = null
 
+// Tour
 var tourMode = false
 var tourTransition = false
 var areasToTour = []
 var tourFadeTimer = 100
 
-var currentMapStyle = 'new'
-
-var currentLayer = 'kanto'
-var areas = kantoAreas
-var areaImages = []
-var loading = true
-
-// TODO: Add Castlevania canvas
-var kantoCanvas = {width: 5472, height: 5904}
-var interiorCanvas = {width: 5504, height: 5744}
-var seviiCanvas = {width: 4448, height: 6784}
-var canvasDimensions = kantoCanvas
-
+// Camera movement
 var _defaultCameraSpeed = 0.008
 var _defaultTourCameraSpeed = 0.002
-
-
 var cameraSpeed = _defaultCameraSpeed
 var tourCameraSpeed = _defaultTourCameraSpeed
 
@@ -56,7 +63,32 @@ var cameraAnimation = {
     easing: true
 }
 
+// Region-specific properties
+// TODO: move region-specific data to separate JS file (integration specific)
+// TODO: these are probably better as a struct
+var activeLayerIndex = 0;           // Currently active layer index (and initial index)
+var layerNames = ['kanto', 'interior', 'sevii'];
+var activeAreas = kantoAreas          // Active array of areas
+var areaLayers = [kantoAreas, interiorAreas, seviiAreas];
+var kantoAreaImages = [];
+var kantoAreaOldImages = [];
+var interiorAreaImages = [];
+var interiorAreaOldImages = [];
+var seviiAreaImages = [];
+var seviiAreaOldImages = [];
+var layerImages = [kantoAreaImages, interiorAreaImages, seviiAreaImages] ;
+var layerOldImages = [kantoAreaOldImages, interiorAreaOldImages, seviiAreaOldImages];
+
+// Canvases
+// TODO: Add Castlevania canvas
+var kantoCanvas = {width: 5472, height: 5904}
+var interiorCanvas = {width: 5504, height: 5744}
+var seviiCanvas = {width: 4448, height: 6784}
+var canvasDimensions = kantoCanvas
+var layerCanvases = [kantoCanvas, interiorCanvas, seviiCanvas];
+
 // Start up
+layersCount = layerImages.length + layerOldImages.length;
 loadImages()
 window.addEventListener('wheel', onMouseWheel)
 window.addEventListener('resize', onResize)
@@ -65,36 +97,53 @@ window.addEventListener('resize', onResize)
 /** Loads new & old images pertaining to a single layer 
  * 
  * @param {Array} areaArray Array of areas particular to a layer.
+ * @param {Array} areaImageArray Array of images tied to areas in a layer.
+ * @param {Array} areaOldImageArray Array of old versions of images tied to a layer.
  * @param {string} layerSubfolder Subfolder directory name of the layer's new & old images.
 */
-function loadLayer (areaArray, layerSubfolder) {
+function loadLayer (areaArray, areaImageArray, areaOldImageArray, layerSubfolder) {
     for (var i = 0; i < areaArray.length; i++) 
     {
         var area = areaArray[i];
+
+        // Load new images
         var img = new Image();
-        img.src = `img/${layerSubfolder}/new/${area.ident}.png`;
-        img.onload = onAreaImageLoaded;
-        areaImages.push(img);
+        img.src = `img/${layerSubfolder}/${NEW_STYLE_NAME}/${area.ident}.png`;
+        img.onload = function () { onAreaImageLoaded(areaImageArray); };
+        areaImageArray.push(img);
+
+        // Load old images
         var oldimg = new Image();
-        oldimg.src = `img/${layerSubfolder}/old/${area.ident}.png`;
-        oldimg.onload = onAreaImageLoaded;
-        areaImages.push(oldimg);
+        oldimg.src = `img/${layerSubfolder}/${OLD_STYLE_NAME}/${area.ident}.png`;
+        oldimg.onload = function () { onAreaImageLoaded(areaOldImageArray); };
+        areaOldImageArray.push(oldimg);
     }
 }
 
 /** Loads all new & old images pertaining to each layer */
 function loadImages () {
-    loadLayer(kantoAreas, "kanto");
-    loadLayer(interiorAreas, "interior");
-    loadLayer(seviiAreas, "sevii");
+
+    for (var i = 0; i < areaLayers.length; i++) {
+
+        // Need areas in the layer to load images
+        if (areaLayers[i].length != 0) {
+            loadLayer(areaLayers[i], layerImages[i], layerOldImages[i], layerNames[i]);
+        }
+        else {
+            layersCount -= 2;   // Ignore & subtract from this var, otherwise will never finish loading.
+        }
+    }
 }
 
-/** Callback triggered when an image is loaded; checks if images are done loading. */
-function onAreaImageLoaded () {
-    var loadedImages = areaImages.filter(x => x.complete).length
-    document.querySelector('.loading-bar__inner').style.width = `${(loadedImages / areaImages.length) * 100}%`
-    if (loadedImages === areaImages.length && loading) {
-        completeLoading();
+/** Callback triggered when an image is loaded; checks if images in the layer are done loading. */
+function onAreaImageLoaded (areaImageArray) {
+    var loadedImages = areaImageArray.filter(x => x.complete).length
+    document.querySelector('.loading-bar__inner').style.width = `${(loadedImages / areaImageArray.length) * 100}%`
+    if (loadedImages === areaImageArray.length && loading) {  // TODO: need an alternate way to track how many images need loading (counter?)
+        layersLoaded += 1;
+        if (layersLoaded >= layersCount) {
+            completeLoading();
+        }
     }
 }
 
@@ -129,7 +178,7 @@ function init () {
     setupCanvas();
 
     // Select & focus on a random area & open it in DOM
-    var startingArea = areas[Math.floor(Math.random() * areas.length)]
+    var startingArea = activeAreas[Math.floor(Math.random() * activeAreas.length)]
     focusOnArea(startingArea)
     openAreaInDOM(startingArea)
 
@@ -193,11 +242,11 @@ function buildMap () {
     while(mapImages.children[0]) { 
         mapImages.removeChild(mapImages.children[0]);
     }
-    for (var i = 0; i < areas.length; i++) {
-        var area = areas[i]
-        var src = `img/${currentLayer}/${currentMapStyle}/${area.ident}.png`
+    for (var i = 0; i < activeAreas.length; i++) {
+        var area = activeAreas[i]
+        var src = `img/${layerNames[activeLayerIndex]}/${currentMapStyle}/${area.ident}.png`
         var sprite = new PIXI.Sprite.from(src)
-        if (currentMapStyle === 'new') {
+        if (currentMapStyle === NEW_STYLE_NAME) {
             sprite.position.set(area.box.x + area.offset.x, area.box.y + area.offset.y)
         } else {
             sprite.position.set(area.box.x, area.box.y)
@@ -206,27 +255,41 @@ function buildMap () {
     }
 }
 
-
 function toggleMapStyle () {
-    if (currentMapStyle === 'new') {
-        currentMapStyle = 'old'
-        buildMap()
+    if (currentMapStyle === NEW_STYLE_NAME) {
+        currentMapStyle = OLD_STYLE_NAME;
+        buildMap();
     } else {
-        currentMapStyle = 'new'
-        buildMap()
+        currentMapStyle = NEW_STYLE_NAME;
+        buildMap();
     }
     updateActiveAreaZone()
 }
 
+//** Fetches the current active layer's area images based on the current style */
+function getActiveLayerAreaImages() {
+    if (currentMapStyle === NEW_STYLE_NAME) {
+        return layerImages[activeLayerIndex];
+    }
+    if (currentMapStyle == OLD_STYLE_NAME) {
+        return layerOldImages[activeLayerIndex];
+    }
+    log.error("current map style not defined as new or old");
+    return null 
+}
+
 function setUpAreas () {
-    if (areas) {
+    if (activeAreas) {
         var areaList = document.querySelector('#areas')
         areaList.innerHTML = ''
-        for (var i = 0; i < areas.length; i++) {
+        for (var i = 0; i < activeAreas.length; i++) {
 
-            var area = areas[i]
-            generateAreaZone(area)
+            var area = activeAreas[i];
+            var activeImages = getActiveLayerAreaImages();
+            var areaImage = activeImages[i];
+            generateAreaZone(area, areaImage)
             
+            // Prepare the HTML block corresponding to an area and its associated credts
             var html = `<li class="area" title="${area.title}" style="background-color:${getColor(area.type)}" onclick="focusOnArea('${area.title}')">
                 <div class="area__header" >
                     <span class="material-icons">
@@ -254,12 +317,14 @@ function setUpAreas () {
     }
 }
 
-function generateAreaZone (area) {
+/** Creates PIXI Graphics corresponding to new and old versions of an area. */
+function generateAreaZone (area, areaImage) {
     if (!area) { console.error('oopsie, no area'); return }
+    if (!areaImage) { console.error('oopsie, no area image'); return }
     var oldZone = new PIXI.Graphics()
     oldZone.beginFill(0xffffff, 0)
     oldZone.lineStyle(4, 0xffffff, 0.5, 1)
-    oldZone.drawRect(area.box.x, area.box.y, area.box.width, area.box.height)
+    oldZone.drawRect(getAreaBox(area, areaImage, OLD_STYLE_NAME));
     oldZone.endFill()
     oldZone.alpha = 0
     area.old_zone = oldZone
@@ -268,7 +333,7 @@ function generateAreaZone (area) {
     var newZone = new PIXI.Graphics()
     newZone.beginFill(0xffffff, 0)
     newZone.lineStyle(4, 0xffffff, 0.5, 1)
-    newZone.drawRect(area.box.x + area.offset.x, area.box.y + area.offset.y, area.box.width + area.offset.width, area.box.height + area.offset.height)
+    newZone.drawRect(getAreaBox(area, areaImage, NEW_STYLE_NAME));
     newZone.endFill()
     newZone.alpha = 0
     area.new_zone = newZone
@@ -283,7 +348,7 @@ function hideAreaZone (area) {
 
 function showAreaZone (area) {
     if (!area) { console.error('oopsie, no area'); return }
-    if (currentMapStyle === 'new') {
+    if (currentMapStyle === NEW_STYLE_NAME) {
         area.old_zone.alpha = 0
         area.new_zone.alpha = 1
     } else {
@@ -299,12 +364,21 @@ function updateActiveAreaZone () {
     }
 }
 
-function getAreaBox (area) {
+/** Gets the position of an area's box, 
+ * with an optional offset applied to 'redrawn' maps to accomodate bleeds. 
+ * Uses source image for width/height.
+ * 
+ * */
+function getAreaBox (area, areaImage, styleOverride = "") {
     if (!area) { console.error('oopsie, no area'); return }
-    if (currentMapStyle === 'new') {
-        return {x: area.box.x + area.offset.x, y: area.box.y + area.offset.y, width: area.box.width + area.offset.width, height: area.box.height + area.offset.height}
+
+    // Use current style or override?
+    var style = styleOverride === "" ? currentMapStyle : styleOverride;
+    
+    if (style === NEW_STYLE_NAME) {
+        return {x: area.box.x + area.offset.x, y: area.box.y + area.offset.y, width: areaImage.naturalWidth + area.offset.width, height: areaImage.naturalHeight + area.offset.height}
     } else {
-        return {x: area.box.x, y: area.box.y, width: area.box.width, height: area.box.height}
+        return {x: area.box.x, y: area.box.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
     }
 }
 
@@ -595,6 +669,7 @@ function zoom(s,x,y){
     zoomCenter.x = zoomCenter.x - (newScreenPos.x-x)
     zoomCenter.y = zoomCenter.y - (newScreenPos.y-y)
 }
+
 function instantZoom(s,x,y){
 
     if (currentZoom !== zoomLevel) { 
@@ -697,10 +772,10 @@ function focusOnArea (a) {
     }
     var area = a
     if (typeof a === 'string') {
-        area = areas.find(x => x.title === a)
+        area = activeAreas.find(x => x.title === a)
     }
-    for (var i = 0; i < areas.length; i++) {
-        hideAreaZone(areas[i])
+    for (var i = 0; i < activeAreas.length; i++) {
+        hideAreaZone(activeAreas[i])
     }
     var isGoodToFocus = true
     showAreaZone(area)
@@ -724,7 +799,7 @@ function focusOnArea (a) {
     }
     
     if (isGoodToFocus) {
-        var box = getAreaBox(area)
+        var box = area.box;
         moveCameraTo(box.x + Math.floor(box.width / 2), box.y + Math.floor(box.height / 2), area.zoom)
     }
     
@@ -733,7 +808,7 @@ function focusOnArea (a) {
 function openAreaInDOM (a) {
     var area = a
     if (typeof a === 'string') {
-        area = areas.find(x => x.title === a)
+        area = activeAreas.find(x => x.title === a)
     }
     var elems = document.querySelectorAll(`#areas`)
     if (elems.length > 0) {
@@ -761,7 +836,7 @@ function initTour () {
     const button = document.querySelector('#tourButton')
     button.innerHTML = '<span class="material-icons">stop</span> <span>End Tour</span>'
     button.classList.add('active')
-    areasToTour = [...areas]
+    areasToTour = [...activeAreas]
     tourMode = true
     map.filters = [colorFilter]
     var activeArea = getActiveArea()
@@ -790,12 +865,12 @@ function endTour () {
 function newTourArea () {
     var rnd = Math.floor(Math.random() * areasToTour.length)
     var area = areasToTour[rnd]
-    var box = getAreaBox(area)
-    if (!area) { area = areas[0] }
+    var box = area.box;
+    if (!area) { area = activeAreas[0] }
     if (areasToTour.length > 1) {
         areasToTour.splice(rnd, 1)
     } else {
-        areasToTour = [...areas]
+        areasToTour = [...activeAreas]
     }
     openAreaInDOM(area)
 
@@ -888,7 +963,7 @@ function isMenuOpen () {
 function getActiveArea () {
     if (document.querySelector('#areas .area.active')) {
         var elem = document.querySelector('#areas .area.active')
-        return { elem , obj: areas.find(x => x.title === elem.title ) }
+        return { elem , obj: activeAreas.find(x => x.title === elem.title ) }
     }
 }
 
@@ -906,23 +981,28 @@ function changeTourCameraSpeed (e) {
     document.querySelector('#tourCameraSpeed + small').textContent = `${e}x`
 }
 
+/** Changes the currently active layer.
+ * 
+ * @param {string} layer String name of the layer to change to.
+ */
 function changeLayer (layer) {
-    this.currentLayer = layer
-    if (this.currentLayer === 'kanto') {
-        this.areas = kantoAreas
-        this.canvasDimensions = kantoCanvas
-    }
-    if (this.currentLayer === 'interior') {
-        this.areas = interiorAreas
-        this.canvasDimensions = interiorCanvas
-    }
-    if (this.currentLayer === 'sevii') {
-        this.areas = seviiAreas
-        this.canvasDimensions = seviiCanvas
+
+    // Find and switch layer
+    var layerCount = this.areaLayers.length;
+    for (var i=0; i< layerCount; i++) {
+        if (layer === this.layerNames[i]) {
+            this.activeLayerIndex = i;
+            this.areas = this.areaLayers[i]
+            this.canvasDimensions = layerCanvases[i]
+            break;
+        }
     }
 
+    // Adjust tab visibility
     const tabs = document.querySelectorAll('#layers li button')
-    tabs.forEach((x) => { if (!x.classList.contains(this.currentLayer)) {x.classList.remove('active')} else {x.classList.add('active')} })
+    tabs.forEach((x) => { if (!x.classList.contains(this.layerNames[this.activeLayerIndex])) {x.classList.remove('active')} else {x.classList.add('active')} })
     this.setupCanvas()
-    this.focusOnArea(areas[Math.floor(Math.random() * areas.length)])
+    
+    // Adjust canvas focus
+    this.focusOnArea(activeAreas[Math.floor(Math.random() * activeAreas.length)])
 }
