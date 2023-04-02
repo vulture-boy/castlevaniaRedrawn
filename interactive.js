@@ -165,7 +165,7 @@ function loadImages () {
 function onAreaImageLoaded (areaImageArray) {
     var loadedImages = areaImageArray.filter(x => x.complete).length
     document.querySelector('.loading-bar__inner').style.width = `${(loadedImages / areaImageArray.length) * 100}%`
-    if (loadedImages === areaImageArray.length && loading) {  // TODO: need an alternate way to track how many images need loading (counter?)
+    if (loadedImages === areaImageArray.length && loading) {
         layersLoaded += 1;
         if (layersLoaded >= layersCount) {
             completeLoading();
@@ -293,11 +293,15 @@ function toggleMapStyle () {
 }
 
 //** Fetches the current active layer's area images based on the current style */
-function getActiveLayerAreaImages() {
-    if (currentMapStyle === NEW_STYLE_NAME) {
+function getActiveLayerAreaImages(styleOverride = "") {
+
+    // Use current style or override?
+    var style = styleOverride === "" ? currentMapStyle : styleOverride;
+
+    if (style === NEW_STYLE_NAME) {
         return layerImages[activeLayerIndex];
     }
-    if (currentMapStyle == OLD_STYLE_NAME) {
+    if (style == OLD_STYLE_NAME) {
         return layerOldImages[activeLayerIndex];
     }
     log.error("current map style not defined as new or old");
@@ -319,7 +323,7 @@ function setUpAreas () {
             var area = activeAreas[i];
             var activeImages = getActiveLayerAreaImages();
             var areaImage = activeImages[i];
-            generateAreaZone(area, areaImage)
+            generateAreaZone(area, areaImage);
 
             var backgroundColor = iconColorDictionary[area.type];
             var materialIcon = iconTypeDictionary[area.type];
@@ -328,7 +332,7 @@ function setUpAreas () {
             var areaArtist = area.artist.replace('@', '');
             var artistImageHTML = '';
             if (areaArtist === '') {
-                console.log("Area artist is undefined, skipping artist image.")
+                console.log("Area artist is undefined, skipping artist image.");
             }else{
                 var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${areaArtist}.png" alt="${area.artist}" /></a>`;
             }
@@ -367,7 +371,7 @@ function generateAreaZone (area, areaImage) {
     if (!areaImage) { console.error('oopsie, no area image'); return }
     var oldZone = new PIXI.Graphics()
     oldZone.beginFill(0xffffff, 0)
-    oldZone.lineStyle(4, 0xffffff, 0.5, 1)
+    oldZone.lineStyle(4, 0xffffff, 0.5, 1)  // Highlight outline?
     oldZone.drawRect(getAreaBox(area, areaImage, OLD_STYLE_NAME));
     oldZone.endFill()
     oldZone.alpha = 0
@@ -753,7 +757,7 @@ function snapCameraTo (x, y, zoom) {
     map.y = position.y
 }
 
-/**
+/** Focus on a specified area.
  * accepts name string and object
  */
 function focusOnArea (a) {
