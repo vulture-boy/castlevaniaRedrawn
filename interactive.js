@@ -14,6 +14,8 @@ var layersCount = 0;
 
 // Navigation
 var zoomLevel = 1 // must be whole number
+var zoomMin = 0.25;
+var zoomMax = 4;
 var currentZoom = 1 //lerp
 var zoomCenter = {x: 0, y: 0} // must be whole numbers
 var currentPos = {x: 0, y: 0} //lerp
@@ -126,16 +128,22 @@ function loadLayer (areaArray, areaImageArray, areaOldImageArray, layerSubfolder
 
         // Load new images
         var img = new Image();
-        img.src = `img/${layerSubfolder}/${NEW_STYLE_NAME}/${area.ident}.png`;
+        img.src = createImageLink(layerSubfolder, NEW_STYLE_NAME, area.ident);
         img.onload = function () { onAreaImageLoaded(areaImageArray); };
         areaImageArray.push(img);
 
         // Load old images
         var oldimg = new Image();
-        oldimg.src = `img/${layerSubfolder}/${OLD_STYLE_NAME}/${area.ident}.png`;
+        oldimg.src = createImageLink(layerSubfolder, OLD_STYLE_NAME, area.ident);
         oldimg.onload = function () { onAreaImageLoaded(areaOldImageArray); };
         areaOldImageArray.push(oldimg);
     }
+}
+
+/** Produces an image link from area details. */
+function createImageLink (layerName, mapStyle, areaName) {
+    var link = `img/${layerName}/${mapStyle}/${areaName}.png`;
+    return link;
 }
 
 /** Loads all new & old images pertaining to each layer */
@@ -246,7 +254,7 @@ function setupCanvas () {
     colorFilter = new PIXI.filters.AlphaFilter()
 
     // Set default position/zoom
-    map.scale.set(0.25)
+    map.scale.set(zoomMin)
     map.x = -((map.width) - (window.innerWidth / 2)) * map.scale.x
     map.y = -((map.height) - (window.innerHeight / 2)) * map.scale.x
 
@@ -262,7 +270,7 @@ function buildMap () {
     }
     for (var i = 0; i < activeAreas.length; i++) {
         var area = activeAreas[i]
-        var src = `img/${layerNames[activeLayerIndex]}/${currentMapStyle}/${area.ident}.png`
+        var src = createImageLink(layerNames[activeLayerIndex], currentMapStyle, area.ident);
         var sprite = new PIXI.Sprite.from(src)
         if (currentMapStyle === NEW_STYLE_NAME) {
             sprite.position.set(area.box.x + area.offset.x, area.box.y + area.offset.y)
@@ -315,6 +323,15 @@ function setUpAreas () {
 
             var backgroundColor = iconColorDictionary[area.type];
             var materialIcon = iconTypeDictionary[area.type];
+
+            // Prep artist image HTML
+            var areaArtist = area.artist.replace('@', '');
+            var artistImageHTML = '';
+            if (areaArtist === '') {
+                console.log("Area artist is undefined, skipping artist image.")
+            }else{
+                var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${areaArtist}.png" alt="${area.artist}" /></a>`;
+            }
             
             // Prepare the HTML block corresponding to an area and its associated credts
             var html = `<li class="area" title="${area.title}" style="background-color:${backgroundColor}" onclick="focusOnArea('${area.title}')">
@@ -329,7 +346,7 @@ function setUpAreas () {
                 <div class="area__info">
                     <div class="area__info__inner">
                         <div class="area__info__img">
-                            <a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${area.artist.replace('@', '')}.png" alt="${area.artist}" /></a>
+                            ${artistImageHTML}
                             
                         </div>
                         <div class="area__info__name">
@@ -395,8 +412,8 @@ function updateActiveAreaZone () {
  * with an optional offset applied to 'redrawn' maps to accomodate bleeds and stylistic extensions. 
  * Uses source image for width/height properties.
  * 
- * @param {any} area The struct describing the area.
- * @param {any} areaImage The image used for this area.
+ * @param {*} area The struct describing the area.
+ * @param {*} areaImage The image used for this area.
  * @param {string} styleOverride Forces the returned box dimensions to be based on a particular style, if defined.
  * */
 function getAreaBox (area, areaImage, styleOverride = "") {
@@ -456,7 +473,7 @@ function tick () {
         }
         if (pinchForTick) {
             instantZoom(pinchForTick.factor, pinchForTick.x, pinchForTick.y)
-            if (map.scale.x < 4 && map.scale.x > 0.25) {
+            if (map.scale.x < zoomMax && map.scale.x > zoomMin) {
                 if (!blurIsDisabled()) {
                     viewport.filters = [blurFilter]
                 }
@@ -467,12 +484,13 @@ function tick () {
         }
         checkMapBoundaries()
     } else {
-        // console.log(cameraAnimation.progress)
+
+        // Calculate position and scale changes relative to a camera animation adjustment
         cameraAnimation.progress += cameraAnimation.speed
         // cameraAnimation.progress = ((cameraAnimation.progress * 100) + (cameraAnimation.speed * 100)) / 100
-        var newScale = cameraAnimation.startZoom + ((cameraAnimation.endZoom - cameraAnimation.startZoom) * (cameraAnimation.easing ? easeInOutCubic(cameraAnimation.progress) : cameraAnimation.progress) )
-        var newPosX = cameraAnimation.startPos.x + ((cameraAnimation.endPos.x - cameraAnimation.startPos.x) * (cameraAnimation.easing ? easeInOutCubic(cameraAnimation.progress) : cameraAnimation.progress) )
-        var newPosY = cameraAnimation.startPos.y + ((cameraAnimation.endPos.y - cameraAnimation.startPos.y) * (cameraAnimation.easing ? easeInOutCubic(cameraAnimation.progress) : cameraAnimation.progress) )
+        var newScale = cameraAdjustment(cameraAnimation.startZoom, cameraAnimation.endZoom);
+        var newPosX = cameraAdjustment(cameraAnimation.startPos.x, cameraAnimation.endPos.x);
+        var newPosY = cameraAdjustment(cameraAnimation.startPos.y, cameraAnimation.endPos.y);
         map.scale.set(newScale)
         map.x = newPosX
         map.y = newPosY
@@ -504,6 +522,12 @@ function tick () {
     requestAnimationFrame(tick)
 }
 
+/** Calculate the current position of a camera adjustment. */
+function cameraAdjustment(start, end) {
+    return start + ((end - start) * 
+        (cameraAnimation.easing ? easeInOutCubic(cameraAnimation.progress) : cameraAnimation.progress) );
+}
+
 /** Toggles active state of the menu, focusing on the active area. */
 function toggleMenu () {
     var elem = document.querySelector('.menu')
@@ -528,6 +552,7 @@ function openMenu () {
     showAreaZone(activeArea.obj)
 }
 
+/** Checks DOM if blur is disabled. */
 function blurIsDisabled () {
     return document.querySelector('#disableBlur').checked
 }
@@ -548,6 +573,7 @@ function onDragEnd () {
     dragging = false
 }
 
+/** Changes a menu tab. */
 function changeTab (n) {
     var tabs = document.querySelectorAll('.menu__tab')
     var elems = document.querySelectorAll('.menu__content >*')
@@ -626,14 +652,18 @@ function onDragMove (e) {
 }
 
 
+/** Callback occurring when the mousewheel is rotated.
+ * (TODO: would like to support this functionality on the trackpad, too, if it doesn't already)
+ * 
+ * @param {*} e Event data relating to the mouse wheel action.
+ */
 function onMouseWheel (e) {
-    // TO DO
-    // FIGURE OUT HOW TO DO THIS FOR TRACKPAD USERS
+
     if (e.target.id === 'canvas') {
         zoomMousePos = { x: e.x, y: e.y }
         if (!mouseDown && !cameraAnimation.playing) {
             var zoomAmount = e.deltaY < 0 ? 2 : .5
-            if ((zoomLevel > 0.25 && e.deltaY > 0) || (zoomLevel < 4 && e.deltaY < 0)) {
+            if ((zoomLevel > zoomMin && e.deltaY > 0) || (zoomLevel < zoomMax && e.deltaY < 0)) {
                 
                 currentPos = {...zoomCenter}
                 dragVelocity = { x: 0, y: 0 }
@@ -644,30 +674,11 @@ function onMouseWheel (e) {
     }
 }
 
+/** Prepare to zoom to a particular scale focused around a point. */
 function zoom(s,x,y){
 
     if (currentZoom !== zoomLevel) { 
-        map.scale.set(zoomLevel) ; currentZoom = zoomLevel 
-        if (zoomCenter.x || zoomCenter.y) {
-            map.x = zoomCenter.x; map.y = zoomCenter.y; 
-        }
-        
-    }
-
-    var worldPos = {x: (x - zoomCenter.x) / zoomLevel, y: (y - zoomCenter.y)/zoomLevel};
-    var newScale = {x: zoomLevel * s, y: zoomLevel * s};
-    zoomLevel = newScale.x
-    
-    var newScreenPos = {x: (worldPos.x ) * newScale.x + zoomCenter.x, y: (worldPos.y) * newScale.y + zoomCenter.y};
-
-    zoomCenter.x = zoomCenter.x - (newScreenPos.x-x)
-    zoomCenter.y = zoomCenter.y - (newScreenPos.y-y)
-}
-
-function instantZoom(s,x,y){
-
-    if (currentZoom !== zoomLevel) { 
-        map.scale.set(zoomLevel)
+        map.scale.set(zoomLevel); 
         currentZoom = zoomLevel 
         if (zoomCenter.x || zoomCenter.y) {
             map.x = zoomCenter.x; map.y = zoomCenter.y; 
@@ -680,12 +691,19 @@ function instantZoom(s,x,y){
     zoomLevel = newScale.x
     checkZoomLimit()
     
-    var newScreenPos = {x: (worldPos.x ) * zoomLevel + zoomCenter.x, y: (worldPos.y) * zoomLevel + zoomCenter.y};
-    // console.log(worldPos.x, x, zoomCenter.x, worldPos.y, y, zoomCenter.y)
+    var newScreenPos = {x: (worldPos.x ) * newScale.x + zoomCenter.x, y: (worldPos.y) * newScale.y + zoomCenter.y};
 
     zoomCenter.x = zoomCenter.x - (newScreenPos.x-x)
     zoomCenter.y = zoomCenter.y - (newScreenPos.y-y)
+}
 
+/** Immediately zoom to a particular scale focused around a point. */
+function instantZoom(s,x,y){
+
+    // Perform the requested zoom
+    zoom(s,x,y);
+
+    // Immediately lock in the target zoom values
     map.scale.set(zoomLevel)
     currentZoom = zoomLevel
     currentPos = {... zoomCenter}
@@ -696,34 +714,12 @@ function instantZoom(s,x,y){
     map.y = zoomCenter.y
 
     checkMapBoundaries()
-
 }
 
-function moveCameraTo (x, y, zoom) {
+function moveCameraTo (x, y, zoom, camAnimationSpeed, useEasing) {
     dragVelocity.x = dragVelocity.y = 0
-    cameraAnimation.speed = cameraSpeed
-    cameraAnimation.easing = true
-    cameraAnimation.startPos = { x: map.x, y: map.y }
-    cameraAnimation.startZoom = map.scale.x
-    cameraAnimation.endZoom = zoom || cameraAnimation.startZoom
-
-    var position = screenToMap(x,y,zoom)
-
-    cameraAnimation.endPos = { x: position.x, y: position.y }
-    cameraAnimation.playing = true
-    cameraAnimation.progress = 0
-    currentZoom = cameraAnimation.endZoom 
-    zoomLevel = cameraAnimation.endZoom 
-    currentPos.x = cameraAnimation.endPos.x
-    zoomCenter.x = cameraAnimation.endPos.x
-    currentPos.y = cameraAnimation.endPos.y
-    zoomCenter.y = cameraAnimation.endPos.y
-}
-
-function slowPanCameraTo (x, y, zoom) {
-    dragVelocity.x = dragVelocity.y = 0
-    cameraAnimation.speed = tourCameraSpeed
-    cameraAnimation.easing = false
+    cameraAnimation.speed = camAnimationSpeed
+    cameraAnimation.easing = useEasing
     cameraAnimation.startPos = { x: map.x, y: map.y }
     cameraAnimation.startZoom = map.scale.x
     cameraAnimation.endZoom = zoom || cameraAnimation.startZoom
@@ -794,7 +790,7 @@ function focusOnArea (a) {
     
     if (isGoodToFocus) {
         var box = area.box;
-        moveCameraTo(box.x + Math.floor(box.width / 2), box.y + Math.floor(box.height / 2), area.zoom)
+        moveCameraTo(box.x + Math.floor(box.width / 2), box.y + Math.floor(box.height / 2), area.zoom, cameraSpeed, true);
     }
     
 }
@@ -907,26 +903,27 @@ function newTourArea () {
         
     }
 
-
     if (area.pan === 'horizontal') { endY = startY }
     if (area.pan === 'vertical') { endX = startX }
 
     snapCameraTo(Math.round(startX), Math.round(startY), 4)
-    slowPanCameraTo(endX, endY, 4)
+    moveCameraTo(endX, endY, zoomMax, tourCameraSpeed, false);
 }
 
+/** Applies the closest pixel-perfect zoom level relative to the current zoom. */
 function checkZoom () {
-    if (zoomLevel <= 0.25) { zoomLevel = 0.25 }
+    checkZoomLimit();
     if (zoomLevel > 0.5 && zoomLevel < 1) { zoomLevel = 1 }
-    if (zoomLevel < 0.5 && zoomLevel > 0.25) { zoomLevel = 0.5 }
-    if (zoomLevel >= 4) { zoomLevel = 4 }
+    if (zoomLevel < 0.5 && zoomLevel > zoomMin) { zoomLevel = 0.5 }
 }
 
+/** Caps the zoom level to the zoom extents. */
 function checkZoomLimit () {
-    if (zoomLevel <= 0.25) { zoomLevel = 0.25 }
-    if (zoomLevel >= 4) { zoomLevel = 4 }
+    if (zoomLevel <= zoomMin) { zoomLevel = zoomMin }
+    if (zoomLevel >= zoomMax) { zoomLevel = zoomMax }
 }
 
+/** Caps map position to the window inner extents. */
 function checkMapBoundaries () {
     if (map.x > Math.floor(window.innerWidth / 2)) { map.x = Math.floor(window.innerWidth / 2) }
     if (map.y > Math.floor(window.innerHeight / 2)) { map.y = Math.floor(window.innerHeight / 2) }
@@ -934,6 +931,7 @@ function checkMapBoundaries () {
     if (map.y < Math.floor(window.innerHeight / 2) - map.height) { map.y = Math.floor(window.innerHeight / 2) - map.height }
 }
 
+/** Basic LERP function. */
 function lerp (start, end, amt){
     return (1-amt)*start+amt*end
 }
@@ -986,7 +984,7 @@ function changeLayer (layer) {
     for (var i=0; i< layerCount; i++) {
         if (layer === this.layerNames[i]) {
             this.activeLayerIndex = i;
-            this.areas = this.areaLayers[i]
+            this.activeAreas = this.areaLayers[i]
             this.canvasDimensions = layerCanvases[i]
             break;
         }
