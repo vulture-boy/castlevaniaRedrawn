@@ -79,6 +79,24 @@ var seviiAreaOldImages = [];
 var layerImages = [kantoAreaImages, interiorAreaImages, seviiAreaImages] ;
 var layerOldImages = [kantoAreaOldImages, interiorAreaOldImages, seviiAreaOldImages];
 
+/** Dictionary pairing zone types to icon filenames. */
+let iconTypeDictionary = {
+    'town' : 'location_city',
+    'forest' : 'park',
+    'surfing' : 'surfing',
+    'mountain' : 'landscape',
+    'route' : 'pedal_bike'
+}
+
+/** Dictionary pairing zone types to rgb color definitions. */
+let iconColorDictionary = {
+    'town' : 'rgb(130 94 108)',
+    'forest' : 'rgb(94 130 105)',
+    'surfing' : 'rgb(108 127 171)',
+    'mountain' : 'rgb(130 115 88)',
+    'route' : 'rgb(110 130 88)'
+}
+
 // Canvases
 // TODO: Add Castlevania canvas
 var kantoCanvas = {width: 5472, height: 5904}
@@ -94,7 +112,7 @@ window.addEventListener('wheel', onMouseWheel)
 window.addEventListener('resize', onResize)
 //
 
-/** Loads new & old images pertaining to a single layer 
+/** Loads new & old images pertaining to a single layer.
  * 
  * @param {Array} areaArray Array of areas particular to a layer.
  * @param {Array} areaImageArray Array of images tied to areas in a layer.
@@ -278,22 +296,31 @@ function getActiveLayerAreaImages() {
     return null 
 }
 
+/** Prepares PIXI area tiles and their associated HTML artist information blocks. */
 function setUpAreas () {
     if (activeAreas) {
+
+        // Query the areas list
         var areaList = document.querySelector('#areas')
         areaList.innerHTML = ''
+
+        // Loop through all active areas
         for (var i = 0; i < activeAreas.length; i++) {
 
+            // Prepare PIXI area tile
             var area = activeAreas[i];
             var activeImages = getActiveLayerAreaImages();
             var areaImage = activeImages[i];
             generateAreaZone(area, areaImage)
+
+            var backgroundColor = iconColorDictionary[area.type];
+            var materialIcon = iconTypeDictionary[area.type];
             
             // Prepare the HTML block corresponding to an area and its associated credts
-            var html = `<li class="area" title="${area.title}" style="background-color:${getColor(area.type)}" onclick="focusOnArea('${area.title}')">
+            var html = `<li class="area" title="${area.title}" style="background-color:${backgroundColor}" onclick="focusOnArea('${area.title}')">
                 <div class="area__header" >
                     <span class="material-icons">
-                        ${getIcon(area.type)}
+                        ${materialIcon}
                     </span>
                     <span>
                         ${area.title}
@@ -365,9 +392,12 @@ function updateActiveAreaZone () {
 }
 
 /** Gets the position of an area's box, 
- * with an optional offset applied to 'redrawn' maps to accomodate bleeds. 
- * Uses source image for width/height.
+ * with an optional offset applied to 'redrawn' maps to accomodate bleeds and stylistic extensions. 
+ * Uses source image for width/height properties.
  * 
+ * @param {any} area The struct describing the area.
+ * @param {any} areaImage The image used for this area.
+ * @param {string} styleOverride Forces the returned box dimensions to be based on a particular style, if defined.
  * */
 function getAreaBox (area, areaImage, styleOverride = "") {
     if (!area) { console.error('oopsie, no area'); return }
@@ -379,42 +409,6 @@ function getAreaBox (area, areaImage, styleOverride = "") {
         return {x: area.box.x + area.offset.x, y: area.box.y + area.offset.y, width: areaImage.naturalWidth + area.offset.width, height: areaImage.naturalHeight + area.offset.height}
     } else {
         return {x: area.box.x, y: area.box.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
-    }
-}
-
-// TODO: Make more generic & move references to a separate file. We want this script to be entirely generic, if possible.
-/** Fetches icon names corresponding to area type. */
-function getIcon (type) {
-    switch (type) {
-        case 'town':
-            return 'location_city'
-        case 'forest': 
-            return 'park'
-        case 'surfing': 
-            return 'surfing'
-        case 'mountain': 
-            return 'landscape'
-        case 'route': 
-            return 'pedal_bike'
-        default:
-            return type
-    }
-}
-
-// TODO: As above.
-/** Fetches colors corresponding to area type. */
-function getColor (type) {
-    switch (type) {
-        case 'town':
-            return 'rgb(130 94 108)'
-        case 'forest': 
-            return 'rgb(94 130 105)'
-        case 'surfing': 
-            return 'rgb(108 127 171)'
-        case 'mountain': 
-            return 'rgb(130 115 88)'
-        case 'route': 
-            return 'rgb(110 130 88)'
     }
 }
 
