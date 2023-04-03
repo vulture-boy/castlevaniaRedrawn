@@ -1,5 +1,9 @@
 /*
-*   Retro Redrawn Interactive
+*   Retro Redrawn 
+*   -- Interactive Script
+*
+*   Backend operations of the Redrawn Viewer. 
+*   Uses Implementation script for data related to a particular implementation.
 *
 *   Originally written by Jerky.
 *   Refactored for reuse by Tyson Moll (vvvvvvv), 2023.
@@ -10,7 +14,6 @@
 var app = null
 var loading = true; // Whether data is being loaded (e.g. images)
 var layersLoaded = 0;
-var layersCount = 0;
 
 // Navigation
 var zoomLevel = 1 // must be whole number
@@ -27,6 +30,7 @@ var map = null;
 var mapImages = null;
 var currentMapStyle = NEW_STYLE_NAME;
 var viewport = null;
+var canvasDimensions = layerCanvases[activeLayerIndex];
 
 // Filters
 var blurFilter = null
@@ -65,50 +69,12 @@ var cameraAnimation = {
     easing: true
 }
 
-// Region-specific properties
-// TODO: move region-specific data to separate JS file (integration specific)
-// TODO: these are probably better as a struct
-var activeLayerIndex = 0;           // Currently active layer index (and initial index)
-var layerNames = ['kanto', 'interior', 'sevii'];
-var activeAreas = kantoAreas          // Active array of areas
-var areaLayers = [kantoAreas, interiorAreas, seviiAreas];
-var kantoAreaImages = [];
-var kantoAreaOldImages = [];
-var interiorAreaImages = [];
-var interiorAreaOldImages = [];
-var seviiAreaImages = [];
-var seviiAreaOldImages = [];
-var layerImages = [kantoAreaImages, interiorAreaImages, seviiAreaImages] ;
-var layerOldImages = [kantoAreaOldImages, interiorAreaOldImages, seviiAreaOldImages];
-
-/** Dictionary pairing zone types to icon filenames. */
-let iconTypeDictionary = {
-    'town' : 'location_city',
-    'forest' : 'park',
-    'surfing' : 'surfing',
-    'mountain' : 'landscape',
-    'route' : 'pedal_bike'
-}
-
-/** Dictionary pairing zone types to rgb color definitions. */
-let iconColorDictionary = {
-    'town' : 'rgb(130 94 108)',
-    'forest' : 'rgb(94 130 105)',
-    'surfing' : 'rgb(108 127 171)',
-    'mountain' : 'rgb(130 115 88)',
-    'route' : 'rgb(110 130 88)'
-}
-
-// Canvases
-// TODO: Add Castlevania canvas
-var kantoCanvas = {width: 5472, height: 5904}
-var interiorCanvas = {width: 5504, height: 5744}
-var seviiCanvas = {width: 4448, height: 6784}
-var canvasDimensions = kantoCanvas
-var layerCanvases = [kantoCanvas, interiorCanvas, seviiCanvas];
+// Layers
+var layerImages = fillWithArrays(Array.apply(null, Array(layerNames.length)));    // Array of length matching LayerNames
+var layerOldImages = fillWithArrays(Array.apply(null, Array(layerNames.length)));
+var layersCount = layerImages.length + layerOldImages.length;    // Total number of layers
 
 // Start up
-layersCount = layerImages.length + layerOldImages.length;
 loadImages()
 window.addEventListener('wheel', onMouseWheel)
 window.addEventListener('resize', onResize)
@@ -837,6 +803,8 @@ function openAreaInDOM (a) {
     }
 }
 
+// #region Tour Methods
+
 function toggleTour () {
     if (tourMode) {
         endTour()
@@ -933,6 +901,8 @@ function newTourArea () {
     moveCameraTo(endX, endY, zoomMax, tourCameraSpeed, false);
 }
 
+// #endregion
+
 /** Applies the closest pixel-perfect zoom level relative to the current zoom. */
 function checkZoom () {
     checkZoomLimit();
@@ -954,6 +924,8 @@ function checkMapBoundaries () {
     if (map.y < Math.floor(window.innerHeight / 2) - map.height) { map.y = Math.floor(window.innerHeight / 2) - map.height }
 }
 
+//#region Math
+
 /** Basic LERP function. */
 function lerp (start, end, amt){
     return (1-amt)*start+amt*end
@@ -961,6 +933,16 @@ function lerp (start, end, amt){
 
 function easeInOutCubic(x) {
     return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+}
+
+//#endregion
+
+/** Fills an array with arrays */
+function fillWithArrays(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i] = Array.apply(null, Array(0));
+    }
+    return array;
 }
 
 function screenToMap(x, y, zoom) {
@@ -982,6 +964,7 @@ function getActiveArea () {
     }
 }
 
+/** Callback occurring when the window is resized. */
 function onResize () {
     app.renderer.resize(window.innerWidth, window.innerHeight);
 }
