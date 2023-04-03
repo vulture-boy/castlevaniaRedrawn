@@ -246,9 +246,9 @@ function buildMap () {
         var sprite = new PIXI.Sprite.from(src)
         sprite.name = `AREA: ${layerNames[activeLayerIndex]} (${currentMapStyle}) - ${area.ident}`;
         if (currentMapStyle === NEW_STYLE_NAME) {
-            sprite.position.set(area.box.x + area.offset.x, area.box.y + area.offset.y)
+            sprite.position.set(area.point.x + area.offset.x, area.point.y + area.offset.y)
         } else {
-            sprite.position.set(area.box.x, area.box.y)
+            sprite.position.set(area.point.x, area.point.y)
         }
         mapImages.addChild(sprite)
     }
@@ -405,9 +405,9 @@ function getAreaBox (area, areaImage, styleOverride = "") {
     var style = styleOverride === "" ? currentMapStyle : styleOverride;
     
     if (style === NEW_STYLE_NAME) {
-        return {x: area.box.x + area.offset.x, y: area.box.y + area.offset.y, width: areaImage.naturalWidth + area.offset.width, height: areaImage.naturalHeight + area.offset.height}
+        return {x: area.point.x + area.offset.x, y: area.point.y + area.offset.y, width: areaImage.naturalWidth + area.offset.width, height: areaImage.naturalHeight + area.offset.height}
     } else {
-        return {x: area.box.x, y: area.box.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
+        return {x: area.point.x, y: area.point.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
     }
 }
 
@@ -846,7 +846,7 @@ function endTour () {
 function newTourArea () {
     var rnd = Math.floor(Math.random() * areasToTour.length)
     var area = areasToTour[rnd]
-    var box = area.box;
+    var box = area.point;
     if (!area) { area = activeAreas[0] }
     if (areasToTour.length > 1) {
         areasToTour.splice(rnd, 1)

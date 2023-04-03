@@ -5,11 +5,9 @@ var castleAreas = [
     ident: "1-1",
     artist: "Malleys",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -29,11 +27,9 @@ var castleAreas = [
     ident: "1-2",
     artist: "Juanito",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -53,11 +49,9 @@ var castleAreas = [
     ident: "1-3",
     artist: "Stefan",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -77,11 +71,9 @@ var castleAreas = [
     ident: "1-4",
     artist: "Scooter",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -101,11 +93,9 @@ var castleAreas = [
     ident: "1-5",
     artist: "Cheesy",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -125,11 +115,9 @@ var castleAreas = [
     ident: "1-6",
     artist: "Sinvilla",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -149,11 +137,9 @@ var castleAreas = [
     ident: "1-7A",
     artist: "Sinvilla",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -173,11 +159,9 @@ var castleAreas = [
     ident: "1-7B",
     artist: "Crowno",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -197,11 +181,9 @@ var castleAreas = [
     ident: "1-8",
     artist: "Retginn",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -221,11 +203,9 @@ var castleAreas = [
     ident: "1-9",
     artist: "Ghoulee",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -245,11 +225,9 @@ var castleAreas = [
     ident: "2-1",
     artist: "Narehop",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -269,11 +247,9 @@ var castleAreas = [
     ident: "2-2",
     artist: "Shaspio",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -293,11 +269,9 @@ var castleAreas = [
     ident: "2-3",
     artist: "PixelEric",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -317,11 +291,9 @@ var castleAreas = [
     ident: "2-4",
     artist: "Gato",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -341,11 +313,9 @@ var castleAreas = [
     ident: "2-5",
     artist: "MobyPixel",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -365,11 +335,9 @@ var castleAreas = [
     ident: "2-6",
     artist: "MobyPixel",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -389,11 +357,9 @@ var castleAreas = [
     ident: "2-7",
     artist: "Coelacamth",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -413,11 +379,9 @@ var castleAreas = [
     ident: "2-8",
     artist: "Marceles",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -437,11 +401,9 @@ var castleAreas = [
     ident: "2-9",
     artist: "Donpo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -461,11 +423,9 @@ var castleAreas = [
     ident: "2-10",
     artist: "Donpo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -485,11 +445,9 @@ var castleAreas = [
     ident: "3-1",
     artist: "RyanKeeton",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -509,11 +467,9 @@ var castleAreas = [
     ident: "3-2",
     artist: "Kyle",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -533,11 +489,9 @@ var castleAreas = [
     ident: "3-3",
     artist: "Toni M",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -557,11 +511,9 @@ var castleAreas = [
     ident: "3-4",
     artist: "Neko",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -581,11 +533,9 @@ var castleAreas = [
     ident: "3-5",
     artist: "Runtd",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -605,11 +555,9 @@ var castleAreas = [
     ident: "3-6",
     artist: "Gabe Fern",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -629,11 +577,9 @@ var castleAreas = [
     ident: "3-7",
     artist: "Juanito",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -653,11 +599,9 @@ var castleAreas = [
     ident: "3-8",
     artist: "Vierbit",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -677,11 +621,9 @@ var castleAreas = [
     ident: "3-9",
     artist: "Ashton Arnold",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -701,11 +643,9 @@ var castleAreas = [
     ident: "3-10",
     artist: "Foofarawr",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -725,11 +665,9 @@ var castleAreas = [
     ident: "3-11",
     artist: "nasCobolo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -749,11 +687,9 @@ var castleAreas = [
     ident: "3-12",
     artist: "Rudy Flores",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -773,11 +709,9 @@ var castleAreas = [
     ident: "P-1",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -797,11 +731,9 @@ var castleAreas = [
     ident: "P-2",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -821,11 +753,9 @@ var castleAreas = [
     ident: "P-3",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -845,11 +775,9 @@ var castleAreas = [
     ident: "P-4",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -869,11 +797,9 @@ var castleAreas = [
     ident: "P-5",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -893,11 +819,9 @@ var castleAreas = [
     ident: "4-1",
     artist: "Kosena",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -917,11 +841,9 @@ var castleAreas = [
     ident: "4-2",
     artist: "8bitalo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -941,11 +863,9 @@ var castleAreas = [
     ident: "4-3",
     artist: "Joe",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -965,11 +885,9 @@ var castleAreas = [
     ident: "4-4",
     artist: "pinselschubser",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -989,11 +907,9 @@ var castleAreas = [
     ident: "4-5",
     artist: "SylverArts",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1013,11 +929,9 @@ var castleAreas = [
     ident: "4-6",
     artist: "Lyzerus",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1037,11 +951,9 @@ var castleAreas = [
     ident: "4-7",
     artist: "DAKU",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1061,11 +973,9 @@ var castleAreas = [
     ident: "4-8",
     artist: "HaywireJo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1085,11 +995,9 @@ var castleAreas = [
     ident: "4-9",
     artist: "Lyzerus",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1109,11 +1017,9 @@ var castleAreas = [
     ident: "4-10",
     artist: "Xanday",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1133,11 +1039,9 @@ var castleAreas = [
     ident: "4-11",
     artist: "Batfeula",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1157,11 +1061,9 @@ var castleAreas = [
     ident: "5-1",
     artist: "Maruki",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1181,11 +1083,9 @@ var castleAreas = [
     ident: "5-2",
     artist: "Jaquiox",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1205,11 +1105,9 @@ var castleAreas = [
     ident: "5-3",
     artist: "Jaquiox",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1229,11 +1127,9 @@ var castleAreas = [
     ident: "5-4",
     artist: "Seth",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1253,11 +1149,9 @@ var castleAreas = [
     ident: "5-5",
     artist: "Figburn",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1277,11 +1171,9 @@ var castleAreas = [
     ident: "5-6",
     artist: "SomecallmeMichelle",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1301,11 +1193,9 @@ var castleAreas = [
     ident: "5-7",
     artist: "Azumon",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1325,11 +1215,9 @@ var castleAreas = [
     ident: "5-8",
     artist: "Bobby",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1349,11 +1237,9 @@ var castleAreas = [
     ident: "5-9",
     artist: "Looloopaa",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1373,11 +1259,9 @@ var castleAreas = [
     ident: "5-10",
     artist: "DaNinjaMan",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1397,11 +1281,9 @@ var castleAreas = [
     ident: "5-11",
     artist: "Steven",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1421,11 +1303,9 @@ var castleAreas = [
     ident: "5-12",
     artist: "Strawbe",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1445,11 +1325,9 @@ var castleAreas = [
     ident: "6-1",
     artist: "Zanuff",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1469,11 +1347,9 @@ var castleAreas = [
     ident: "6-2",
     artist: "Kohemy",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1493,11 +1369,9 @@ var castleAreas = [
     ident: "6-3",
     artist: "Rakun",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1517,11 +1391,9 @@ var castleAreas = [
     ident: "6-4",
     artist: "Masashi",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1541,11 +1413,9 @@ var castleAreas = [
     ident: "6-5",
     artist: "Skelly",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1565,11 +1435,9 @@ var castleAreas = [
     ident: "6-6",
     artist: "Barosaros",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1589,11 +1457,9 @@ var castleAreas = [
     ident: "6-7",
     artist: "Tanuki",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1613,11 +1479,9 @@ var castleAreas = [
     ident: "6-8",
     artist: "Metarupx",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1637,11 +1501,9 @@ var castleAreas = [
     ident: "6-9",
     artist: "Metarupx",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1661,11 +1523,9 @@ var castleAreas = [
     ident: "6-10",
     artist: "Steven",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1685,11 +1545,9 @@ var castleAreas = [
     ident: "7-1",
     artist: "JJ Haggar",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1709,11 +1567,9 @@ var castleAreas = [
     ident: "7-2",
     artist: "JJ Haggar",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1733,11 +1589,9 @@ var castleAreas = [
     ident: "7-3",
     artist: "nasCobolo",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1757,11 +1611,9 @@ var castleAreas = [
     ident: "7-4",
     artist: "Zernek",
     url: "",
-    box: {
+    point: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     offset: {
       x: null,
@@ -1783,7 +1635,7 @@ var kantoAreas = [
     ident: "pallet_town",
     artist: "@Pixel_Pit",
     url: "https://twitter.com/Pixel_Pit",
-    box: {
+    point: {
       x: 832,
       y: 4512,
       width: 320,
@@ -1829,11 +1681,9 @@ var kantoAreas = [
     ident: "route_1",
     artist: "@spooonnnboy",
     url: "https://twitter.com/spooonnnboy",
-    box: {
+    point: {
       x: 832,
-      y: 3936,
-      width: 320,
-      height: 576
+      y: 3936
     },
     offset: {
       x: null,
@@ -1853,11 +1703,9 @@ var kantoAreas = [
     ident: "viridian_city",
     artist: "@OhNoItsMonroe",
     url: "https://twitter.com/OhNoItsMonroe",
-    box: {
+    point: {
       x: 672,
-      y: 3360,
-      width: 640,
-      height: 576
+      y: 3360
     },
     offset: {
       x: null,
@@ -1899,11 +1747,9 @@ var kantoAreas = [
     ident: "route_2_south",
     artist: "@witch_warren",
     url: "https://twitter.com/witch_warren",
-    box: {
+    point: {
       x: 800,
-      y: 2848,
-      width: 480,
-      height: 512
+      y: 2848
     },
     offset: {
       x: null,
@@ -1923,11 +1769,9 @@ var kantoAreas = [
     ident: "viridian_forest",
     artist: "@Woodspixl_",
     url: "https://twitter.com/Woodspixl_",
-    box: {
+    point: {
       x: 608,
-      y: 2080,
-      width: 544,
-      height: 768
+      y: 2080
     },
     offset: {
       x: null,
@@ -1946,11 +1790,9 @@ var kantoAreas = [
     ident: "route_2_north",
     artist: "@rbatistadelima",
     url: "https://twitter.com/rbatistadelima",
-    box: {
+    point: {
       x: 608,
-      y: 1824,
-      width: 672,
-      height: 256
+      y: 1824
     },
     offset: {
       x: null,
@@ -1970,11 +1812,9 @@ var kantoAreas = [
     ident: "viridian_forest_bypass",
     artist: "@fiopico",
     url: "https://twitter.com/fiopico",
-    box: {
+    point: {
       x: 1152,
-      y: 2080,
-      width: 128,
-      height: 768
+      y: 2080
     },
     offset: {
       x: null,
@@ -1994,11 +1834,9 @@ var kantoAreas = [
     ident: "pewter_city",
     artist: "@saltiestbunny",
     url: "https://twitter.com/saltiestbunny",
-    box: {
+    point: {
       x: 672,
-      y: 1248,
-      width: 640,
-      height: 576
+      y: 1248
     },
     offset: {
       x: -58,
@@ -2018,11 +1856,9 @@ var kantoAreas = [
     ident: "route_3_west",
     artist: "@chreniafoka",
     url: "https://twitter.com/chreniafoka/status",
-    box: {
+    point: {
       x: 1312,
-      y: 1376,
-      width: 800,
-      height: 288
+      y: 1376
     },
     offset: {
       x: null,
@@ -2042,11 +1878,9 @@ var kantoAreas = [
     ident: "route_3_east",
     artist: "cjlm123",
     url: "https://pixeljoint.com/p/220173.htm",
-    box: {
+    point: {
       x: 2112,
-      y: 1088,
-      width: 352,
-      height: 576
+      y: 1088
     },
     offset: {
       x: null,
@@ -2066,11 +1900,9 @@ var kantoAreas = [
     ident: "mt_moon_square",
     artist: "@Woodspixl_",
     url: "https://twitter.com/Woodspixl_",
-    box: {
+    point: {
       x: 2224,
-      y: 864,
-      width: 432,
-      height: 224
+      y: 864
     },
     offset: {
       x: -68,
@@ -2090,11 +1922,9 @@ var kantoAreas = [
     ident: "route_4",
     artist: "@1000_toasters",
     url: "https://twitter.com/1000_toasters",
-    box: {
+    point: {
       x: 2464,
-      y: 1088,
-      width: 1088,
-      height: 288
+      y: 1088
     },
     offset: {
       x: null,
@@ -2114,11 +1944,9 @@ var kantoAreas = [
     ident: "cerulean_city",
     artist: "@EdelweissPkmn",
     url: "https://twitter.com/EdelweissPkmn",
-    box: {
+    point: {
       x: 3552,
-      y: 960,
-      width: 640,
-      height: 576
+      y: 960
     },
     offset: {
       x: null,
@@ -2138,11 +1966,9 @@ var kantoAreas = [
     ident: "route_24",
     artist: "@yoYokaiy",
     url: "https://twitter.com/yoYokaiy",
-    box: {
+    point: {
       x: 3712,
-      y: 384,
-      width: 320,
-      height: 576
+      y: 384
     },
     offset: {
       x: null,
@@ -2162,11 +1988,9 @@ var kantoAreas = [
     ident: "route_25",
     artist: "@huttaburger",
     url: "https://twitter.com/huttaburger",
-    box: {
+    point: {
       x: 4032,
-      y: 384,
-      width: 960,
-      height: 288
+      y: 384
     },
     offset: {
       x: null,
@@ -2186,11 +2010,9 @@ var kantoAreas = [
     ident: "bills_lighthouse",
     artist: "@Pixelkauz",
     url: "https://twitter.com/Pixelkauz",
-    box: {
+    point: {
       x: 4704,
-      y: 64,
-      width: 608,
-      height: 320
+      y: 64
     },
     offset: {
       x: null,
@@ -2210,11 +2032,9 @@ var kantoAreas = [
     ident: "route_5",
     artist: "@ashenwater",
     url: "https://twitter.com/ashenwater",
-    box: {
+    point: {
       x: 3712,
-      y: 1536,
-      width: 320,
-      height: 576
+      y: 1536
     },
     offset: {
       x: null,
@@ -2234,11 +2054,9 @@ var kantoAreas = [
     ident: "route_6",
     artist: "@RaspberryMilks1",
     url: "https://twitter.com/RaspberryMilks1",
-    box: {
+    point: {
       x: 3696,
-      y: 2688,
-      width: 352,
-      height: 560
+      y: 2688
     },
     offset: {
       x: null,
@@ -2258,11 +2076,9 @@ var kantoAreas = [
     ident: "vermilion_city",
     artist: "@HyperJerk",
     url: "https://twitter.com/HyperJerk",
-    box: {
+    point: {
       x: 3552,
-      y: 3248,
-      width: 656,
-      height: 800
+      y: 3248
     },
     offset: {
       x: -35,
@@ -2282,11 +2098,9 @@ var kantoAreas = [
     ident: "route_11",
     artist: "@pixellerjeremy",
     url: "https://twitter.com/pixellerjeremy",
-    box: {
+    point: {
       x: 4208,
-      y: 3376,
-      width: 976,
-      height: 320
+      y: 3376
     },
     offset: {
       x: null,
@@ -2306,11 +2120,9 @@ var kantoAreas = [
     ident: "route_9",
     artist: "@HaywireJo",
     url: "https://twitter.com/HaywireJo",
-    box: {
+    point: {
       x: 4192,
-      y: 1088,
-      width: 960,
-      height: 288
+      y: 1088
     },
     offset: {
       x: null,
@@ -2330,11 +2142,9 @@ var kantoAreas = [
     ident: "route_10_north",
     artist: "@Seva86706122",
     url: "https://twitter.com/Seva86706122",
-    box: {
+    point: {
       x: 5152,
-      y: 1088,
-      width: 320,
-      height: 480
+      y: 1088
     },
     offset: {
       x: null,
@@ -2354,11 +2164,9 @@ var kantoAreas = [
     ident: "power_plant",
     artist: "@gif_not_jif",
     url: "https://twitter.com/gif_not_jif",
-    box: {
+    point: {
       x: 5152,
-      y: 1568,
-      width: 320,
-      height: 320
+      y: 1568
     },
     offset: {
       x: null,
@@ -2378,11 +2186,9 @@ var kantoAreas = [
     ident: "route_10_south",
     artist: "@StrawPact",
     url: "https://twitter.com/StrawPact",
-    box: {
+    point: {
       x: 5152,
-      y: 1888,
-      width: 320,
-      height: 224
+      y: 1888
     },
     offset: {
       x: null,
@@ -2402,11 +2208,9 @@ var kantoAreas = [
     ident: "lavender_town",
     artist: "@cure_pixel",
     url: "https://twitter.com/cure_pixel",
-    box: {
+    point: {
       x: 5152,
-      y: 2112,
-      width: 320,
-      height: 416
+      y: 2112
     },
     offset: {
       x: null,
@@ -2426,11 +2230,9 @@ var kantoAreas = [
     ident: "route_8",
     artist: "KerrieLake",
     url: "https://twitter.com/KerrieLake",
-    box: {
+    point: {
       x: 4192,
-      y: 2240,
-      width: 960,
-      height: 288
+      y: 2240
     },
     offset: {
       x: 32,
@@ -2450,11 +2252,9 @@ var kantoAreas = [
     ident: "route_7",
     artist: "@SarahBoevingArt",
     url: "https://twitter.com/SarahBoevingArt",
-    box: {
+    point: {
       x: 3232,
-      y: 2112,
-      width: 320,
-      height: 416
+      y: 2112
     },
     offset: {
       x: null,
@@ -2474,11 +2274,9 @@ var kantoAreas = [
     ident: "celadon_city",
     artist: "@MetaruPX",
     url: "https://twitter.com/MetaruPX",
-    box: {
+    point: {
       x: 2432,
-      y: 2048,
-      width: 800,
-      height: 640
+      y: 2048
     },
     offset: {
       x: null,
@@ -2498,11 +2296,9 @@ var kantoAreas = [
     ident: "saffron_city",
     artist: "@foofarawr",
     url: "https://twitter.com/foofarawr",
-    box: {
+    point: {
       x: 3552,
-      y: 2112,
-      width: 640,
-      height: 576
+      y: 2112
     },
     offset: {
       x: -48,
@@ -2522,11 +2318,9 @@ var kantoAreas = [
     ident: "route_16",
     artist: "@MetaruPX",
     url: "https://twitter.com/MetaruPX",
-    box: {
+    point: {
       x: 1792,
-      y: 2112,
-      width: 640,
-      height: 400
+      y: 2112
     },
     offset: {
       x: null,
@@ -2546,11 +2340,9 @@ var kantoAreas = [
     ident: "route_17",
     artist: "@Anima_nel",
     url: "https://twitter.com/Anima_nel",
-    box: {
+    point: {
       x: 1792,
-      y: 2512,
-      width: 320,
-      height: 2448
+      y: 2512
     },
     offset: {
       x: null,
@@ -2570,11 +2362,9 @@ var kantoAreas = [
     ident: "route_18",
     artist: "@Anima_nel",
     url: "https://twitter.com/Anima_nel",
-    box: {
+    point: {
       x: 1792,
-      y: 4832,
-      width: 800,
-      height: 288
+      y: 4832
     },
     offset: {
       x: null,
@@ -2594,11 +2384,9 @@ var kantoAreas = [
     ident: "fuchsia_city",
     artist: "@Dewndeym",
     url: "https://twitter.com/Dewndeym",
-    box: {
+    point: {
       x: 2592,
-      y: 4704,
-      width: 640,
-      height: 576
+      y: 4704
     },
     offset: {
       x: null,
@@ -2618,11 +2406,9 @@ var kantoAreas = [
     ident: "safari_zone_central",
     artist: "@Dewndeym",
     url: "https://twitter.com/Dewndeym",
-    box: {
+    point: {
       x: 2656,
-      y: 4256,
-      width: 512,
-      height: 448
+      y: 4256
     },
     offset: {
       x: null,
@@ -2642,11 +2428,9 @@ var kantoAreas = [
     ident: "safari_zone_east",
     artist: "chubbopx",
     url: "https://www.instagram.com/chubbopx/",
-    box: {
+    point: {
       x: 3168,
-      y: 4064,
-      width: 480,
-      height: 480
+      y: 4064
     },
     offset: {
       x: null,
@@ -2666,11 +2450,9 @@ var kantoAreas = [
     ident: "safari_zone_north",
     artist: "@_Mechano_",
     url: "https://twitter.com/_Mechano_",
-    box: {
+    point: {
       x: 2464,
-      y: 3648,
-      width: 704,
-      height: 608
+      y: 3648
     },
     offset: {
       x: null,
@@ -2690,11 +2472,9 @@ var kantoAreas = [
     ident: "safari_zone_west",
     artist: "@Daydream_Stream",
     url: "https://twitter.com/Daydream_Stream",
-    box: {
+    point: {
       x: 2144,
-      y: 4256,
-      width: 512,
-      height: 480
+      y: 4256
     },
     offset: {
       x: null,
@@ -2714,11 +2494,9 @@ var kantoAreas = [
     ident: "route_15",
     artist: "cjlm123",
     url: "https://pixeljoint.com/p/220173.htm",
-    box: {
+    point: {
       x: 3232,
-      y: 4880,
-      width: 1008,
-      height: 192
+      y: 4880
     },
     offset: {
       x: null,
@@ -2738,11 +2516,9 @@ var kantoAreas = [
     ident: "route_14",
     artist: "@KarlestonChew",
     url: "https://twitter.com/KarlestonChew",
-    box: {
+    point: {
       x: 4240,
-      y: 4544,
-      width: 256,
-      height: 528
+      y: 4544
     },
     offset: {
       x: null,
@@ -2762,11 +2538,9 @@ var kantoAreas = [
     ident: "route_13",
     artist: "cjlm123",
     url: "https://pixeljoint.com/p/220173.htm",
-    box: {
+    point: {
       x: 4240,
-      y: 4288,
-      width: 1232,
-      height: 256
+      y: 4288
     },
     offset: {
       x: null,
@@ -2786,11 +2560,9 @@ var kantoAreas = [
     ident: "route_12_south",
     artist: "@SarahBoevingArt",
     url: "https://twitter.com/SarahBoevingArt",
-    box: {
+    point: {
       x: 5184,
-      y: 3504,
-      width: 288,
-      height: 784
+      y: 3504
     },
     offset: {
       x: null,
@@ -2810,11 +2582,9 @@ var kantoAreas = [
     ident: "route_12_north",
     artist: "mysticaldrop",
     url: "https://www.instagram.com/mysticaldrop/",
-    box: {
+    point: {
       x: 5184,
-      y: 2528,
-      width: 288,
-      height: 976
+      y: 2528
     },
     offset: {
       x: null,
@@ -2834,11 +2604,9 @@ var kantoAreas = [
     ident: "route_19",
     artist: "@VCorbi",
     url: "https://twitter.com/VCorbi",
-    box: {
+    point: {
       x: 2752,
-      y: 5280,
-      width: 320,
-      height: 512
+      y: 5280
     },
     offset: {
       x: null,
@@ -2858,11 +2626,9 @@ var kantoAreas = [
     ident: "route_20",
     artist: "@natnatart",
     url: "https://twitter.com/natnatart",
-    box: {
+    point: {
       x: 1248,
-      y: 5520,
-      width: 1504,
-      height: 272
+      y: 5520
     },
     offset: {
       x: 48,
@@ -2882,11 +2648,9 @@ var kantoAreas = [
     ident: "cinnabar_island",
     artist: "@Anima_nel",
     url: "https://twitter.com/Anima_nel",
-    box: {
+    point: {
       x: 832,
-      y: 5424,
-      width: 416,
-      height: 368
+      y: 5424
     },
     offset: {
       x: -213,
@@ -2906,11 +2670,9 @@ var kantoAreas = [
     ident: "route_21",
     artist: "@SalamiChild",
     url: "https://twitter.com/SalamiChild",
-    box: {
+    point: {
       x: 832,
-      y: 4800,
-      width: 320,
-      height: 624
+      y: 4800
     },
     offset: {
       x: null,
@@ -2930,11 +2692,9 @@ var kantoAreas = [
     ident: "route_22",
     artist: "@Geno_CL",
     url: "https://twitter.com/Geno_CL",
-    box: {
+    point: {
       x: null,
-      y: 3424,
-      width: 672,
-      height: 352
+      y: 3424
     },
     offset: {
       x: null,
@@ -2954,11 +2714,9 @@ var kantoAreas = [
     ident: "route_23_1",
     artist: "@incrediblemaker",
     url: "https://twitter.com/incrediblemaker",
-    box: {
+    point: {
       x: null,
-      y: 2832,
-      width: 384,
-      height: 592
+      y: 2832
     },
     offset: {
       x: null,
@@ -2978,11 +2736,9 @@ var kantoAreas = [
     ident: "route_23_2",
     artist: "@incrediblemaker",
     url: "https://twitter.com/incrediblemaker",
-    box: {
+    point: {
       x: null,
-      y: 2352,
-      width: 384,
-      height: 480
+      y: 2352
     },
     offset: {
       x: 16,
@@ -3002,11 +2758,9 @@ var kantoAreas = [
     ident: "route_23_3",
     artist: "@chromegnomes",
     url: "https://twitter.com/chromegnomes",
-    box: {
+    point: {
       x: null,
-      y: 1728,
-      width: 384,
-      height: 624
+      y: 1728
     },
     offset: {
       x: 16,
@@ -3026,11 +2780,9 @@ var kantoAreas = [
     ident: "route_23_4",
     artist: "@jooniverz",
     url: "https://twitter.com/jooniverz",
-    box: {
+    point: {
       x: null,
-      y: 1184,
-      width: 384,
-      height: 544
+      y: 1184
     },
     offset: {
       x: 16,
@@ -3050,11 +2802,9 @@ var kantoAreas = [
     ident: "indigo_plateau",
     artist: "@jdzombi_",
     url: "https://twitter.com/jdzombi_",
-    box: {
+    point: {
       x: null,
-      y: 896,
-      width: 384,
-      height: 288
+      y: 896
     },
     offset: {
       x: 16,
@@ -3076,17 +2826,13 @@ var interiorAreas = [
     ident: "players_house_1f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 832,
-      y: 4496,
-      width: 128,
-      height: 128
+      y: 4496
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "cottage",
@@ -3099,17 +2845,13 @@ var interiorAreas = [
     ident: "players_house_2f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 832,
-      y: 4640,
-      width: 128,
-      height: 128
+      y: 4640
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "cottage",
@@ -3122,17 +2864,13 @@ var interiorAreas = [
     ident: "oaks_lab",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 992,
-      y: 4576,
-      width: 160,
-      height: 192
+      y: 4576
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "cottage",
@@ -3145,17 +2883,13 @@ var interiorAreas = [
     ident: "pokemart",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 1136,
-      y: 3488,
-      width: 128,
-      height: 128
+      y: 3488
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "store",
@@ -3168,17 +2902,13 @@ var interiorAreas = [
     ident: "pokecenter",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 961,
-      y: 3792,
-      width: 223,
-      height: 128
+      y: 3792
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "store",
@@ -3191,17 +2921,13 @@ var interiorAreas = [
     ident: "trade_center",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 992,
-      y: 3648,
-      width: 160,
-      height: 128
+      y: 3648
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "store",
@@ -3214,17 +2940,13 @@ var interiorAreas = [
     ident: "pokemon_school",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 992,
-      y: 3488,
-      width: 128,
-      height: 128
+      y: 3488
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "cottage",
@@ -3237,17 +2959,13 @@ var interiorAreas = [
     ident: "trainer_house_1f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 768,
-      y: 3489,
-      width: 160,
-      height: 223
+      y: 3489
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "store",
@@ -3260,17 +2978,13 @@ var interiorAreas = [
     ident: "trainer_house_b1f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 768,
-      y: 3728,
-      width: 160,
-      height: 256
+      y: 3728
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "store",
@@ -3283,17 +2997,13 @@ var interiorAreas = [
     ident: "museum",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 752,
-      y: 1008,
-      width: 352,
-      height: 304
+      y: 1008
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "store",
@@ -3306,17 +3016,13 @@ var interiorAreas = [
     ident: "pewter_gym",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 833,
-      y: 1328,
-      width: 159,
-      height: 224
+      y: 1328
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "stadium",
@@ -3329,17 +3035,13 @@ var interiorAreas = [
     ident: "mt_moon_1f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 1040,
-      y: 208,
-      width: 640,
-      height: 576
+      y: 208
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -3352,17 +3054,13 @@ var interiorAreas = [
     ident: "mt_moon_b1f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 1696,
-      y: 208,
-      width: 640,
-      height: 576
+      y: 208
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -3375,17 +3073,13 @@ var interiorAreas = [
     ident: "mt_moon_b2f",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 2352,
-      y: 208,
-      width: 640,
-      height: 576
+      y: 208
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -3398,17 +3092,13 @@ var interiorAreas = [
     ident: "bike_shop",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3680,
-      y: 1200,
-      width: 128,
-      height: 128
+      y: 1200
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "store",
@@ -3421,17 +3111,13 @@ var interiorAreas = [
     ident: "trashed_house",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3984,
-      y: 960,
-      width: 128,
-      height: 128
+      y: 960
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "cottage",
@@ -3444,17 +3130,13 @@ var interiorAreas = [
     ident: "cerulean_gym",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3968,
-      y: 1120,
-      width: 160,
-      height: 240
+      y: 1120
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "stadium",
@@ -3467,17 +3149,13 @@ var interiorAreas = [
     ident: "bill_lab",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 4704,
-      y: 272,
-      width: 128,
-      height: 128
+      y: 272
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "cottage",
@@ -3490,17 +3168,13 @@ var interiorAreas = [
     ident: "underground_ns",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3648,
-      y: 2320,
-      width: 160,
-      height: 528
+      y: 2320
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "route",
@@ -3513,17 +3187,13 @@ var interiorAreas = [
     ident: "pokemon_fanclub",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3440,
-      y: 3344,
-      width: 160,
-      height: 128
+      y: 3344
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "cottage",
@@ -3536,17 +3206,13 @@ var interiorAreas = [
     ident: "vermilion_gym",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3616,
-      y: 3312,
-      width: 160,
-      height: 288
+      y: 3312
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "stadium",
@@ -3559,17 +3225,13 @@ var interiorAreas = [
     ident: "ss_anne_kitchen",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 3728,
-      y: 3632,
-      width: 688,
-      height: 576
+      y: 3632
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "directions_boat",
@@ -3582,17 +3244,13 @@ var interiorAreas = [
     ident: "ss_anne_halls",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 4416,
-      y: 3696,
-      width: 608,
-      height: 208
+      y: 3696
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "directions_boat",
@@ -3605,17 +3263,13 @@ var interiorAreas = [
     ident: "ss_anne_deck",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 2880,
-      y: 3632,
-      width: 832,
-      height: 392
+      y: 3632
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "horizontal",
     type: "directions_boat",
@@ -3628,17 +3282,13 @@ var interiorAreas = [
     ident: "digletts_cave",
     artist: "",
     url: "",
-    box: {
+    point: {
       x: 1184,
-      y: 1856,
-      width: 320,
-      height: 576
+      y: 1856
     },
     offset: {
       x: 0,
-      y: 0,
-      width: 0,
-      height: 0
+      y: 0
     },
     pan: "vertical",
     type: "mountain",
