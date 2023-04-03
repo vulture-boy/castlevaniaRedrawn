@@ -846,7 +846,7 @@ function endTour () {
 function newTourArea () {
     var rnd = Math.floor(Math.random() * areasToTour.length)
     var area = areasToTour[rnd]
-    var box = area.point;
+    var box = getAreaBox(area, getAreaImage(area));
     if (!area) { area = activeAreas[0] }
     if (areasToTour.length > 1) {
         areasToTour.splice(rnd, 1)
