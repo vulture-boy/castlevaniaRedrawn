@@ -192,7 +192,8 @@ function init () {
     // Construct the PIXI canvas with pixel perfect settings
     try {
         PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST     // Nearest neighbour scaling
-        app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, antialias: false, view: document.querySelector('#canvas'), autoResize: true })
+        app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, antialias: false, view: document.querySelector('#canvas'), autoResize: true });
+        globalThis.__PIXI_APP__ = app; 
     } catch (error) {
         // alert('Application cannot start - Please ensure Hardware Acceleration is enabled on your web browser.')
         // document.querySelector('#error').innerHTML =  '<p>Application cannot start - Please ensure Hardware Acceleration is enabled on your web browser.</p><a>View full image</a>'
@@ -218,16 +219,21 @@ function setupCanvas () {
 
     // Establish PIXI containers
     map = new PIXI.Container()
+    map.name = "Map";
     mapImages = new PIXI.Container()
+    mapImages.name = "Map Images"
     viewport = new PIXI.Container({width: window.innerWidth, height: window.innerHeight})
+    viewport.name = "Viewport"
 
     buildMap()
     var mapbg = new PIXI.TilingSprite(new PIXI.Texture.from('grid_test.png'), canvasDimensions.width, canvasDimensions.height)
+    mapbg.name = "Map Background"
     mapbg.zIndex = -1
     map.addChild(mapbg)
     map.addChild(mapImages)
     var background = new PIXI.Graphics()
-    // background.beginFill(0x333333)
+    background.name = "Background Fill"
+    //background.beginFill(0x333333)
     background.beginFill(0x00000)
     background.drawRect(0,0,window.innerWidth, window.innerHeight)
     background.endFill()
@@ -272,6 +278,7 @@ function buildMap () {
         var area = activeAreas[i]
         var src = createImageLink(layerNames[activeLayerIndex], currentMapStyle, area.ident);
         var sprite = new PIXI.Sprite.from(src)
+        sprite.name = `AREA: ${layerNames[activeLayerIndex]} (${currentMapStyle}) - ${area.ident}`;
         if (currentMapStyle === NEW_STYLE_NAME) {
             sprite.position.set(area.box.x + area.offset.x, area.box.y + area.offset.y)
         } else {
@@ -310,58 +317,59 @@ function getActiveLayerAreaImages(styleOverride = "") {
 
 /** Prepares PIXI area tiles and their associated HTML artist information blocks. */
 function setUpAreas () {
-    if (activeAreas) {
+    if (!activeAreas) {
+        return
+    }
 
-        // Query the areas list
-        var areaList = document.querySelector('#areas')
-        areaList.innerHTML = ''
+    // Query the areas list
+    var areaList = document.querySelector('#areas')
+    areaList.innerHTML = ''
 
-        // Loop through all active areas
-        for (var i = 0; i < activeAreas.length; i++) {
+    // Loop through all active areas
+    for (var i = 0; i < activeAreas.length; i++) {
 
-            // Prepare PIXI area tile
-            var area = activeAreas[i];
-            var activeImages = getActiveLayerAreaImages();
-            var areaImage = activeImages[i];
-            generateAreaZone(area, areaImage);
+        // Prepare PIXI area tile
+        var area = activeAreas[i];
+        var activeImages = getActiveLayerAreaImages();
+        var areaImage = activeImages[i];
+        generateAreaZone(area, areaImage);
 
-            var backgroundColor = iconColorDictionary[area.type];
-            var materialIcon = iconTypeDictionary[area.type];
+        var backgroundColor = area.type in iconColorDictionary ? iconColorDictionary[area.type] : 'rgb(0 0 0)';
+        var materialIcon = area.type in iconTypeDictionary ? iconTypeDictionary[area.type] : '';
 
-            // Prep artist image HTML
-            var areaArtist = area.artist.replace('@', '');
-            var artistImageHTML = '';
-            if (areaArtist === '') {
-                console.log("Area artist is undefined, skipping artist image.");
-            }else{
-                var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${areaArtist}.png" alt="${area.artist}" /></a>`;
-            }
-            
-            // Prepare the HTML block corresponding to an area and its associated credts
-            var html = `<li class="area" title="${area.title}" style="background-color:${backgroundColor}" onclick="focusOnArea('${area.title}')">
-                <div class="area__header" >
-                    <span class="material-icons">
-                        ${materialIcon}
-                    </span>
-                    <span>
-                        ${area.title}
-                    </span>
-                </div>
-                <div class="area__info">
-                    <div class="area__info__inner">
-                        <div class="area__info__img">
-                            ${artistImageHTML}
-                            
-                        </div>
-                        <div class="area__info__name">
-                            <a href="${area.url}" target="_blank" title="${area.artist}">${area.artist}</a>
-                            ${area.post_url ? `<a href="${area.post_url}" target="_blank" title="View Post">[View Post]</a>` : ''}
-                        </div>
+        // Prep artist image HTML
+        var areaArtist = area.artist.replace('@', '');
+        var artistImageHTML = '';
+        if (areaArtist === '') {
+            console.log("Area artist is undefined, skipping artist image.");
+        }else{
+            var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${areaArtist}.png" alt="${area.artist}" /></a>`;
+        }
+        
+        // Prepare the HTML block corresponding to an area and its associated credts
+        var html = `<li class="area" title="${area.title}" style="background-color:${backgroundColor}" onclick="focusOnArea('${area.title}')">
+            <div class="area__header" >
+                <span class="material-icons">
+                    ${materialIcon}
+                </span>
+                <span>
+                    ${area.title}
+                </span>
+            </div>
+            <div class="area__info">
+                <div class="area__info__inner">
+                    <div class="area__info__img">
+                        ${artistImageHTML}
+                        
+                    </div>
+                    <div class="area__info__name">
+                        <a href="${area.url}" target="_blank" title="${area.artist}">${area.artist}</a>
+                        ${area.post_url ? `<a href="${area.post_url}" target="_blank" title="View Post">[View Post]</a>` : ''}
                     </div>
                 </div>
-            </li>`
-            areaList.innerHTML += html
-        }
+            </div>
+        </li>`
+        areaList.innerHTML += html
     }
 }
 
@@ -370,18 +378,22 @@ function generateAreaZone (area, areaImage) {
     if (!area) { console.error('oopsie, no area'); return }
     if (!areaImage) { console.error('oopsie, no area image'); return }
     var oldZone = new PIXI.Graphics()
+    oldZone.name = `ZONE: ${area.ident} (${OLD_STYLE_NAME})`
     oldZone.beginFill(0xffffff, 0)
     oldZone.lineStyle(4, 0xffffff, 0.5, 1)  // Highlight outline?
-    oldZone.drawRect(getAreaBox(area, areaImage, OLD_STYLE_NAME));
+    var oldAreaBox = getAreaBox(area, areaImage, OLD_STYLE_NAME);
+    oldZone.drawRect(oldAreaBox.x, oldAreaBox.y, oldAreaBox.width, oldAreaBox.height);
     oldZone.endFill()
     oldZone.alpha = 0
     area.old_zone = oldZone
     map.addChild(oldZone)
 
     var newZone = new PIXI.Graphics()
+    newZone.name = `ZONE: ${area.ident} (${NEW_STYLE_NAME})`
     newZone.beginFill(0xffffff, 0)
     newZone.lineStyle(4, 0xffffff, 0.5, 1)
-    newZone.drawRect(getAreaBox(area, areaImage, NEW_STYLE_NAME));
+    var newAreaBox = getAreaBox(area, areaImage, NEW_STYLE_NAME);
+    newZone.drawRect(newAreaBox.x, newAreaBox.y, newAreaBox.width, newAreaBox.height);
     newZone.endFill()
     newZone.alpha = 0
     area.new_zone = newZone
@@ -431,6 +443,13 @@ function getAreaBox (area, areaImage, styleOverride = "") {
     } else {
         return {x: area.box.x, y: area.box.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
     }
+}
+
+/** Gets the image associated with the provided area for the active layer. */
+function getAreaImage(area, styleOverride = "") {
+    var activeImages = getActiveLayerAreaImages(styleOverride);
+    var imageIndex = activeAreas.indexOf(area);
+    return activeImages[imageIndex];
 }
 
 /** Actions peformed on update (each frame). */
@@ -734,7 +753,7 @@ function moveCameraTo (x, y, zoom, camAnimationSpeed, useEasing) {
     cameraAnimation.playing = true
     cameraAnimation.progress = 0
     currentZoom = cameraAnimation.endZoom 
-    zoomLevel = cameraAnimation.endZoom 
+    zoomLevel = cameraAnimation.endZoom
     currentPos.x = cameraAnimation.endPos.x
     zoomCenter.x = cameraAnimation.endPos.x
     currentPos.y = cameraAnimation.endPos.y
@@ -793,10 +812,10 @@ function focusOnArea (a) {
     }
     
     if (isGoodToFocus) {
-        var box = area.box;
+        var areaImage = getAreaImage(area);
+        var box = getAreaBox(area, areaImage);
         moveCameraTo(box.x + Math.floor(box.width / 2), box.y + Math.floor(box.height / 2), area.zoom, cameraSpeed, true);
     }
-    
 }
 
 function openAreaInDOM (a) {
@@ -1000,5 +1019,5 @@ function changeLayer (layer) {
     this.setupCanvas()
     
     // Adjust canvas focus
-    this.focusOnArea(activeAreas[Math.floor(Math.random() * activeAreas.length)])
+    this.focusOnArea(this.activeAreas[Math.floor(Math.random() * layerCount)])
 }
