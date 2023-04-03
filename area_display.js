@@ -9,11 +9,9 @@ var blankArea = {
     artist: "",
     url: "",
     post_url: "",
-    box: {
+    point: {
         x: 0,
-        y: 0,
-        width: 0,
-        height: 0
+        y: 0
     },
     offset: {
         x: 0,
@@ -58,10 +56,8 @@ function registerElems () {
         artist: document.querySelector('#areaForm [name="artist"]'),
         url: document.querySelector('#areaForm [name="url"]'),
         post_url: document.querySelector('#areaForm [name="post_url"]'),
-        box_x: document.querySelector('#areaForm [name="box_x"]'),
-        box_y: document.querySelector('#areaForm [name="box_y"]'),
-        box_width: document.querySelector('#areaForm [name="box_width"]'),
-        box_height: document.querySelector('#areaForm [name="box_height"]'),
+        point_x: document.querySelector('#areaForm [name="point_x"]'),
+        point_y: document.querySelector('#areaForm [name="point_y"]'),
         offset_box_x: document.querySelector('#areaForm [name="offset_box_x"]'),
         offset_box_y: document.querySelector('#areaForm [name="offset_box_y"]'),
         offset_box_width: document.querySelector('#areaForm [name="offset_box_width"]'),
@@ -71,6 +67,7 @@ function registerElems () {
     }
 }
 
+// TODO: needs to be implementation agnostic
 // Region area & associated CSS ID
 var regionAreas = [
     [kantoAreas, '#AreaListKanto'],
@@ -150,10 +147,8 @@ function loadSelectedAreaDataIntoElements () {
         elems.artist.value = selectedArea.artist || null
         elems.url.value = selectedArea.url || null
         elems.post_url.value = selectedArea.post_url || null
-        elems.box_x.value = selectedArea.box.x || null
-        elems.box_y.value = selectedArea.box.y || null
-        elems.box_width.value = selectedArea.box.width || null
-        elems.box_height.value = selectedArea.box.height || null
+        elems.point_x.value = selectedArea.point.x || null
+        elems.point_y.value = selectedArea.point.y || null
         elems.offset_box_x.value = selectedArea.offset.x || null
         elems.offset_box_y.value = selectedArea.offset.y || null
         elems.offset_box_width.value = selectedArea.offset.width || null
@@ -172,10 +167,8 @@ function saveData () {
         selectedArea.artist = elems.artist.value
         selectedArea.url = elems.url.value
         selectedArea.post_url = elems.post_url.value
-        selectedArea.box.x = parseInt(elems.box_x.value)
-        selectedArea.box.y = parseInt(elems.box_y.value)
-        selectedArea.box.width = parseInt(elems.box_width.value)
-        selectedArea.box.height = parseInt(elems.box_height.value)
+        selectedArea.point.x = parseInt(elems.point_x.value)
+        selectedArea.point.y = parseInt(elems.point_y.value)
         selectedArea.offset.x = parseInt(elems.offset_box_x.value)
         selectedArea.offset.y = parseInt(elems.offset_box_y.value)
         selectedArea.offset.width = parseInt(elems.offset_box_width.value)
@@ -183,6 +176,7 @@ function saveData () {
         selectedArea.pan = elems.pan.value
         selectedArea.zoom = parseInt(elems.zoom.value)
 
+        // Teleporters
         var teleporters = []
         var teleporterElems = document.querySelectorAll('#teleporters li')
         for (var i = 0; i < teleporterElems.length; i++) {
@@ -210,8 +204,8 @@ function updateTeleporterTranslateTool () {
     var y = parseInt(yElem.value)
 
     if (selectedArea) {
-        xOutputElem.value = (selectedArea.box.x + selectedArea.offset.x) - x
-        yOutputElem.value = (selectedArea.box.y + selectedArea.offset.y) - y
+        xOutputElem.value = (selectedArea.point.x + selectedArea.offset.x) - x
+        yOutputElem.value = (selectedArea.point.y + selectedArea.offset.y) - y
     }
 
 }
@@ -262,14 +256,17 @@ function removeTeleporter (index) {
     }
 }
 
+// TODO: needs to be implementation agnostic
 function removeArea () {
     if (selectedArea) {
         var index = kantoAreas.findIndex(x => x.ident === selectedArea.ident)
         if (index > -1) { kantoAreas.splice(index, 1); generateKantoList() }
-        index = seviiAreas.findIndex(x => x.ident === selectedArea.ident)
-        if (index > -1) { seviiAreas.splice(index, 1); generateSeviiList() }
         index = interiorAreas.findIndex(x => x.ident === selectedArea.ident)
         if (index > -1) { interiorAreas.splice(index, 1); generateInteriorList() }
+        index = seviiAreas.findIndex(x => x.ident === selectedArea.ident)
+        if (index > -1) { seviiAreas.splice(index, 1); generateSeviiList() }
+        index = castleAreas.findIndex(x => x.ident === selectedArea.ident)
+        if (index > -1) { castleAreas.splice(index, 1); generateCastleList() }
         selectArea(kantoAreas[0])
     }
 }
@@ -282,6 +279,7 @@ function addRegionArea (region) {
     selectArea(region[0][region[0].length - 1])
 }
 
+// TODO: needs to be implementation agnostic
 function doOutput () {
     var elem = document.querySelector('#output')
     if (elem) {
@@ -289,6 +287,7 @@ function doOutput () {
         areas += `var kantoAreas = ${JSON.stringify(kantoAreas, null, 2)} \n`
         areas += `var interiorAreas = ${JSON.stringify(interiorAreas, null, 2)} \n`
         areas += `var seviiAreas = ${JSON.stringify(seviiAreas, null, 2)} \n`
+        areas += `var castleAreas = ${JSON.stringify(castleAreas, null, 2)} \n`
         elem.value = areas.replace(/^[\t ]*"[^:\n\r]+(?<!\\)":/gm, function (match) {
             return match.replace(/"/g, "").replace("'", '’');
         });
