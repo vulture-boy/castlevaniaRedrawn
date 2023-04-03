@@ -7,7 +7,7 @@ var castleAreas = [
     url: "",
     point: {
       x: 0,
-      y: 0
+      y: 1760
     },
     offset: {
       x: null,
@@ -15,7 +15,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -28,8 +28,8 @@ var castleAreas = [
     artist: "Juanito",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 384,
+      y: 1760
     },
     offset: {
       x: null,
@@ -37,7 +37,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -50,8 +50,8 @@ var castleAreas = [
     artist: "Stefan",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 768,
+      y: 1760
     },
     offset: {
       x: null,
@@ -59,7 +59,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -72,8 +72,8 @@ var castleAreas = [
     artist: "Scooter",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1168,
+      y: 1760
     },
     offset: {
       x: null,
@@ -81,7 +81,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -94,8 +94,8 @@ var castleAreas = [
     artist: "Cheesy",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1552,
+      y: 1760
     },
     offset: {
       x: null,
@@ -103,7 +103,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -116,8 +116,8 @@ var castleAreas = [
     artist: "Sinvilla",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1936,
+      y: 1760
     },
     offset: {
       x: null,
@@ -125,7 +125,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -138,8 +138,8 @@ var castleAreas = [
     artist: "Sinvilla",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2304,
+      y: 1760
     },
     offset: {
       x: null,
@@ -147,7 +147,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -160,8 +160,8 @@ var castleAreas = [
     artist: "Crowno",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2320,
+      y: 1936
     },
     offset: {
       x: null,
@@ -169,7 +169,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -182,8 +182,8 @@ var castleAreas = [
     artist: "Retginn",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2816,
+      y: 1760
     },
     offset: {
       x: null,
@@ -191,7 +191,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -204,8 +204,8 @@ var castleAreas = [
     artist: "Ghoulee",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3328,
+      y: 1760
     },
     offset: {
       x: null,
@@ -213,7 +213,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
@@ -226,8 +226,8 @@ var castleAreas = [
     artist: "Narehop",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3584,
+      y: 1696
     },
     offset: {
       x: null,
@@ -235,7 +235,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -257,7 +257,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -279,7 +279,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -301,7 +301,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -323,7 +323,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -345,7 +345,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -367,7 +367,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -389,7 +389,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -411,7 +411,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -433,7 +433,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
@@ -455,7 +455,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -477,7 +477,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -499,7 +499,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -521,7 +521,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -543,7 +543,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -565,7 +565,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -587,7 +587,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -609,7 +609,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -631,7 +631,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -653,7 +653,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -675,7 +675,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -697,7 +697,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
@@ -719,7 +719,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -741,7 +741,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -763,7 +763,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -785,7 +785,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -807,7 +807,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -829,7 +829,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -851,7 +851,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -873,7 +873,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -895,7 +895,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Underground",
     zoom: 2,
     teleporters: [],
@@ -917,7 +917,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -939,7 +939,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -961,7 +961,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -983,7 +983,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1005,7 +1005,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1027,7 +1027,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1049,7 +1049,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
@@ -1071,7 +1071,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1093,7 +1093,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1115,7 +1115,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1137,7 +1137,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1159,7 +1159,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1181,7 +1181,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1203,7 +1203,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1225,7 +1225,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1247,7 +1247,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1269,7 +1269,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1291,7 +1291,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1313,7 +1313,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
@@ -1335,7 +1335,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1357,7 +1357,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1379,7 +1379,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1401,7 +1401,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1423,7 +1423,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1445,7 +1445,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1467,7 +1467,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1489,7 +1489,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1511,7 +1511,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1533,7 +1533,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1555,7 +1555,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1577,7 +1577,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Terrace",
     zoom: 2,
     teleporters: [],
@@ -1599,7 +1599,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Castle",
     zoom: 2,
     teleporters: [],
@@ -1621,7 +1621,7 @@ var castleAreas = [
       width: null,
       height: null
     },
-    pan: "vertical",
+    pan: "horizontal",
     type: "Boss",
     zoom: 2,
     teleporters: [],
