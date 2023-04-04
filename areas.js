@@ -1012,31 +1012,9 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 46,
+    order: 47,
     title: "4-10",
     ident: "4-10",
-    artist: "Xanday",
-    url: "",
-    point: {
-      x: 0,
-      y: 0
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "Castle",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 47,
-    title: "4-11",
-    ident: "4-11",
     artist: "Batfeula",
     url: "",
     point: {
