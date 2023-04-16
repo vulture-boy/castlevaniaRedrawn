@@ -6,8 +6,8 @@ var castleAreas = [
     artist: "Malleys",
     url: "",
     point: {
-      x: 0,
-      y: 1760
+      x: 32,
+      y: 1712
     },
     offset: {
       x: null,
@@ -28,8 +28,8 @@ var castleAreas = [
     artist: "Juanito",
     url: "",
     point: {
-      x: 384,
-      y: 1760
+      x: 416,
+      y: 1712
     },
     offset: {
       x: null,
@@ -50,8 +50,8 @@ var castleAreas = [
     artist: "Stefan",
     url: "",
     point: {
-      x: 768,
-      y: 1760
+      x: 800,
+      y: 1712
     },
     offset: {
       x: null,
@@ -72,8 +72,8 @@ var castleAreas = [
     artist: "Scooter",
     url: "",
     point: {
-      x: 1168,
-      y: 1760
+      x: 1200,
+      y: 1712
     },
     offset: {
       x: null,
@@ -94,8 +94,8 @@ var castleAreas = [
     artist: "Cheesy",
     url: "",
     point: {
-      x: 1552,
-      y: 1760
+      x: 1584,
+      y: 1712
     },
     offset: {
       x: null,
@@ -116,8 +116,8 @@ var castleAreas = [
     artist: "Sinvilla",
     url: "",
     point: {
-      x: 1936,
-      y: 1760
+      x: 1968,
+      y: 1712
     },
     offset: {
       x: null,
@@ -138,8 +138,8 @@ var castleAreas = [
     artist: "Sinvilla",
     url: "",
     point: {
-      x: 2304,
-      y: 1760
+      x: 2336,
+      y: 1712
     },
     offset: {
       x: null,
@@ -160,8 +160,8 @@ var castleAreas = [
     artist: "Crowno",
     url: "",
     point: {
-      x: 2320,
-      y: 1936
+      x: 2336,
+      y: 1904
     },
     offset: {
       x: null,
@@ -182,8 +182,8 @@ var castleAreas = [
     artist: "Retginn",
     url: "",
     point: {
-      x: 2816,
-      y: 1760
+      x: 2848,
+      y: 1712
     },
     offset: {
       x: null,
@@ -204,8 +204,8 @@ var castleAreas = [
     artist: "Ghoulee",
     url: "",
     point: {
-      x: 3328,
-      y: 1760
+      x: 3360,
+      y: 1712
     },
     offset: {
       x: null,
@@ -226,8 +226,8 @@ var castleAreas = [
     artist: "Narehop",
     url: "",
     point: {
-      x: 3584,
-      y: 1696
+      x: 3616,
+      y: 1648
     },
     offset: {
       x: null,
@@ -248,8 +248,8 @@ var castleAreas = [
     artist: "Shaspio",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3360,
+      y: 1456
     },
     offset: {
       x: null,
@@ -270,8 +270,8 @@ var castleAreas = [
     artist: "PixelEric",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2976,
+      y: 1456
     },
     offset: {
       x: null,
@@ -292,8 +292,8 @@ var castleAreas = [
     artist: "Gato",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2592,
+      y: 1456
     },
     offset: {
       x: null,
@@ -314,8 +314,8 @@ var castleAreas = [
     artist: "MobyPixel",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2976,
+      y: 1264
     },
     offset: {
       x: null,
@@ -336,8 +336,8 @@ var castleAreas = [
     artist: "MobyPixel",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2592,
+      y: 1264
     },
     offset: {
       x: null,
@@ -358,8 +358,8 @@ var castleAreas = [
     artist: "Coelacamth",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2208,
+      y: 1264
     },
     offset: {
       x: null,
@@ -380,8 +380,8 @@ var castleAreas = [
     artist: "Marceles",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1824,
+      y: 1264
     },
     offset: {
       x: null,
@@ -402,8 +402,8 @@ var castleAreas = [
     artist: "Donpo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2080,
+      y: 1072
     },
     offset: {
       x: null,
@@ -424,8 +424,8 @@ var castleAreas = [
     artist: "Donpo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1824,
+      y: 1072
     },
     offset: {
       x: null,
@@ -446,8 +446,8 @@ var castleAreas = [
     artist: "RyanKeeton",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1440,
+      y: 1056
     },
     offset: {
       x: null,
@@ -468,8 +468,8 @@ var castleAreas = [
     artist: "Kyle",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1056,
+      y: 1056
     },
     offset: {
       x: null,
@@ -490,8 +490,8 @@ var castleAreas = [
     artist: "Toni M",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1056,
+      y: 864
     },
     offset: {
       x: null,
@@ -512,8 +512,8 @@ var castleAreas = [
     artist: "Neko",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1440,
+      y: 864
     },
     offset: {
       x: null,
@@ -534,8 +534,8 @@ var castleAreas = [
     artist: "Runtd",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 1824,
+      y: 864
     },
     offset: {
       x: null,
@@ -556,8 +556,8 @@ var castleAreas = [
     artist: "Gabe Fern",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2208,
+      y: 864
     },
     offset: {
       x: null,
@@ -578,8 +578,8 @@ var castleAreas = [
     artist: "Juanito",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2080,
+      y: 672
     },
     offset: {
       x: null,
@@ -600,8 +600,8 @@ var castleAreas = [
     artist: "Vierbit",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 2592,
+      y: 672
     },
     offset: {
       x: null,
@@ -622,8 +622,8 @@ var castleAreas = [
     artist: "Ashton Arnold",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3104,
+      y: 672
     },
     offset: {
       x: null,
@@ -644,8 +644,8 @@ var castleAreas = [
     artist: "Foofarawr",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3488,
+      y: 672
     },
     offset: {
       x: null,
@@ -666,8 +666,8 @@ var castleAreas = [
     artist: "nasCobolo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 3872,
+      y: 672
     },
     offset: {
       x: null,
@@ -688,8 +688,8 @@ var castleAreas = [
     artist: "Rudy Flores",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 672
     },
     offset: {
       x: null,
@@ -710,8 +710,8 @@ var castleAreas = [
     artist: "",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 864
     },
     offset: {
       x: null,
@@ -732,8 +732,8 @@ var castleAreas = [
     artist: "",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 1040
     },
     offset: {
       x: null,
@@ -754,8 +754,8 @@ var castleAreas = [
     artist: "",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 1216
     },
     offset: {
       x: null,
@@ -776,8 +776,8 @@ var castleAreas = [
     artist: "",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 1392
     },
     offset: {
       x: null,
@@ -798,8 +798,8 @@ var castleAreas = [
     artist: "",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 1568
     },
     offset: {
       x: null,
@@ -820,8 +820,8 @@ var castleAreas = [
     artist: "Kosena",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4384,
+      y: 1872
     },
     offset: {
       x: null,
@@ -842,8 +842,8 @@ var castleAreas = [
     artist: "8bitalo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4768,
+      y: 1872
     },
     offset: {
       x: null,
@@ -864,8 +864,8 @@ var castleAreas = [
     artist: "Joe",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5152,
+      y: 1872
     },
     offset: {
       x: null,
@@ -886,8 +886,8 @@ var castleAreas = [
     artist: "pinselschubser",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5536,
+      y: 1872
     },
     offset: {
       x: null,
@@ -908,8 +908,8 @@ var castleAreas = [
     artist: "SylverArts",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5856,
+      y: 1008
     },
     offset: {
       x: null,
@@ -930,8 +930,8 @@ var castleAreas = [
     artist: "Lyzerus",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 6240,
+      y: 1008
     },
     offset: {
       x: null,
@@ -952,8 +952,8 @@ var castleAreas = [
     artist: "DAKU",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 6624,
+      y: 1008
     },
     offset: {
       x: null,
@@ -974,8 +974,8 @@ var castleAreas = [
     artist: "HaywireJo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 7008,
+      y: 1008
     },
     offset: {
       x: null,
@@ -996,8 +996,8 @@ var castleAreas = [
     artist: "Lyzerus",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 7392,
+      y: 1008
     },
     offset: {
       x: null,
@@ -1018,8 +1018,8 @@ var castleAreas = [
     artist: "Batfeula",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8160,
+      y: 1008
     },
     offset: {
       x: null,
@@ -1040,8 +1040,8 @@ var castleAreas = [
     artist: "Maruki",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8416,
+      y: 1008
     },
     offset: {
       x: null,
@@ -1062,8 +1062,8 @@ var castleAreas = [
     artist: "Jaquiox",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8416,
+      y: 816
     },
     offset: {
       x: null,
@@ -1084,8 +1084,8 @@ var castleAreas = [
     artist: "Jaquiox",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8928,
+      y: 816
     },
     offset: {
       x: null,
@@ -1106,8 +1106,8 @@ var castleAreas = [
     artist: "Seth",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 9440,
+      y: 816
     },
     offset: {
       x: null,
@@ -1128,8 +1128,8 @@ var castleAreas = [
     artist: "Figburn",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 9696,
+      y: 816
     },
     offset: {
       x: null,
@@ -1150,8 +1150,8 @@ var castleAreas = [
     artist: "SomecallmeMichelle",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 9440,
+      y: 624
     },
     offset: {
       x: null,
@@ -1172,8 +1172,8 @@ var castleAreas = [
     artist: "Azumon",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 9184,
+      y: 624
     },
     offset: {
       x: null,
@@ -1194,8 +1194,8 @@ var castleAreas = [
     artist: "Bobby",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8672,
+      y: 624
     },
     offset: {
       x: null,
@@ -1216,8 +1216,8 @@ var castleAreas = [
     artist: "Looloopaa",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8160,
+      y: 624
     },
     offset: {
       x: null,
@@ -1238,8 +1238,8 @@ var castleAreas = [
     artist: "DaNinjaMan",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 8288,
+      y: 432
     },
     offset: {
       x: null,
@@ -1260,8 +1260,8 @@ var castleAreas = [
     artist: "Steven",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 7904,
+      y: 432
     },
     offset: {
       x: null,
@@ -1282,8 +1282,8 @@ var castleAreas = [
     artist: "Strawbe",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 7648,
+      y: 432
     },
     offset: {
       x: null,
@@ -1304,8 +1304,8 @@ var castleAreas = [
     artist: "Zanuff",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 7264,
+      y: 432
     },
     offset: {
       x: null,
@@ -1326,8 +1326,8 @@ var castleAreas = [
     artist: "Kohemy",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 6880,
+      y: 432
     },
     offset: {
       x: null,
@@ -1348,8 +1348,8 @@ var castleAreas = [
     artist: "Rakun",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 6496,
+      y: 432
     },
     offset: {
       x: null,
@@ -1370,8 +1370,8 @@ var castleAreas = [
     artist: "Masashi",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 6112,
+      y: 432
     },
     offset: {
       x: null,
@@ -1392,8 +1392,8 @@ var castleAreas = [
     artist: "Skelly",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5856,
+      y: 432
     },
     offset: {
       x: null,
@@ -1414,8 +1414,8 @@ var castleAreas = [
     artist: "Barosaros",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5856,
+      y: 240
     },
     offset: {
       x: null,
@@ -1436,8 +1436,8 @@ var castleAreas = [
     artist: "Tanuki",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5520,
+      y: 240
     },
     offset: {
       x: null,
@@ -1458,8 +1458,8 @@ var castleAreas = [
     artist: "Metarupx",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5520,
+      y: 432
     },
     offset: {
       x: null,
@@ -1480,8 +1480,8 @@ var castleAreas = [
     artist: "Metarupx",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5344,
+      y: 432
     },
     offset: {
       x: null,
@@ -1502,8 +1502,8 @@ var castleAreas = [
     artist: "Steven",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5344,
+      y: 240
     },
     offset: {
       x: null,
@@ -1524,8 +1524,8 @@ var castleAreas = [
     artist: "JJ Haggar",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4832,
+      y: 240
     },
     offset: {
       x: null,
@@ -1546,8 +1546,8 @@ var castleAreas = [
     artist: "JJ Haggar",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 5088,
+      y: 48
     },
     offset: {
       x: null,
@@ -1568,8 +1568,8 @@ var castleAreas = [
     artist: "nasCobolo",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4832,
+      y: 48
     },
     offset: {
       x: null,
@@ -1590,8 +1590,8 @@ var castleAreas = [
     artist: "Zernek",
     url: "",
     point: {
-      x: 0,
-      y: 0
+      x: 4576,
+      y: 48
     },
     offset: {
       x: null,
