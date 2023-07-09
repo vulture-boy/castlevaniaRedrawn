@@ -31,10 +31,10 @@ let iconTypeDictionary = {
     'mountain' : 'landscape',
     'route' : 'pedal_bike',
 
-    'Terrace' : 'landscape',
-    'Underground' : 'surfing',
-    'Castle' : 'park',
-    'Boss' : 'location_city',
+    'Terrace' : 'grass',
+    'Underground' : 'fireplace',
+    'Castle' : 'fort',
+    'Boss' : 'dark_mode',
 }
 
 /** Dictionary pairing zone types to rgb color definitions. */
