@@ -7,6 +7,7 @@ var blankArea = {
     title: "New",
     ident: "",
     artist: "",
+    artistImageOverride: "",
     url: "",
     post_url: "",
     point: {
@@ -54,6 +55,7 @@ function registerElems () {
         ident: document.querySelector('#areaForm [name="ident"]'),
         type: document.querySelector('#areaForm [name="type"]'),
         artist: document.querySelector('#areaForm [name="artist"]'),
+        artistImageOverride: document.querySelector('#areaForm [name="artistImageOverride"]'),
         url: document.querySelector('#areaForm [name="url"]'),
         post_url: document.querySelector('#areaForm [name="post_url"]'),
         point_x: document.querySelector('#areaForm [name="point_x"]'),
@@ -145,6 +147,7 @@ function loadSelectedAreaDataIntoElements () {
         elems.ident.value = selectedArea.ident || null
         elems.type.value = selectedArea.type || null
         elems.artist.value = selectedArea.artist || null
+        elems.artistImageOverride.value = selectedArea.artistImageOverride || null
         elems.url.value = selectedArea.url || null
         elems.post_url.value = selectedArea.post_url || null
         elems.point_x.value = selectedArea.point.x || null
@@ -165,6 +168,7 @@ function saveData () {
         selectedArea.ident = elems.ident.value
         selectedArea.type = elems.type.value
         selectedArea.artist = elems.artist.value
+        selectedArea.artistImageOverride = elems.artistImageOverride.value
         selectedArea.url = elems.url.value
         selectedArea.post_url = elems.post_url.value
         selectedArea.point.x = parseInt(elems.point_x.value)

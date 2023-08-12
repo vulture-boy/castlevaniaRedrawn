@@ -308,8 +308,18 @@ function setUpAreas () {
         var artistImageHTML = '';
         if (areaArtist === '') {
             console.log("Area artist is undefined, skipping artist image.");
-        }else{
-            var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}"><img src="img/profiles/${areaArtist}.png" alt="${area.artist}" /></a>`;
+        }
+        else
+        {
+            // Get artist image
+            var areaArtistImage = area.artistImageOverride;
+            if (areaArtistImage === '') {
+                areaArtistImage = areaArtist;   // Fallback if no artist image is defined
+            }
+            var artistImgPath = artistImgDir + areaArtistImage + artistImgExtension;
+        
+            var artistImageHTML = `<a href="${area.url}" target="_blank" title="${area.artist}">
+                <img src="${artistImgPath}" alt="${area.artist}" /></a>`;
         }
         
         // Prepare the HTML block corresponding to an area and its associated credts

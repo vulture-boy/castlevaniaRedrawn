@@ -4,6 +4,7 @@ var castleAreas = [
     title: "1-1",
     ident: "1-1",
     artist: "Arvy",
+    artistImageOverride: "",
     url: "https://twitter.com/arvydas_b",
     point: {
       x: 32,
@@ -26,6 +27,7 @@ var castleAreas = [
     title: "1-2",
     ident: "1-2",
     artist: "Juanito",
+    artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
     point: {
       x: 416,
@@ -48,6 +50,7 @@ var castleAreas = [
     title: "1-3",
     ident: "1-3",
     artist: "Stefan",
+    artistImageOverride: "",
     url: "https://twitter.com/MercuryBD",
     point: {
       x: 800,
@@ -70,6 +73,7 @@ var castleAreas = [
     title: "1-4",
     ident: "1-4",
     artist: "Scooter",
+    artistImageOverride: "",
     url: "http://twitter.com/lorenradis",
     point: {
       x: 1200,
@@ -92,6 +96,7 @@ var castleAreas = [
     title: "1-5",
     ident: "1-5",
     artist: "Arkflinn",
+    artistImageOverride: "",
     url: "https://linktr.ee/Arkflinn",
     point: {
       x: 1584,
@@ -114,6 +119,7 @@ var castleAreas = [
     title: "1-6",
     ident: "1-6",
     artist: "MatteeDubbz",
+    artistImageOverride: "",
     url: "https://twitter.com/MatteeDubbz/",
     point: {
       x: 1968,
@@ -136,6 +142,7 @@ var castleAreas = [
     title: "1-7A",
     ident: "1-7A",
     artist: "Anonim",
+    artistImageOverride: "",
     url: "https://pixeljoint.com/p/245239.htm",
     point: {
       x: 2336,
@@ -158,6 +165,7 @@ var castleAreas = [
     title: "1-7B",
     ident: "1-7B",
     artist: "Crowno",
+    artistImageOverride: "",
     url: "https://twitter.com/CrownoO",
     point: {
       x: 2336,
@@ -180,6 +188,7 @@ var castleAreas = [
     title: "1-8",
     ident: "1-8",
     artist: "HaywireJo",
+    artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
     point: {
       x: 2848,
@@ -202,6 +211,7 @@ var castleAreas = [
     title: "1-9",
     ident: "1-9",
     artist: "Ghoulee",
+    artistImageOverride: "",
     url: "https://twitter.com/ghouleebones",
     point: {
       x: 3360,
@@ -224,6 +234,7 @@ var castleAreas = [
     title: "2-1",
     ident: "2-1",
     artist: "Arkflinn",
+    artistImageOverride: "",
     url: "https://linktr.ee/Arkflinn",
     point: {
       x: 3616,
@@ -246,6 +257,7 @@ var castleAreas = [
     title: "2-2",
     ident: "2-2",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3360,
@@ -268,6 +280,7 @@ var castleAreas = [
     title: "2-3",
     ident: "2-3",
     artist: "PixelEric",
+    artistImageOverride: "",
     url: "https://pixeleric.carrd.co/",
     point: {
       x: 2976,
@@ -290,6 +303,7 @@ var castleAreas = [
     title: "2-4",
     ident: "2-4",
     artist: "DioShiba",
+    artistImageOverride: "",
     url: "https://andreworlukartanimations.wordpress.com/",
     point: {
       x: 2592,
@@ -312,6 +326,7 @@ var castleAreas = [
     title: "2-5",
     ident: "2-5",
     artist: "MobyPixel",
+    artistImageOverride: "",
     url: "https://twitter.com/MobyPixel",
     point: {
       x: 2976,
@@ -334,6 +349,7 @@ var castleAreas = [
     title: "2-6",
     ident: "2-6",
     artist: "MobyPixel",
+    artistImageOverride: "",
     url: "https://twitter.com/MobyPixel",
     point: {
       x: 2592,
@@ -356,6 +372,7 @@ var castleAreas = [
     title: "2-7",
     ident: "2-7",
     artist: "Coelacamth",
+    artistImageOverride: "",
     url: "https://twitter.com/COELACAMTH",
     point: {
       x: 2208,
@@ -378,6 +395,7 @@ var castleAreas = [
     title: "2-8",
     ident: "2-8",
     artist: "Marceles",
+    artistImageOverride: "",
     url: "https://twitter.com/marceles_pxl",
     point: {
       x: 1824,
@@ -400,6 +418,7 @@ var castleAreas = [
     title: "2-9",
     ident: "2-9",
     artist: "Donpo",
+    artistImageOverride: "",
     url: "https://twitter.com/DonpoPixels",
     point: {
       x: 2080,
@@ -422,6 +441,7 @@ var castleAreas = [
     title: "2-10",
     ident: "2-10",
     artist: "Donpo",
+    artistImageOverride: "",
     url: "https://twitter.com/DonpoPixels",
     point: {
       x: 1824,
@@ -444,6 +464,7 @@ var castleAreas = [
     title: "3-1",
     ident: "3-1",
     artist: "RyanKeeton",
+    artistImageOverride: "",
     url: "https://twitter.com/ryankeeton",
     point: {
       x: 1440,
@@ -466,6 +487,7 @@ var castleAreas = [
     title: "3-2",
     ident: "3-2",
     artist: "KhyleThePixelPrince",
+    artistImageOverride: "",
     url: "https://twitter.com/KhyleThe",
     point: {
       x: 1056,
@@ -488,6 +510,7 @@ var castleAreas = [
     title: "3-3",
     ident: "3-3",
     artist: "Toni M",
+    artistImageOverride: "ToniM",
     url: "https://twitter.com/PixelsMil",
     point: {
       x: 1056,
@@ -510,6 +533,7 @@ var castleAreas = [
     title: "3-4",
     ident: "3-4",
     artist: "Neko",
+    artistImageOverride: "",
     url: "https://twitter.com/nekocrocodile",
     point: {
       x: 1440,
@@ -532,6 +556,7 @@ var castleAreas = [
     title: "3-5",
     ident: "3-5",
     artist: "Runtd",
+    artistImageOverride: "",
     url: "https://twitter.com/RuntdArt",
     point: {
       x: 1824,
@@ -554,6 +579,7 @@ var castleAreas = [
     title: "3-6",
     ident: "3-6",
     artist: "Marceles",
+    artistImageOverride: "",
     url: "https://twitter.com/marceles_pxl",
     point: {
       x: 2208,
@@ -576,6 +602,7 @@ var castleAreas = [
     title: "3-7",
     ident: "3-7",
     artist: "Juanito",
+    artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
     point: {
       x: 2080,
@@ -598,6 +625,7 @@ var castleAreas = [
     title: "3-8",
     ident: "3-8",
     artist: "Vierbit",
+    artistImageOverride: "",
     url: "https://twitter.com/vierbit",
     point: {
       x: 2592,
@@ -620,6 +648,7 @@ var castleAreas = [
     title: "3-9",
     ident: "3-9",
     artist: "Ashton: Retrocade Media",
+    artistImageOverride: "AshtonArnold",
     url: "https://retrocademedia.itch.io/",
     point: {
       x: 3104,
@@ -642,6 +671,7 @@ var castleAreas = [
     title: "3-10",
     ident: "3-10",
     artist: "Foofarawr",
+    artistImageOverride: "",
     url: "https://linktr.ee/foofarawr",
     point: {
       x: 3488,
@@ -664,6 +694,7 @@ var castleAreas = [
     title: "3-11",
     ident: "3-11",
     artist: "nasCobolo",
+    artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
     point: {
       x: 3872,
@@ -686,6 +717,7 @@ var castleAreas = [
     title: "3-12",
     ident: "3-12",
     artist: "Rudy Flores",
+    artistImageOverride: "RudyFlores",
     url: "https://twitter.com/Rudyf93",
     point: {
       x: 4384,
@@ -708,6 +740,7 @@ var castleAreas = [
     title: "P-1",
     ident: "P-1",
     artist: "Lombre",
+    artistImageOverride: "",
     url: "https://twitter.com/ElHombreLombre",
     point: {
       x: 4384,
@@ -730,6 +763,7 @@ var castleAreas = [
     title: "P-2",
     ident: "P-2",
     artist: "nasCobolo",
+    artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
     point: {
       x: 4384,
@@ -752,6 +786,7 @@ var castleAreas = [
     title: "P-3",
     ident: "P-3",
     artist: "Jaquiox",
+    artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
     point: {
       x: 4384,
@@ -774,6 +809,7 @@ var castleAreas = [
     title: "P-4",
     ident: "P-4",
     artist: "Normal Neighbor",
+    artistImageOverride: "NormalNeighbor",
     url: "https://twitter.com/PixelNeighbor",
     point: {
       x: 4384,
@@ -796,6 +832,7 @@ var castleAreas = [
     title: "P-5",
     ident: "P-5",
     artist: "Chubbo",
+    artistImageOverride: "",
     url: "https://www.instagram.com/chubbopx/",
     point: {
       x: 4384,
@@ -818,6 +855,7 @@ var castleAreas = [
     title: "4-1",
     ident: "4-1",
     artist: "Kosena",
+    artistImageOverride: "",
     url: "https://twitter.com/KosenaMaster",
     point: {
       x: 4384,
@@ -840,6 +878,7 @@ var castleAreas = [
     title: "4-2",
     ident: "4-2",
     artist: "Normal Neighbor",
+    artistImageOverride: "NormalNeighbor",
     url: "https://twitter.com/PixelNeighbor",
     point: {
       x: 4768,
@@ -862,6 +901,7 @@ var castleAreas = [
     title: "4-3",
     ident: "4-3",
     artist: "Goblin",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 5152,
@@ -884,6 +924,7 @@ var castleAreas = [
     title: "4-4",
     ident: "4-4",
     artist: "pinselschubser",
+    artistImageOverride: "",
     url: "https://twitter.com/pinselschubser",
     point: {
       x: 5536,
@@ -906,6 +947,7 @@ var castleAreas = [
     title: "4-5",
     ident: "4-5",
     artist: "Toni M",
+    artistImageOverride: "ToniM",
     url: "https://twitter.com/PixelsMil",
     point: {
       x: 5856,
@@ -928,6 +970,7 @@ var castleAreas = [
     title: "4-6",
     ident: "4-6",
     artist: "Lyzerus",
+    artistImageOverride: "",
     url: "https://twitter.com/AaronLyzerus",
     point: {
       x: 6240,
@@ -950,6 +993,7 @@ var castleAreas = [
     title: "4-7",
     ident: "4-7",
     artist: "Curelapse",
+    artistImageOverride: "",
     url: "https://twitter.com/curelapsed",
     point: {
       x: 6624,
@@ -972,6 +1016,7 @@ var castleAreas = [
     title: "4-8",
     ident: "4-8",
     artist: "HaywireJo",
+    artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
     point: {
       x: 7008,
@@ -994,6 +1039,7 @@ var castleAreas = [
     title: "4-9",
     ident: "4-9",
     artist: "Xanday",
+    artistImageOverride: "",
     url: "http://www.xanday.com",
     point: {
       x: 7392,
@@ -1016,6 +1062,7 @@ var castleAreas = [
     title: "4-10",
     ident: "4-10",
     artist: "Batfeula",
+    artistImageOverride: "",
     url: "https://twitter.com/batfeula",
     point: {
       x: 8160,
@@ -1038,6 +1085,7 @@ var castleAreas = [
     title: "5-1",
     ident: "5-1",
     artist: "maruki",
+    artistImageOverride: "",
     url: "https://twitter.com/MarukiHurakami",
     point: {
       x: 8416,
@@ -1060,6 +1108,7 @@ var castleAreas = [
     title: "5-2",
     ident: "5-2",
     artist: "Jaquiox",
+    artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
     point: {
       x: 8416,
@@ -1082,6 +1131,7 @@ var castleAreas = [
     title: "5-3",
     ident: "5-3",
     artist: "Jaquiox",
+    artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
     point: {
       x: 8928,
@@ -1104,6 +1154,7 @@ var castleAreas = [
     title: "5-4",
     ident: "5-4",
     artist: "Seth",
+    artistImageOverride: "",
     url: "https://twitter.com/Setho_o",
     point: {
       x: 9440,
@@ -1126,6 +1177,7 @@ var castleAreas = [
     title: "5-5",
     ident: "5-5",
     artist: "Stefan",
+    artistImageOverride: "",
     url: "https://twitter.com/MercuryBD",
     point: {
       x: 9696,
@@ -1148,6 +1200,7 @@ var castleAreas = [
     title: "5-6",
     ident: "5-6",
     artist: "Juanito",
+    artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
     point: {
       x: 9440,
@@ -1170,6 +1223,7 @@ var castleAreas = [
     title: "5-7",
     ident: "5-7",
     artist: "Marina",
+    artistImageOverride: "",
     url: "https://cringe.ovh/",
     point: {
       x: 9184,
@@ -1192,6 +1246,7 @@ var castleAreas = [
     title: "5-8",
     ident: "5-8",
     artist: "Robin Quinn",
+    artistImageOverride: "RobinQuinn",
     url: "https://twitter.com/bobbytries/",
     point: {
       x: 8672,
@@ -1214,6 +1269,7 @@ var castleAreas = [
     title: "5-9",
     ident: "5-9",
     artist: "Looloopaa",
+    artistImageOverride: "",
     url: "https://twitter.com/looloopaa",
     point: {
       x: 8160,
@@ -1236,6 +1292,7 @@ var castleAreas = [
     title: "5-10",
     ident: "5-10",
     artist: "DaNinjaManZ",
+    artistImageOverride: "",
     url: "https://twitter.com/DaNinjaManZ",
     point: {
       x: 8288,
@@ -1258,6 +1315,7 @@ var castleAreas = [
     title: "5-11",
     ident: "5-11",
     artist: "Steven",
+    artistImageOverride: "",
     url: "https://stevenart1988.wordpress.com/",
     point: {
       x: 7904,
@@ -1280,6 +1338,7 @@ var castleAreas = [
     title: "5-12",
     ident: "5-12",
     artist: "StrawBe",
+    artistImageOverride: "",
     url: "https://twitter.com/StrawPact",
     point: {
       x: 7648,
@@ -1302,6 +1361,7 @@ var castleAreas = [
     title: "6-1",
     ident: "6-1",
     artist: "HaywireJo",
+    artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
     point: {
       x: 7264,
@@ -1324,6 +1384,7 @@ var castleAreas = [
     title: "6-2",
     ident: "6-2",
     artist: "Kohemy",
+    artistImageOverride: "",
     url: "https://mobile.twitter.com/kohemy1",
     point: {
       x: 6880,
@@ -1346,6 +1407,7 @@ var castleAreas = [
     title: "6-3",
     ident: "6-3",
     artist: "Rakun",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 6496,
@@ -1368,6 +1430,7 @@ var castleAreas = [
     title: "6-4",
     ident: "6-4",
     artist: "Enchanteur",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 6112,
@@ -1390,6 +1453,7 @@ var castleAreas = [
     title: "6-5",
     ident: "6-5",
     artist: "MattStov",
+    artistImageOverride: "",
     url: "https://twitter.com/MattstovArt",
     point: {
       x: 5856,
@@ -1412,6 +1476,7 @@ var castleAreas = [
     title: "6-6",
     ident: "6-6",
     artist: "Barosaros",
+    artistImageOverride: "",
     url: "https://twitter.com/barosaros",
     point: {
       x: 5856,
@@ -1434,6 +1499,7 @@ var castleAreas = [
     title: "6-7",
     ident: "6-7",
     artist: "Tanuki",
+    artistImageOverride: "",
     url: "https://linktr.ee/tanukitype",
     point: {
       x: 5520,
@@ -1456,6 +1522,7 @@ var castleAreas = [
     title: "6-8",
     ident: "6-8",
     artist: "MetaruPX",
+    artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
     point: {
       x: 5520,
@@ -1478,6 +1545,7 @@ var castleAreas = [
     title: "6-9",
     ident: "6-9",
     artist: "MetaruPX",
+    artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
     point: {
       x: 5344,
@@ -1500,6 +1568,7 @@ var castleAreas = [
     title: "6-10",
     ident: "6-10",
     artist: "Steven",
+    artistImageOverride: "",
     url: "https://stevenart1988.wordpress.com/",
     point: {
       x: 5344,
@@ -1522,6 +1591,7 @@ var castleAreas = [
     title: "7-1",
     ident: "7-1",
     artist: "DaNinjaManZ",
+    artistImageOverride: "",
     url: "https://twitter.com/DaNinjaManZ",
     point: {
       x: 4832,
@@ -1544,6 +1614,7 @@ var castleAreas = [
     title: "7-2",
     ident: "7-2",
     artist: "Lombre",
+    artistImageOverride: "",
     url: "https://twitter.com/ElHombreLombre",
     point: {
       x: 5088,
@@ -1566,6 +1637,7 @@ var castleAreas = [
     title: "7-3",
     ident: "7-3",
     artist: "nasCobolo",
+    artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
     point: {
       x: 4832,
@@ -1588,6 +1660,7 @@ var castleAreas = [
     title: "7-4",
     ident: "7-4",
     artist: "Zernek",
+    artistImageOverride: "",
     url: "https://twitter.com/Zernek1",
     point: {
       x: 4576,
@@ -1612,6 +1685,7 @@ var kantoAreas = [
     title: "Pallet Town",
     ident: "pallet_town",
     artist: "@Pixel_Pit",
+    artistImageOverride: "",
     url: "https://twitter.com/Pixel_Pit",
     point: {
       x: 832,
@@ -1658,6 +1732,7 @@ var kantoAreas = [
     title: "Route 1",
     ident: "route_1",
     artist: "@spooonnnboy",
+    artistImageOverride: "",
     url: "https://twitter.com/spooonnnboy",
     point: {
       x: 832,
@@ -1680,6 +1755,7 @@ var kantoAreas = [
     title: "Viridian City",
     ident: "viridian_city",
     artist: "@OhNoItsMonroe",
+    artistImageOverride: "",
     url: "https://twitter.com/OhNoItsMonroe",
     point: {
       x: 672,
@@ -1724,6 +1800,7 @@ var kantoAreas = [
     title: "Route 2 South",
     ident: "route_2_south",
     artist: "@witch_warren",
+    artistImageOverride: "",
     url: "https://twitter.com/witch_warren",
     point: {
       x: 800,
@@ -1746,6 +1823,7 @@ var kantoAreas = [
     title: "Viridian Forest",
     ident: "viridian_forest",
     artist: "@Woodspixl_",
+    artistImageOverride: "",
     url: "https://twitter.com/Woodspixl_",
     point: {
       x: 608,
@@ -1767,6 +1845,7 @@ var kantoAreas = [
     title: "Route 2 North",
     ident: "route_2_north",
     artist: "@rbatistadelima",
+    artistImageOverride: "",
     url: "https://twitter.com/rbatistadelima",
     point: {
       x: 608,
@@ -1789,6 +1868,7 @@ var kantoAreas = [
     title: "Viridian Forest Bypass",
     ident: "viridian_forest_bypass",
     artist: "@fiopico",
+    artistImageOverride: "",
     url: "https://twitter.com/fiopico",
     point: {
       x: 1152,
@@ -1811,6 +1891,7 @@ var kantoAreas = [
     title: "Pewter City",
     ident: "pewter_city",
     artist: "@saltiestbunny",
+    artistImageOverride: "",
     url: "https://twitter.com/saltiestbunny",
     point: {
       x: 672,
@@ -1833,6 +1914,7 @@ var kantoAreas = [
     title: "Route 3 West",
     ident: "route_3_west",
     artist: "@chreniafoka",
+    artistImageOverride: "",
     url: "https://twitter.com/chreniafoka/status",
     point: {
       x: 1312,
@@ -1855,6 +1937,7 @@ var kantoAreas = [
     title: "Route 3 East",
     ident: "route_3_east",
     artist: "cjlm123",
+    artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
     point: {
       x: 2112,
@@ -1877,6 +1960,7 @@ var kantoAreas = [
     title: "Mt. Moon Square",
     ident: "mt_moon_square",
     artist: "@Woodspixl_",
+    artistImageOverride: "",
     url: "https://twitter.com/Woodspixl_",
     point: {
       x: 2224,
@@ -1899,6 +1983,7 @@ var kantoAreas = [
     title: "Route 4",
     ident: "route_4",
     artist: "@1000_toasters",
+    artistImageOverride: "",
     url: "https://twitter.com/1000_toasters",
     point: {
       x: 2464,
@@ -1921,6 +2006,7 @@ var kantoAreas = [
     title: "Cerulean City",
     ident: "cerulean_city",
     artist: "@EdelweissPkmn",
+    artistImageOverride: "",
     url: "https://twitter.com/EdelweissPkmn",
     point: {
       x: 3552,
@@ -1943,6 +2029,7 @@ var kantoAreas = [
     title: "Route 24",
     ident: "route_24",
     artist: "@yoYokaiy",
+    artistImageOverride: "",
     url: "https://twitter.com/yoYokaiy",
     point: {
       x: 3712,
@@ -1965,6 +2052,7 @@ var kantoAreas = [
     title: "Route 25",
     ident: "route_25",
     artist: "@huttaburger",
+    artistImageOverride: "",
     url: "https://twitter.com/huttaburger",
     point: {
       x: 4032,
@@ -1987,6 +2075,7 @@ var kantoAreas = [
     title: "Bill’s Lighthouse",
     ident: "bills_lighthouse",
     artist: "@Pixelkauz",
+    artistImageOverride: "",
     url: "https://twitter.com/Pixelkauz",
     point: {
       x: 4704,
@@ -2009,6 +2098,7 @@ var kantoAreas = [
     title: "Route 5",
     ident: "route_5",
     artist: "@ashenwater",
+    artistImageOverride: "",
     url: "https://twitter.com/ashenwater",
     point: {
       x: 3712,
@@ -2031,6 +2121,7 @@ var kantoAreas = [
     title: "Route 6",
     ident: "route_6",
     artist: "@RaspberryMilks1",
+    artistImageOverride: "",
     url: "https://twitter.com/RaspberryMilks1",
     point: {
       x: 3696,
@@ -2053,6 +2144,7 @@ var kantoAreas = [
     title: "Vermilion City",
     ident: "vermilion_city",
     artist: "@HyperJerk",
+    artistImageOverride: "",
     url: "https://twitter.com/HyperJerk",
     point: {
       x: 3552,
@@ -2075,6 +2167,7 @@ var kantoAreas = [
     title: "Route 11",
     ident: "route_11",
     artist: "@pixellerjeremy",
+    artistImageOverride: "",
     url: "https://twitter.com/pixellerjeremy",
     point: {
       x: 4208,
@@ -2097,6 +2190,7 @@ var kantoAreas = [
     title: "Route 9",
     ident: "route_9",
     artist: "@HaywireJo",
+    artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
     point: {
       x: 4192,
@@ -2119,6 +2213,7 @@ var kantoAreas = [
     title: "Route 10 North",
     ident: "route_10_north",
     artist: "@Seva86706122",
+    artistImageOverride: "",
     url: "https://twitter.com/Seva86706122",
     point: {
       x: 5152,
@@ -2141,6 +2236,7 @@ var kantoAreas = [
     title: "Power Plant",
     ident: "power_plant",
     artist: "@gif_not_jif",
+    artistImageOverride: "",
     url: "https://twitter.com/gif_not_jif",
     point: {
       x: 5152,
@@ -2163,6 +2259,7 @@ var kantoAreas = [
     title: "Route 10 South",
     ident: "route_10_south",
     artist: "@StrawPact",
+    artistImageOverride: "",
     url: "https://twitter.com/StrawPact",
     point: {
       x: 5152,
@@ -2185,6 +2282,7 @@ var kantoAreas = [
     title: "Lavender Town",
     ident: "lavender_town",
     artist: "@cure_pixel",
+    artistImageOverride: "",
     url: "https://twitter.com/cure_pixel",
     point: {
       x: 5152,
@@ -2207,6 +2305,7 @@ var kantoAreas = [
     title: "Route 8",
     ident: "route_8",
     artist: "KerrieLake",
+    artistImageOverride: "",
     url: "https://twitter.com/KerrieLake",
     point: {
       x: 4192,
@@ -2229,6 +2328,7 @@ var kantoAreas = [
     title: "Route 7",
     ident: "route_7",
     artist: "@SarahBoevingArt",
+    artistImageOverride: "",
     url: "https://twitter.com/SarahBoevingArt",
     point: {
       x: 3232,
@@ -2251,6 +2351,7 @@ var kantoAreas = [
     title: "Celadon City",
     ident: "celadon_city",
     artist: "@MetaruPX",
+    artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
     point: {
       x: 2432,
@@ -2273,6 +2374,7 @@ var kantoAreas = [
     title: "Saffron City",
     ident: "saffron_city",
     artist: "@foofarawr",
+    artistImageOverride: "",
     url: "https://twitter.com/foofarawr",
     point: {
       x: 3552,
@@ -2295,6 +2397,7 @@ var kantoAreas = [
     title: "Route 16",
     ident: "route_16",
     artist: "@MetaruPX",
+    artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
     point: {
       x: 1792,
@@ -2317,6 +2420,7 @@ var kantoAreas = [
     title: "Route 17",
     ident: "route_17",
     artist: "@Anima_nel",
+    artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
     point: {
       x: 1792,
@@ -2339,6 +2443,7 @@ var kantoAreas = [
     title: "Route 18",
     ident: "route_18",
     artist: "@Anima_nel",
+    artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
     point: {
       x: 1792,
@@ -2361,6 +2466,7 @@ var kantoAreas = [
     title: "Fuchsia City",
     ident: "fuchsia_city",
     artist: "@Dewndeym",
+    artistImageOverride: "",
     url: "https://twitter.com/Dewndeym",
     point: {
       x: 2592,
@@ -2383,6 +2489,7 @@ var kantoAreas = [
     title: "Safari Zone Central",
     ident: "safari_zone_central",
     artist: "@Dewndeym",
+    artistImageOverride: "",
     url: "https://twitter.com/Dewndeym",
     point: {
       x: 2656,
@@ -2405,6 +2512,7 @@ var kantoAreas = [
     title: "Safari Zone East",
     ident: "safari_zone_east",
     artist: "chubbopx",
+    artistImageOverride: "",
     url: "https://www.instagram.com/chubbopx/",
     point: {
       x: 3168,
@@ -2427,6 +2535,7 @@ var kantoAreas = [
     title: "Safari Zone North",
     ident: "safari_zone_north",
     artist: "@_Mechano_",
+    artistImageOverride: "",
     url: "https://twitter.com/_Mechano_",
     point: {
       x: 2464,
@@ -2449,6 +2558,7 @@ var kantoAreas = [
     title: "Safari Zone West",
     ident: "safari_zone_west",
     artist: "@Daydream_Stream",
+    artistImageOverride: "",
     url: "https://twitter.com/Daydream_Stream",
     point: {
       x: 2144,
@@ -2471,6 +2581,7 @@ var kantoAreas = [
     title: "Route 15",
     ident: "route_15",
     artist: "cjlm123",
+    artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
     point: {
       x: 3232,
@@ -2493,6 +2604,7 @@ var kantoAreas = [
     title: "Route 14",
     ident: "route_14",
     artist: "@KarlestonChew",
+    artistImageOverride: "",
     url: "https://twitter.com/KarlestonChew",
     point: {
       x: 4240,
@@ -2515,6 +2627,7 @@ var kantoAreas = [
     title: "Route 13",
     ident: "route_13",
     artist: "cjlm123",
+    artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
     point: {
       x: 4240,
@@ -2537,6 +2650,7 @@ var kantoAreas = [
     title: "Route 12 South",
     ident: "route_12_south",
     artist: "@SarahBoevingArt",
+    artistImageOverride: "",
     url: "https://twitter.com/SarahBoevingArt",
     point: {
       x: 5184,
@@ -2559,6 +2673,7 @@ var kantoAreas = [
     title: "Route 12 North",
     ident: "route_12_north",
     artist: "mysticaldrop",
+    artistImageOverride: "",
     url: "https://www.instagram.com/mysticaldrop/",
     point: {
       x: 5184,
@@ -2581,6 +2696,7 @@ var kantoAreas = [
     title: "Route 19",
     ident: "route_19",
     artist: "@VCorbi",
+    artistImageOverride: "",
     url: "https://twitter.com/VCorbi",
     point: {
       x: 2752,
@@ -2603,6 +2719,7 @@ var kantoAreas = [
     title: "Route 20",
     ident: "route_20",
     artist: "@natnatart",
+    artistImageOverride: "",
     url: "https://twitter.com/natnatart",
     point: {
       x: 1248,
@@ -2625,6 +2742,7 @@ var kantoAreas = [
     title: "Cinnabar Island",
     ident: "cinnabar_island",
     artist: "@Anima_nel",
+    artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
     point: {
       x: 832,
@@ -2647,6 +2765,7 @@ var kantoAreas = [
     title: "Route 21",
     ident: "route_21",
     artist: "@SalamiChild",
+    artistImageOverride: "",
     url: "https://twitter.com/SalamiChild",
     point: {
       x: 832,
@@ -2669,6 +2788,7 @@ var kantoAreas = [
     title: "Route 22",
     ident: "route_22",
     artist: "@Geno_CL",
+    artistImageOverride: "",
     url: "https://twitter.com/Geno_CL",
     point: {
       x: null,
@@ -2691,6 +2811,7 @@ var kantoAreas = [
     title: "Route 23 Part 1",
     ident: "route_23_1",
     artist: "@incrediblemaker",
+    artistImageOverride: "",
     url: "https://twitter.com/incrediblemaker",
     point: {
       x: null,
@@ -2713,6 +2834,7 @@ var kantoAreas = [
     title: "Route 23 Part 2",
     ident: "route_23_2",
     artist: "@incrediblemaker",
+    artistImageOverride: "",
     url: "https://twitter.com/incrediblemaker",
     point: {
       x: null,
@@ -2735,6 +2857,7 @@ var kantoAreas = [
     title: "Route 23 Part 3",
     ident: "route_23_3",
     artist: "@chromegnomes",
+    artistImageOverride: "",
     url: "https://twitter.com/chromegnomes",
     point: {
       x: null,
@@ -2757,6 +2880,7 @@ var kantoAreas = [
     title: "Route 23 Part 4",
     ident: "route_23_4",
     artist: "@jooniverz",
+    artistImageOverride: "",
     url: "https://twitter.com/jooniverz",
     point: {
       x: null,
@@ -2779,6 +2903,7 @@ var kantoAreas = [
     title: "Indigo Plateau",
     ident: "indigo_plateau",
     artist: "@jdzombi_",
+    artistImageOverride: "",
     url: "https://twitter.com/jdzombi_",
     point: {
       x: null,
@@ -2803,6 +2928,7 @@ var interiorAreas = [
     title: "Player’s House 1F",
     ident: "players_house_1f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 832,
@@ -2822,6 +2948,7 @@ var interiorAreas = [
     title: "Player’s House 2F",
     ident: "players_house_2f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 832,
@@ -2841,6 +2968,7 @@ var interiorAreas = [
     title: "Professor Oak’s Lab",
     ident: "oaks_lab",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 992,
@@ -2860,6 +2988,7 @@ var interiorAreas = [
     title: "PokeMart",
     ident: "pokemart",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 1136,
@@ -2879,6 +3008,7 @@ var interiorAreas = [
     title: "Pokemon Center",
     ident: "pokecenter",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 961,
@@ -2898,6 +3028,7 @@ var interiorAreas = [
     title: "Trade Center",
     ident: "trade_center",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 992,
@@ -2917,6 +3048,7 @@ var interiorAreas = [
     title: "Pokemon Academy",
     ident: "pokemon_school",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 992,
@@ -2936,6 +3068,7 @@ var interiorAreas = [
     title: "Trainer House 1F",
     ident: "trainer_house_1f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 768,
@@ -2955,6 +3088,7 @@ var interiorAreas = [
     title: "Trainer House B1F",
     ident: "trainer_house_b1f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 768,
@@ -2974,6 +3108,7 @@ var interiorAreas = [
     title: "Pewter Museum",
     ident: "museum",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 752,
@@ -2993,6 +3128,7 @@ var interiorAreas = [
     title: "Pewter Gym",
     ident: "pewter_gym",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 833,
@@ -3012,6 +3148,7 @@ var interiorAreas = [
     title: "Mt. Moon 1F",
     ident: "mt_moon_1f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 1040,
@@ -3031,6 +3168,7 @@ var interiorAreas = [
     title: "Mt. Moon B1F",
     ident: "mt_moon_b1f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 1696,
@@ -3050,6 +3188,7 @@ var interiorAreas = [
     title: "Mt. Moon B2F",
     ident: "mt_moon_b2f",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 2352,
@@ -3069,6 +3208,7 @@ var interiorAreas = [
     title: "Bike Shop",
     ident: "bike_shop",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3680,
@@ -3088,6 +3228,7 @@ var interiorAreas = [
     title: "Burglarized House",
     ident: "trashed_house",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3984,
@@ -3107,6 +3248,7 @@ var interiorAreas = [
     title: "Cerulean Gym",
     ident: "cerulean_gym",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3968,
@@ -3126,6 +3268,7 @@ var interiorAreas = [
     title: "Bill’s Lab",
     ident: "bill_lab",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 4704,
@@ -3145,6 +3288,7 @@ var interiorAreas = [
     title: "Underground (North-South)",
     ident: "underground_ns",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3648,
@@ -3164,6 +3308,7 @@ var interiorAreas = [
     title: "Pokemon Fan Club",
     ident: "pokemon_fanclub",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3440,
@@ -3183,6 +3328,7 @@ var interiorAreas = [
     title: "Vermilion Gym",
     ident: "vermilion_gym",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3616,
@@ -3202,6 +3348,7 @@ var interiorAreas = [
     title: "S.S. Anne Hallway & Kitchen",
     ident: "ss_anne_kitchen",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 3728,
@@ -3221,6 +3368,7 @@ var interiorAreas = [
     title: "S.S. Anne Halls",
     ident: "ss_anne_halls",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 4416,
@@ -3240,6 +3388,7 @@ var interiorAreas = [
     title: "S.S. Anne Deck",
     ident: "ss_anne_deck",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 2880,
@@ -3259,6 +3408,7 @@ var interiorAreas = [
     title: "Diglett’s Tunnel",
     ident: "digletts_cave",
     artist: "",
+    artistImageOverride: "",
     url: "",
     point: {
       x: 1184,

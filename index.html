@@ -22,12 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pixi-filters@latest/dist/pixi-filters.js"></script>
 
-    <!--Retro Redrawn-->
-    <script src="areas.js"></script>
-    <script src="implementation.js"></script>
-    <script src="interactive.js"></script>
+    <!--Retro Redrawn: CSS-->
     <link rel="stylesheet" href="home.css">
-
 </head>
 <body>
     <div id="app">
@@ -38,7 +34,7 @@
             <div class="menu__inner">
                 <div class="menu__logo">
                     <a href="https://twitter.com/PokemonRedrawn" title="Visit our Twitter!" target="_blank">
-                        <img src="kanto_redrawn_logo.png" alt="Kanto Redrawn" draggable="false" />
+                        <img src="Castlevania_Redrawn_text.png" alt="Castlevania Redrawn" draggable="false" />
                     </a>
                 </div>
                 <div class="menu__disclaimer">
@@ -81,8 +77,7 @@
                     </div>
                     <div id="settings">
                         <div><input type="checkbox" id="disableBlur"><label for="disableBlur">Disable Zoom Blur</label> </div><br>
-                        <div><input type="checkbox" id="mapSwitch" onchange="toggleMapStyle()"><label for="mapSwitch">Show Original Map*</label> </div>
-                        <small>* original map is mostly based on gen II Kanto and areas have been edited to fit into one whole map</small>
+                        <div><input type="checkbox" id="mapSwitch" onchange="toggleMapStyle()"><label for="mapSwitch">Show Original Map</label> </div>
                         <hr>
                         <div>
                             <label>Camera Speed</label><br>
@@ -102,11 +97,11 @@
                         <hr>
                         <p>Pan and zoom the map the same you would on sites like Google Maps.</p>
                         <p>Map requires WebGL compatible browsers - Chrome may require you <a href="https://www.howtogeek.com/412738/how-to-turn-hardware-acceleration-on-and-off-in-chrome/" target="_blank">enable hardware acceleration.</a></p>
-                        <p><a href="https://twitter.com/vvvultures" target="_blank">DM for bug reports</a></p>
+                        <p><a href="https://github.com/vulture-boy/castlevaniaRedrawn" target="_blank">DM for bug reports</a></p>
                         <hr>
                         <p><b>Credits</b></p>
+                        <p>Backend development and refactoring by <a href="https://tysonmoll.ca" target="_blank">Tyson Moll (vvvultures)</a></p>
                         <p>Originally developed by <a href="https://twitter.com/hyperjerk" target="_blank">@HyperJerk</a></p>
-                        <p>Backend development and Castlevania port by <a href="https://twitter.com/vvvultures" target="_blank">@vvvultures</a></p>
                         <p><b>Organisers</b></p>
                         <p>
                             <a href="https://twitter.com/juanitomedinart" target="_blank">@juanitomedinart</a> - 
@@ -118,13 +113,20 @@
         </div>
         <div id="loading" class="active">
             <div>
-                <img src="kanto_redrawn_logo_1x.png" alt="Kanto Redrawn" draggable="false" />
+                <img src="Castlevania_Redrawn_text.png" alt="Castlevania Redrawn" draggable="false" />
                 <p>Loading...</p>
                 <div class="loading-bar">
-                    <div class="loading-bar__inner"></div>
+                    <div class="loading-bar__inner" style="width: auto;"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<!--Retro Redrawn: JS-->
+<!--Since we want to ensure the document is fully loaded, we run our scripts last.-->
+<script src="areas.js"></script>
+<script src="implementation.js"></script>
+<script src="interactive.js"></script>
+
 </html>
