@@ -1,3 +1,15 @@
+/*
+*   Retro Redrawn 
+*   -- Area Editor JavaScript
+*
+*   Editor tool for creating new areas and modifying existing ones.
+*   Uses Implementation script for data related to a particular implementation.
+*
+*   Originally written by Jerky.
+*   Refactored for reuse by Tyson Moll (vvvvvvv), 2023.
+*
+*/
+
 var selectedArea = null
 
 var elems = null
@@ -26,15 +38,22 @@ var blankArea = {
     teleporters: []
 }
 
-document.addEventListener('DOMContentLoaded', init)
+document.addEventListener('DOMContentLoaded', init) // Run init when DOM has loaded.
 
+/** Initializes the Area Editor. 
+ */
 function init () {
-    registerElems()
-    setEventOnStaticInputs()
-    updateAreaLists()
-    selectArea(kantoAreas[0])
+    registerElems();
+    createRegionMenus();
+    setEventOnStaticInputs();
+    updateAreaLists();
+    selectArea(regionAreas[0][0][0]);   // Designate a starting area
 }
 
+/** Prevents the Form Submit action from performing its default behaviour. (Override)
+ * 
+ * @param {*} e 
+ */
 function formSubmit (e) {
     e.preventDefault()
 }
@@ -42,12 +61,14 @@ function formSubmit (e) {
 function setEventOnStaticInputs () {
     var elems = document.querySelectorAll('input, select')
     for (var i = 0; i < elems.length; i++) {
-        var elem = elems[i]
-        elem.addEventListener('change', saveData)
+        var elem = elems[i];
+        elem.addEventListener('change', saveData);
     }
 }
 
-// Registers elements for the area entry form
+/** 
+ * Registers elements for the area entry form.
+*/
 function registerElems () {
     elems = {
         order: document.querySelector('#areaForm [name="order"]'),
@@ -65,33 +86,49 @@ function registerElems () {
         offset_box_width: document.querySelector('#areaForm [name="offset_box_width"]'),
         offset_box_height: document.querySelector('#areaForm [name="offset_box_height"]'),
         pan: document.querySelector('#areaForm [name="pan"]'),
-        zoom: document.querySelector('#areaForm [name="zoom"]')
+        zoom: document.querySelector('#areaForm [name="zoom"]'),
+
+        regionMenu: document.getElementById('regionMenu')
     }
 }
 
-// TODO: needs to be implementation agnostic
-// Region area & associated CSS ID
-var regionAreas = [
-    [kantoAreas, '#AreaListKanto'],
-    [interiorAreas, '#AreaListInterior'],
-    [seviiAreas, '#AreaListSevii'],
-    [castleAreas, '#AreaListCastlevania']
-]
+// Stores region area & associated CSS ID
+var regionAreas = [];
 
-// Updates each defined region area
+/** Prepares menus for each region in the DOM. */
+function createRegionMenus() {
+
+    regionAreas = [];   // Clear (in case populated)
+
+    for (var i=0; i<layerNames.length; i++)
+    {
+        regionAreas.push([areaLayers[i], `AreaList${layerNames[i]}`])
+
+        let html = `
+        <h4>${layerNames[i]} Areas</h4>
+        <ul id="${regionAreas[i][1]}">
+        </ul>
+        <button onclick="addRegionArea(${i})">Add</button>
+        `
+
+        regionMenu.innerHTML += html;
+    }
+}
+
+/** Updates each defined region area */
 function updateAreaLists () {
     regionAreas.forEach(element => {
         generateRegionList(element[0], element[1])
     });
 }
 
-// Generates a region's area list
+/** Generates a region's area list */
 function generateRegionList (areas, cssId) {
     areas.sort((a, b) => a.order - b.order)
     var listHTML = []
     for (var i = 0; i < areas.length; i++) {
         area = areas[i]
-        var className =  selectedArea && selectedArea.ident === area.ident ? 'selected' : !area.artist ? 'warning' : ''
+        let className =  selectedArea && selectedArea.ident === area.ident ? 'selected' : !area.artist ? 'warning' : ''
         listHTML.push(`
             <li>
                 <button onclick="clickArea('${area.ident}')" data-ident="${area.ident}" class="${className}">
@@ -100,21 +137,39 @@ function generateRegionList (areas, cssId) {
             </li>
         `)
     }
-    var listElem = document.querySelector(cssId)
-    listElem.innerHTML = listHTML.join('')
+    var listElem = document.querySelector(`#${cssId}`)
+    if (listElem != null) {
+        if (listHTML.length > 0) {
+            listElem.innerHTML = listHTML.join('');
+        }
+        else
+        {
+            let report = `Region with cssId ${cssId} did not have areas!`;
+            console.warn(report);
+        }
+    }
+    else
+    {
+        let report = `Couldn't find cssId ${cssId} element!`;
+        console.error(report)
+    }
+    
 }
 
+/** DOM button click response for when an area is clicked. */
 function clickArea (ident) {
     selectArea(getAreaByIdent(ident))
 }
 
+/** Sets the argument-defined area as the new selected area and updates the display. */
 function selectArea (area) {
     selectedArea = area
     loadSelectedAreaDataIntoElements()
-    generateTeleporterList()
+    updateSelectedArea()
     updateAreaLists()
 }
 
+/** Fetches an area using an ident key. */
 function getAreaByIdent (ident) {
     var area = null
     if (regionAreas.length < 1)
@@ -125,12 +180,14 @@ function getAreaByIdent (ident) {
     }
 }
 
+/** Updates the selected area (but really just updates its teleporter info). */
 function updateSelectedArea () {
     if (selectedArea) {
         generateTeleporterList()
     }
 }
 
+/** Updates the selected area's file identifier to a tech-safe value. */
 function updateSelectedAreaIdent () {
     if (selectedArea) {
         if (!selectedArea.ident) {
@@ -140,6 +197,7 @@ function updateSelectedAreaIdent () {
     }
 }
 
+/** Loads data from the selected area into the editor's DOM fields. */
 function loadSelectedAreaDataIntoElements () {
     if (selectedArea) {
         elems.order.value = selectedArea.order || null
@@ -161,6 +219,7 @@ function loadSelectedAreaDataIntoElements () {
     }
 }
 
+/** Saves editor's DOM field values to the selected area and refreshes the area list.  */
 function saveData () {
     if (selectedArea) {
         selectedArea.order = parseInt(elems.order.value)
@@ -199,6 +258,7 @@ function saveData () {
     }
 }
 
+/** Updates the teleportation tool's DOM element position values */
 function updateTeleporterTranslateTool () {
     var xElem = document.querySelector('#TeleporterXTranslate')
     var xOutputElem = document.querySelector('#TeleporterXTranslateOutput')
@@ -214,6 +274,7 @@ function updateTeleporterTranslateTool () {
 
 }
 
+/** Generates a list of teleporters for the selected area. */
 function generateTeleporterList () {
     if (selectedArea) {
         var list = document.querySelector('#teleporters')
@@ -239,6 +300,7 @@ function generateTeleporterList () {
     }
 }
 
+/** Adds a teleporter to the selected area. */
 function addTeleporter () {
     if (selectedArea) {
         selectedArea.teleporters.push({
@@ -253,6 +315,7 @@ function addTeleporter () {
     
 }
 
+/** Removes a teleporter from the selected area. */
 function removeTeleporter (index) {
     if (selectedArea) {
         selectedArea.teleporters.splice(index, 1)
@@ -260,44 +323,48 @@ function removeTeleporter (index) {
     }
 }
 
-// TODO: needs to be implementation agnostic
+/** Removes the actively selected area. */
 function removeArea () {
     if (selectedArea) {
-        var index = kantoAreas.findIndex(x => x.ident === selectedArea.ident)
-        if (index > -1) { kantoAreas.splice(index, 1); generateKantoList() }
-        index = interiorAreas.findIndex(x => x.ident === selectedArea.ident)
-        if (index > -1) { interiorAreas.splice(index, 1); generateInteriorList() }
-        index = seviiAreas.findIndex(x => x.ident === selectedArea.ident)
-        if (index > -1) { seviiAreas.splice(index, 1); generateSeviiList() }
-        index = castleAreas.findIndex(x => x.ident === selectedArea.ident)
-        if (index > -1) { castleAreas.splice(index, 1); generateCastleList() }
-        selectArea(kantoAreas[0])
+        for (var i=0; i<areaLayers.length; i++) 
+        {
+            var index = areaLayers[i].findIndex(x => x.ident === selectedArea.ident)
+            if (index > -1) 
+            {
+                regionAreas[i].splice(index, 1);
+                generateRegionList(index, regionAreas[i][1]);
+            }
+        }
+        selectArea(regionAreas[0][0][0])
     }
 }
 
-function addRegionArea (region) {
+/** Adds an area to an indexed region in variable regionAreas. Called by DOM. */
+function addRegionArea (regionIndex) {
     selectedArea = null
-    region[0].push(JSON.parse(JSON.stringify({...blankArea, order: region[0].length})))
+    let regionArea = regionAreas[regionIndex];
+    regionArea[0].push(JSON.parse(JSON.stringify({...blankArea, order: regionArea[0].length})))
     // clearElems()
-    generateRegionList(region[0], region[1])
-    selectArea(region[0][region[0].length - 1])
+    generateRegionList(regionArea[0], regionArea[1])   // Regenerate 
+                                            // TODO: make this regenerate just the modified list?
+    selectArea(regionArea[0][regionArea[0].length - 1])   // Select added area
 }
 
-// TODO: needs to be implementation agnostic
+/** Prepares a JSON output of the region areas. */
 function doOutput () {
     var elem = document.querySelector('#output')
     if (elem) {
         var areas = ''
-        areas += `var kantoAreas = ${JSON.stringify(kantoAreas, null, 2)} \n`
-        areas += `var interiorAreas = ${JSON.stringify(interiorAreas, null, 2)} \n`
-        areas += `var seviiAreas = ${JSON.stringify(seviiAreas, null, 2)} \n`
-        areas += `var castleAreas = ${JSON.stringify(castleAreas, null, 2)} \n`
+        for (var i=0; i<regionAreas.length; i++) {
+            areas +=  `var ${layerNames[i]} = ${JSON.stringify(regionAreas[i][0], null, 2)} \n`
+        }
         elem.value = areas.replace(/^[\t ]*"[^:\n\r]+(?<!\\)":/gm, function (match) {
             return match.replace(/"/g, "").replace("'", '’');
         });
     }
 }
 
+/** Helper: Converts a string to snake_case */
 function toSnakeCase (string) {
     var str = string || ''
     var strArr = str.split(' ');

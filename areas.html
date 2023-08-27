@@ -6,35 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Editor Tool</title>
     <script src="areas.js"></script>
+    <script src="implementation.js"></script>
     <link rel="stylesheet" href="areatool.css">
 
 </head>
 <body>
     <div class="area-editor">
-        <div class="area-editor__left"><!--Regions-->
-            <h4>Castlevania Areas</h4>
-            <ul id="AreaListCastlevania">
-                <!--  -->
-            </ul>
-            <button onclick="addRegionArea(regionAreas[3])">Add</button>
-            <h4>Kanto Areas</h4>
-            <ul id="AreaListKanto">
-                <!--  -->
-            </ul>
-            <button onclick="addRegionArea(regionAreas[0])">Add</button>
-            <hr>
-            <h4>Interior Areas</h4>
-            <ul id="AreaListInterior">
-                <!--  -->
-            </ul>
-            <button onclick="addRegionArea(regionAreas[1])">Add</button>
-            <hr>
-            <h4>Sevii Areas</h4>
-            <ul id="AreaListSevii">
-                <!--  -->
-            </ul>
-            <button onclick="addRegionArea(regionAreas[2])">Add</button>
-
+        <div class="area-editor__left" id="regionMenu"><!--Regions-->
+            <!--Filled by JS-->
         </div>
         <div class="area-editor__right">
             <div id="AreaEditorMain">
