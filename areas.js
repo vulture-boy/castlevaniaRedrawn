@@ -6,6 +6,7 @@ var castleAreas = [
     artist: "Arvy",
     artistImageOverride: "",
     url: "https://twitter.com/arvydas_b",
+    animation: false,
     point: {
       x: 32,
       y: 1712
@@ -29,6 +30,7 @@ var castleAreas = [
     artist: "Juanito",
     artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
+    animation: false,
     point: {
       x: 416,
       y: 1712
@@ -52,6 +54,7 @@ var castleAreas = [
     artist: "Stefan",
     artistImageOverride: "",
     url: "https://twitter.com/MercuryBD",
+    animation: true,
     point: {
       x: 800,
       y: 1712
@@ -75,6 +78,7 @@ var castleAreas = [
     artist: "Scooter",
     artistImageOverride: "",
     url: "http://twitter.com/lorenradis",
+    animation: false,
     point: {
       x: 1200,
       y: 1712
@@ -98,6 +102,7 @@ var castleAreas = [
     artist: "Arkflinn",
     artistImageOverride: "",
     url: "https://linktr.ee/Arkflinn",
+    animation: false,
     point: {
       x: 1584,
       y: 1712
@@ -121,6 +126,7 @@ var castleAreas = [
     artist: "MatteeDubbz",
     artistImageOverride: "",
     url: "https://twitter.com/MatteeDubbz/",
+    animation: false,
     point: {
       x: 1968,
       y: 1712
@@ -144,6 +150,7 @@ var castleAreas = [
     artist: "Anonim",
     artistImageOverride: "",
     url: "https://pixeljoint.com/p/245239.htm",
+    animation: false,
     point: {
       x: 2336,
       y: 1712
@@ -167,6 +174,7 @@ var castleAreas = [
     artist: "Crowno",
     artistImageOverride: "",
     url: "https://twitter.com/CrownoO",
+    animation: false,
     point: {
       x: 2336,
       y: 1904
@@ -190,6 +198,7 @@ var castleAreas = [
     artist: "HaywireJo",
     artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
+    animation: false,
     point: {
       x: 2848,
       y: 1712
@@ -213,6 +222,7 @@ var castleAreas = [
     artist: "Ghoulee",
     artistImageOverride: "",
     url: "https://twitter.com/ghouleebones",
+    animation: false,
     point: {
       x: 3360,
       y: 1712
@@ -236,6 +246,7 @@ var castleAreas = [
     artist: "Arkflinn",
     artistImageOverride: "",
     url: "https://linktr.ee/Arkflinn",
+    animation: false,
     point: {
       x: 3616,
       y: 1648
@@ -259,6 +270,7 @@ var castleAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3360,
       y: 1456
@@ -282,6 +294,7 @@ var castleAreas = [
     artist: "PixelEric",
     artistImageOverride: "",
     url: "https://pixeleric.carrd.co/",
+    animation: false,
     point: {
       x: 2976,
       y: 1456
@@ -305,6 +318,7 @@ var castleAreas = [
     artist: "DioShiba",
     artistImageOverride: "",
     url: "https://andreworlukartanimations.wordpress.com/",
+    animation: false,
     point: {
       x: 2592,
       y: 1456
@@ -328,6 +342,7 @@ var castleAreas = [
     artist: "MobyPixel",
     artistImageOverride: "",
     url: "https://twitter.com/MobyPixel",
+    animation: false,
     point: {
       x: 2976,
       y: 1264
@@ -351,6 +366,7 @@ var castleAreas = [
     artist: "MobyPixel",
     artistImageOverride: "",
     url: "https://twitter.com/MobyPixel",
+    animation: false,
     point: {
       x: 2592,
       y: 1264
@@ -374,6 +390,7 @@ var castleAreas = [
     artist: "Coelacamth",
     artistImageOverride: "",
     url: "https://twitter.com/COELACAMTH",
+    animation: false,
     point: {
       x: 2208,
       y: 1264
@@ -397,6 +414,7 @@ var castleAreas = [
     artist: "Marceles",
     artistImageOverride: "",
     url: "https://twitter.com/marceles_pxl",
+    animation: false,
     point: {
       x: 1824,
       y: 1264
@@ -420,6 +438,7 @@ var castleAreas = [
     artist: "Donpo",
     artistImageOverride: "",
     url: "https://twitter.com/DonpoPixels",
+    animation: false,
     point: {
       x: 2080,
       y: 1072
@@ -443,6 +462,7 @@ var castleAreas = [
     artist: "Donpo",
     artistImageOverride: "",
     url: "https://twitter.com/DonpoPixels",
+    animation: false,
     point: {
       x: 1824,
       y: 1072
@@ -466,6 +486,7 @@ var castleAreas = [
     artist: "RyanKeeton",
     artistImageOverride: "",
     url: "https://twitter.com/ryankeeton",
+    animation: false,
     point: {
       x: 1440,
       y: 1056
@@ -489,6 +510,7 @@ var castleAreas = [
     artist: "KhyleThePixelPrince",
     artistImageOverride: "",
     url: "https://twitter.com/KhyleThe",
+    animation: false,
     point: {
       x: 1056,
       y: 1056
@@ -512,6 +534,7 @@ var castleAreas = [
     artist: "Toni M",
     artistImageOverride: "ToniM",
     url: "https://twitter.com/PixelsMil",
+    animation: true,
     point: {
       x: 1056,
       y: 864
@@ -535,6 +558,7 @@ var castleAreas = [
     artist: "Neko",
     artistImageOverride: "",
     url: "https://twitter.com/nekocrocodile",
+    animation: false,
     point: {
       x: 1440,
       y: 864
@@ -558,6 +582,7 @@ var castleAreas = [
     artist: "Runtd",
     artistImageOverride: "",
     url: "https://twitter.com/RuntdArt",
+    animation: false,
     point: {
       x: 1824,
       y: 864
@@ -581,6 +606,7 @@ var castleAreas = [
     artist: "Marceles",
     artistImageOverride: "",
     url: "https://twitter.com/marceles_pxl",
+    animation: false,
     point: {
       x: 2208,
       y: 864
@@ -604,6 +630,7 @@ var castleAreas = [
     artist: "Juanito",
     artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
+    animation: true,
     point: {
       x: 2080,
       y: 672
@@ -627,6 +654,7 @@ var castleAreas = [
     artist: "Vierbit",
     artistImageOverride: "",
     url: "https://twitter.com/vierbit",
+    animation: false,
     point: {
       x: 2592,
       y: 672
@@ -650,6 +678,7 @@ var castleAreas = [
     artist: "Ashton: Retrocade Media",
     artistImageOverride: "AshtonArnold",
     url: "https://retrocademedia.itch.io/",
+    animation: false,
     point: {
       x: 3104,
       y: 672
@@ -673,6 +702,7 @@ var castleAreas = [
     artist: "Foofarawr",
     artistImageOverride: "",
     url: "https://linktr.ee/foofarawr",
+    animation: false,
     point: {
       x: 3488,
       y: 672
@@ -696,6 +726,7 @@ var castleAreas = [
     artist: "nasCobolo",
     artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
+    animation: true,
     point: {
       x: 3872,
       y: 672
@@ -719,6 +750,7 @@ var castleAreas = [
     artist: "Rudy Flores",
     artistImageOverride: "RudyFlores",
     url: "https://twitter.com/Rudyf93",
+    animation: false,
     point: {
       x: 4384,
       y: 672
@@ -742,6 +774,7 @@ var castleAreas = [
     artist: "Lombre",
     artistImageOverride: "",
     url: "https://twitter.com/ElHombreLombre",
+    animation: false,
     point: {
       x: 4384,
       y: 864
@@ -765,6 +798,7 @@ var castleAreas = [
     artist: "nasCobolo",
     artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
+    animation: false,
     point: {
       x: 4384,
       y: 1040
@@ -788,6 +822,7 @@ var castleAreas = [
     artist: "Jaquiox",
     artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
+    animation: false,
     point: {
       x: 4384,
       y: 1216
@@ -811,6 +846,7 @@ var castleAreas = [
     artist: "Normal Neighbor",
     artistImageOverride: "NormalNeighbor",
     url: "https://twitter.com/PixelNeighbor",
+    animation: false,
     point: {
       x: 4384,
       y: 1392
@@ -834,6 +870,7 @@ var castleAreas = [
     artist: "Chubbo",
     artistImageOverride: "",
     url: "https://www.instagram.com/chubbopx/",
+    animation: false,
     point: {
       x: 4384,
       y: 1568
@@ -857,6 +894,7 @@ var castleAreas = [
     artist: "Kosena",
     artistImageOverride: "",
     url: "https://twitter.com/KosenaMaster",
+    animation: false,
     point: {
       x: 4384,
       y: 1872
@@ -880,6 +918,7 @@ var castleAreas = [
     artist: "Normal Neighbor",
     artistImageOverride: "NormalNeighbor",
     url: "https://twitter.com/PixelNeighbor",
+    animation: true,
     point: {
       x: 4768,
       y: 1872
@@ -903,6 +942,7 @@ var castleAreas = [
     artist: "Goblin",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 5152,
       y: 1872
@@ -926,6 +966,7 @@ var castleAreas = [
     artist: "pinselschubser",
     artistImageOverride: "",
     url: "https://twitter.com/pinselschubser",
+    animation: false,
     point: {
       x: 5536,
       y: 1872
@@ -949,6 +990,7 @@ var castleAreas = [
     artist: "Toni M",
     artistImageOverride: "ToniM",
     url: "https://twitter.com/PixelsMil",
+    animation: false,
     point: {
       x: 5856,
       y: 1008
@@ -972,6 +1014,7 @@ var castleAreas = [
     artist: "Lyzerus",
     artistImageOverride: "",
     url: "https://twitter.com/AaronLyzerus",
+    animation: false,
     point: {
       x: 6240,
       y: 1008
@@ -995,6 +1038,7 @@ var castleAreas = [
     artist: "Curelapse",
     artistImageOverride: "",
     url: "https://twitter.com/curelapsed",
+    animation: false,
     point: {
       x: 6624,
       y: 1008
@@ -1018,6 +1062,7 @@ var castleAreas = [
     artist: "HaywireJo",
     artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
+    animation: false,
     point: {
       x: 7008,
       y: 1008
@@ -1041,6 +1086,7 @@ var castleAreas = [
     artist: "Xanday",
     artistImageOverride: "",
     url: "http://www.xanday.com",
+    animation: false,
     point: {
       x: 7392,
       y: 1008
@@ -1064,6 +1110,7 @@ var castleAreas = [
     artist: "Batfeula",
     artistImageOverride: "",
     url: "https://twitter.com/batfeula",
+    animation: false,
     point: {
       x: 8160,
       y: 1008
@@ -1087,6 +1134,7 @@ var castleAreas = [
     artist: "maruki",
     artistImageOverride: "",
     url: "https://twitter.com/MarukiHurakami",
+    animation: false,
     point: {
       x: 8416,
       y: 1008
@@ -1110,6 +1158,7 @@ var castleAreas = [
     artist: "Jaquiox",
     artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
+    animation: false,
     point: {
       x: 8416,
       y: 816
@@ -1133,6 +1182,7 @@ var castleAreas = [
     artist: "Jaquiox",
     artistImageOverride: "",
     url: "https://www.instagram.com/jaquiox/",
+    animation: false,
     point: {
       x: 8928,
       y: 816
@@ -1156,6 +1206,7 @@ var castleAreas = [
     artist: "Seth",
     artistImageOverride: "",
     url: "https://twitter.com/Setho_o",
+    animation: false,
     point: {
       x: 9440,
       y: 816
@@ -1179,6 +1230,7 @@ var castleAreas = [
     artist: "Stefan",
     artistImageOverride: "",
     url: "https://twitter.com/MercuryBD",
+    animation: true,
     point: {
       x: 9696,
       y: 816
@@ -1202,6 +1254,7 @@ var castleAreas = [
     artist: "Juanito",
     artistImageOverride: "",
     url: "https://twitter.com/juanitomedinart",
+    animation: false,
     point: {
       x: 9440,
       y: 624
@@ -1225,6 +1278,7 @@ var castleAreas = [
     artist: "Marina",
     artistImageOverride: "",
     url: "https://cringe.ovh/",
+    animation: false,
     point: {
       x: 9184,
       y: 624
@@ -1248,6 +1302,7 @@ var castleAreas = [
     artist: "Robin Quinn",
     artistImageOverride: "RobinQuinn",
     url: "https://twitter.com/bobbytries/",
+    animation: false,
     point: {
       x: 8672,
       y: 624
@@ -1271,6 +1326,7 @@ var castleAreas = [
     artist: "Looloopaa",
     artistImageOverride: "",
     url: "https://twitter.com/looloopaa",
+    animation: false,
     point: {
       x: 8160,
       y: 624
@@ -1294,6 +1350,7 @@ var castleAreas = [
     artist: "DaNinjaManZ",
     artistImageOverride: "",
     url: "https://twitter.com/DaNinjaManZ",
+    animation: true,
     point: {
       x: 8288,
       y: 432
@@ -1317,6 +1374,7 @@ var castleAreas = [
     artist: "Steven",
     artistImageOverride: "",
     url: "https://stevenart1988.wordpress.com/",
+    animation: false,
     point: {
       x: 7904,
       y: 432
@@ -1340,6 +1398,7 @@ var castleAreas = [
     artist: "StrawBe",
     artistImageOverride: "",
     url: "https://twitter.com/StrawPact",
+    animation: true,
     point: {
       x: 7648,
       y: 432
@@ -1363,6 +1422,7 @@ var castleAreas = [
     artist: "HaywireJo",
     artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
+    animation: false,
     point: {
       x: 7264,
       y: 432
@@ -1386,6 +1446,7 @@ var castleAreas = [
     artist: "Kohemy",
     artistImageOverride: "",
     url: "https://mobile.twitter.com/kohemy1",
+    animation: false,
     point: {
       x: 6880,
       y: 432
@@ -1409,6 +1470,7 @@ var castleAreas = [
     artist: "Rakun",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 6496,
       y: 432
@@ -1432,6 +1494,7 @@ var castleAreas = [
     artist: "Enchanteur",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 6112,
       y: 432
@@ -1455,6 +1518,7 @@ var castleAreas = [
     artist: "MattStov",
     artistImageOverride: "",
     url: "https://twitter.com/MattstovArt",
+    animation: false,
     point: {
       x: 5856,
       y: 432
@@ -1478,6 +1542,7 @@ var castleAreas = [
     artist: "Barosaros",
     artistImageOverride: "",
     url: "https://twitter.com/barosaros",
+    animation: false,
     point: {
       x: 5856,
       y: 240
@@ -1501,6 +1566,7 @@ var castleAreas = [
     artist: "Tanuki",
     artistImageOverride: "",
     url: "https://linktr.ee/tanukitype",
+    animation: true,
     point: {
       x: 5520,
       y: 240
@@ -1519,34 +1585,12 @@ var castleAreas = [
   },
   {
     order: 67,
-    title: "6-8",
-    ident: "6-8",
+    title: "6-8 & 6-9",
+    ident: "6-8_6-9",
     artist: "MetaruPX",
     artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
-    point: {
-      x: 5520,
-      y: 432
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "Castle",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 68,
-    title: "6-9",
-    ident: "6-9",
-    artist: "MetaruPX",
-    artistImageOverride: "",
-    url: "https://twitter.com/MetaruPX",
+    animation: true,
     point: {
       x: 5344,
       y: 432
@@ -1564,12 +1608,13 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 69,
+    order: 68,
     title: "6-10",
     ident: "6-10",
     artist: "Steven",
     artistImageOverride: "",
     url: "https://stevenart1988.wordpress.com/",
+    animation: false,
     point: {
       x: 5344,
       y: 240
@@ -1587,12 +1632,13 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 70,
+    order: 69,
     title: "7-1",
     ident: "7-1",
     artist: "DaNinjaManZ",
     artistImageOverride: "",
     url: "https://twitter.com/DaNinjaManZ",
+    animation: false,
     point: {
       x: 4832,
       y: 240
@@ -1610,12 +1656,13 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 71,
+    order: 70,
     title: "7-2",
     ident: "7-2",
     artist: "Lombre",
     artistImageOverride: "",
     url: "https://twitter.com/ElHombreLombre",
+    animation: false,
     point: {
       x: 5088,
       y: 48
@@ -1633,12 +1680,13 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 72,
+    order: 71,
     title: "7-3",
     ident: "7-3",
     artist: "nasCobolo",
     artistImageOverride: "",
     url: "https://twitter.com/ratariasart",
+    animation: true,
     point: {
       x: 4832,
       y: 48
@@ -1656,12 +1704,13 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 73,
+    order: 72,
     title: "7-4",
     ident: "7-4",
     artist: "Zernek",
     artistImageOverride: "",
     url: "https://twitter.com/Zernek1",
+    animation: false,
     point: {
       x: 4576,
       y: 48
@@ -1687,6 +1736,7 @@ var kantoAreas = [
     artist: "@Pixel_Pit",
     artistImageOverride: "",
     url: "https://twitter.com/Pixel_Pit",
+    animation: false,
     point: {
       x: 832,
       y: 4512,
@@ -1734,6 +1784,7 @@ var kantoAreas = [
     artist: "@spooonnnboy",
     artistImageOverride: "",
     url: "https://twitter.com/spooonnnboy",
+    animation: false,
     point: {
       x: 832,
       y: 3936
@@ -1757,6 +1808,7 @@ var kantoAreas = [
     artist: "@OhNoItsMonroe",
     artistImageOverride: "",
     url: "https://twitter.com/OhNoItsMonroe",
+    animation: false,
     point: {
       x: 672,
       y: 3360
@@ -1802,6 +1854,7 @@ var kantoAreas = [
     artist: "@witch_warren",
     artistImageOverride: "",
     url: "https://twitter.com/witch_warren",
+    animation: false,
     point: {
       x: 800,
       y: 2848
@@ -1825,6 +1878,7 @@ var kantoAreas = [
     artist: "@Woodspixl_",
     artistImageOverride: "",
     url: "https://twitter.com/Woodspixl_",
+    animation: false,
     point: {
       x: 608,
       y: 2080
@@ -1847,6 +1901,7 @@ var kantoAreas = [
     artist: "@rbatistadelima",
     artistImageOverride: "",
     url: "https://twitter.com/rbatistadelima",
+    animation: false,
     point: {
       x: 608,
       y: 1824
@@ -1870,6 +1925,7 @@ var kantoAreas = [
     artist: "@fiopico",
     artistImageOverride: "",
     url: "https://twitter.com/fiopico",
+    animation: false,
     point: {
       x: 1152,
       y: 2080
@@ -1893,6 +1949,7 @@ var kantoAreas = [
     artist: "@saltiestbunny",
     artistImageOverride: "",
     url: "https://twitter.com/saltiestbunny",
+    animation: false,
     point: {
       x: 672,
       y: 1248
@@ -1916,6 +1973,7 @@ var kantoAreas = [
     artist: "@chreniafoka",
     artistImageOverride: "",
     url: "https://twitter.com/chreniafoka/status",
+    animation: false,
     point: {
       x: 1312,
       y: 1376
@@ -1939,6 +1997,7 @@ var kantoAreas = [
     artist: "cjlm123",
     artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
+    animation: false,
     point: {
       x: 2112,
       y: 1088
@@ -1962,6 +2021,7 @@ var kantoAreas = [
     artist: "@Woodspixl_",
     artistImageOverride: "",
     url: "https://twitter.com/Woodspixl_",
+    animation: false,
     point: {
       x: 2224,
       y: 864
@@ -1985,6 +2045,7 @@ var kantoAreas = [
     artist: "@1000_toasters",
     artistImageOverride: "",
     url: "https://twitter.com/1000_toasters",
+    animation: false,
     point: {
       x: 2464,
       y: 1088
@@ -2008,6 +2069,7 @@ var kantoAreas = [
     artist: "@EdelweissPkmn",
     artistImageOverride: "",
     url: "https://twitter.com/EdelweissPkmn",
+    animation: false,
     point: {
       x: 3552,
       y: 960
@@ -2031,6 +2093,7 @@ var kantoAreas = [
     artist: "@yoYokaiy",
     artistImageOverride: "",
     url: "https://twitter.com/yoYokaiy",
+    animation: false,
     point: {
       x: 3712,
       y: 384
@@ -2054,6 +2117,7 @@ var kantoAreas = [
     artist: "@huttaburger",
     artistImageOverride: "",
     url: "https://twitter.com/huttaburger",
+    animation: false,
     point: {
       x: 4032,
       y: 384
@@ -2077,6 +2141,7 @@ var kantoAreas = [
     artist: "@Pixelkauz",
     artistImageOverride: "",
     url: "https://twitter.com/Pixelkauz",
+    animation: false,
     point: {
       x: 4704,
       y: 64
@@ -2100,6 +2165,7 @@ var kantoAreas = [
     artist: "@ashenwater",
     artistImageOverride: "",
     url: "https://twitter.com/ashenwater",
+    animation: false,
     point: {
       x: 3712,
       y: 1536
@@ -2123,6 +2189,7 @@ var kantoAreas = [
     artist: "@RaspberryMilks1",
     artistImageOverride: "",
     url: "https://twitter.com/RaspberryMilks1",
+    animation: false,
     point: {
       x: 3696,
       y: 2688
@@ -2146,6 +2213,7 @@ var kantoAreas = [
     artist: "@HyperJerk",
     artistImageOverride: "",
     url: "https://twitter.com/HyperJerk",
+    animation: false,
     point: {
       x: 3552,
       y: 3248
@@ -2169,6 +2237,7 @@ var kantoAreas = [
     artist: "@pixellerjeremy",
     artistImageOverride: "",
     url: "https://twitter.com/pixellerjeremy",
+    animation: false,
     point: {
       x: 4208,
       y: 3376
@@ -2192,6 +2261,7 @@ var kantoAreas = [
     artist: "@HaywireJo",
     artistImageOverride: "",
     url: "https://twitter.com/HaywireJo",
+    animation: false,
     point: {
       x: 4192,
       y: 1088
@@ -2215,6 +2285,7 @@ var kantoAreas = [
     artist: "@Seva86706122",
     artistImageOverride: "",
     url: "https://twitter.com/Seva86706122",
+    animation: false,
     point: {
       x: 5152,
       y: 1088
@@ -2238,6 +2309,7 @@ var kantoAreas = [
     artist: "@gif_not_jif",
     artistImageOverride: "",
     url: "https://twitter.com/gif_not_jif",
+    animation: false,
     point: {
       x: 5152,
       y: 1568
@@ -2261,6 +2333,7 @@ var kantoAreas = [
     artist: "@StrawPact",
     artistImageOverride: "",
     url: "https://twitter.com/StrawPact",
+    animation: false,
     point: {
       x: 5152,
       y: 1888
@@ -2284,6 +2357,7 @@ var kantoAreas = [
     artist: "@cure_pixel",
     artistImageOverride: "",
     url: "https://twitter.com/cure_pixel",
+    animation: false,
     point: {
       x: 5152,
       y: 2112
@@ -2307,6 +2381,7 @@ var kantoAreas = [
     artist: "KerrieLake",
     artistImageOverride: "",
     url: "https://twitter.com/KerrieLake",
+    animation: false,
     point: {
       x: 4192,
       y: 2240
@@ -2330,6 +2405,7 @@ var kantoAreas = [
     artist: "@SarahBoevingArt",
     artistImageOverride: "",
     url: "https://twitter.com/SarahBoevingArt",
+    animation: false,
     point: {
       x: 3232,
       y: 2112
@@ -2353,6 +2429,7 @@ var kantoAreas = [
     artist: "@MetaruPX",
     artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
+    animation: false,
     point: {
       x: 2432,
       y: 2048
@@ -2376,6 +2453,7 @@ var kantoAreas = [
     artist: "@foofarawr",
     artistImageOverride: "",
     url: "https://twitter.com/foofarawr",
+    animation: false,
     point: {
       x: 3552,
       y: 2112
@@ -2399,6 +2477,7 @@ var kantoAreas = [
     artist: "@MetaruPX",
     artistImageOverride: "",
     url: "https://twitter.com/MetaruPX",
+    animation: false,
     point: {
       x: 1792,
       y: 2112
@@ -2422,6 +2501,7 @@ var kantoAreas = [
     artist: "@Anima_nel",
     artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
+    animation: false,
     point: {
       x: 1792,
       y: 2512
@@ -2445,6 +2525,7 @@ var kantoAreas = [
     artist: "@Anima_nel",
     artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
+    animation: false,
     point: {
       x: 1792,
       y: 4832
@@ -2468,6 +2549,7 @@ var kantoAreas = [
     artist: "@Dewndeym",
     artistImageOverride: "",
     url: "https://twitter.com/Dewndeym",
+    animation: false,
     point: {
       x: 2592,
       y: 4704
@@ -2491,6 +2573,7 @@ var kantoAreas = [
     artist: "@Dewndeym",
     artistImageOverride: "",
     url: "https://twitter.com/Dewndeym",
+    animation: false,
     point: {
       x: 2656,
       y: 4256
@@ -2514,6 +2597,7 @@ var kantoAreas = [
     artist: "chubbopx",
     artistImageOverride: "",
     url: "https://www.instagram.com/chubbopx/",
+    animation: false,
     point: {
       x: 3168,
       y: 4064
@@ -2537,6 +2621,7 @@ var kantoAreas = [
     artist: "@_Mechano_",
     artistImageOverride: "",
     url: "https://twitter.com/_Mechano_",
+    animation: false,
     point: {
       x: 2464,
       y: 3648
@@ -2560,6 +2645,7 @@ var kantoAreas = [
     artist: "@Daydream_Stream",
     artistImageOverride: "",
     url: "https://twitter.com/Daydream_Stream",
+    animation: false,
     point: {
       x: 2144,
       y: 4256
@@ -2583,6 +2669,7 @@ var kantoAreas = [
     artist: "cjlm123",
     artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
+    animation: false,
     point: {
       x: 3232,
       y: 4880
@@ -2606,6 +2693,7 @@ var kantoAreas = [
     artist: "@KarlestonChew",
     artistImageOverride: "",
     url: "https://twitter.com/KarlestonChew",
+    animation: false,
     point: {
       x: 4240,
       y: 4544
@@ -2629,6 +2717,7 @@ var kantoAreas = [
     artist: "cjlm123",
     artistImageOverride: "",
     url: "https://pixeljoint.com/p/220173.htm",
+    animation: false,
     point: {
       x: 4240,
       y: 4288
@@ -2652,6 +2741,7 @@ var kantoAreas = [
     artist: "@SarahBoevingArt",
     artistImageOverride: "",
     url: "https://twitter.com/SarahBoevingArt",
+    animation: false,
     point: {
       x: 5184,
       y: 3504
@@ -2675,6 +2765,7 @@ var kantoAreas = [
     artist: "mysticaldrop",
     artistImageOverride: "",
     url: "https://www.instagram.com/mysticaldrop/",
+    animation: false,
     point: {
       x: 5184,
       y: 2528
@@ -2698,6 +2789,7 @@ var kantoAreas = [
     artist: "@VCorbi",
     artistImageOverride: "",
     url: "https://twitter.com/VCorbi",
+    animation: false,
     point: {
       x: 2752,
       y: 5280
@@ -2721,6 +2813,7 @@ var kantoAreas = [
     artist: "@natnatart",
     artistImageOverride: "",
     url: "https://twitter.com/natnatart",
+    animation: false,
     point: {
       x: 1248,
       y: 5520
@@ -2744,6 +2837,7 @@ var kantoAreas = [
     artist: "@Anima_nel",
     artistImageOverride: "",
     url: "https://twitter.com/Anima_nel",
+    animation: false,
     point: {
       x: 832,
       y: 5424
@@ -2767,6 +2861,7 @@ var kantoAreas = [
     artist: "@SalamiChild",
     artistImageOverride: "",
     url: "https://twitter.com/SalamiChild",
+    animation: false,
     point: {
       x: 832,
       y: 4800
@@ -2790,6 +2885,7 @@ var kantoAreas = [
     artist: "@Geno_CL",
     artistImageOverride: "",
     url: "https://twitter.com/Geno_CL",
+    animation: false,
     point: {
       x: null,
       y: 3424
@@ -2813,6 +2909,7 @@ var kantoAreas = [
     artist: "@incrediblemaker",
     artistImageOverride: "",
     url: "https://twitter.com/incrediblemaker",
+    animation: false,
     point: {
       x: null,
       y: 2832
@@ -2836,6 +2933,7 @@ var kantoAreas = [
     artist: "@incrediblemaker",
     artistImageOverride: "",
     url: "https://twitter.com/incrediblemaker",
+    animation: false,
     point: {
       x: null,
       y: 2352
@@ -2859,6 +2957,7 @@ var kantoAreas = [
     artist: "@chromegnomes",
     artistImageOverride: "",
     url: "https://twitter.com/chromegnomes",
+    animation: false,
     point: {
       x: null,
       y: 1728
@@ -2882,6 +2981,7 @@ var kantoAreas = [
     artist: "@jooniverz",
     artistImageOverride: "",
     url: "https://twitter.com/jooniverz",
+    animation: false,
     point: {
       x: null,
       y: 1184
@@ -2905,6 +3005,7 @@ var kantoAreas = [
     artist: "@jdzombi_",
     artistImageOverride: "",
     url: "https://twitter.com/jdzombi_",
+    animation: false,
     point: {
       x: null,
       y: 896
@@ -2930,6 +3031,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 832,
       y: 4496
@@ -2950,6 +3052,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 832,
       y: 4640
@@ -2970,6 +3073,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 992,
       y: 4576
@@ -2990,6 +3094,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 1136,
       y: 3488
@@ -3010,6 +3115,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 961,
       y: 3792
@@ -3030,6 +3136,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 992,
       y: 3648
@@ -3050,6 +3157,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 992,
       y: 3488
@@ -3070,6 +3178,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 768,
       y: 3489
@@ -3090,6 +3199,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 768,
       y: 3728
@@ -3110,6 +3220,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 752,
       y: 1008
@@ -3130,6 +3241,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 833,
       y: 1328
@@ -3150,6 +3262,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 1040,
       y: 208
@@ -3170,6 +3283,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 1696,
       y: 208
@@ -3190,6 +3304,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 2352,
       y: 208
@@ -3210,6 +3325,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3680,
       y: 1200
@@ -3230,6 +3346,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3984,
       y: 960
@@ -3250,6 +3367,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3968,
       y: 1120
@@ -3270,6 +3388,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 4704,
       y: 272
@@ -3290,6 +3409,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3648,
       y: 2320
@@ -3310,6 +3430,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3440,
       y: 3344
@@ -3330,6 +3451,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3616,
       y: 3312
@@ -3350,6 +3472,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 3728,
       y: 3632
@@ -3370,6 +3493,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 4416,
       y: 3696
@@ -3390,6 +3514,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 2880,
       y: 3632
@@ -3410,6 +3535,7 @@ var interiorAreas = [
     artist: "",
     artistImageOverride: "",
     url: "",
+    animation: false,
     point: {
       x: 1184,
       y: 1856

@@ -28,30 +28,66 @@ var seviiCanvas = {width: 4448, height: 6784}
 var castleCanvas = {width: 10000, height: 2096}
 var layerCanvases = [kantoCanvas, interiorCanvas, seviiCanvas, castleCanvas];
 
-/** Dictionary pairing zone types to icon filenames. */
-let iconTypeDictionary = {
-    'town' : 'location_city',
-    'forest' : 'park',
-    'surfing' : 'surfing',
-    'mountain' : 'landscape',
-    'route' : 'pedal_bike',
-
-    'Terrace' : 'grass',
-    'Underground' : 'fireplace',
-    'Castle' : 'fort',
-    'Boss' : 'dark_mode',
-}
-
-/** Dictionary pairing zone types to rgb color definitions. */
-let iconColorDictionary = {
-    'town' : 'rgb(130 94 108)',
-    'forest' : 'rgb(94 130 105)',
-    'surfing' : 'rgb(108 127 171)',
-    'mountain' : 'rgb(130 115 88)',
-    'route' : 'rgb(110 130 88)',
-
-    'Terrace' : 'rgb(210 212 141)',
-    'Underground' : 'rgb(113 104 127)',
-    'Castle' : 'rgb(204 156 73)',
-    'Boss' : 'rgb(129 28 56)'
-}
+/** Biome Data (Screen icons) */
+var biomes = [
+    {
+        name: "Town",
+        ident: "town",
+        iconId: "location_city",
+        color: 'rgb(130 94 108)',
+    },
+    {
+        name: "Forest",
+        ident: "forest",
+        iconId: "park",
+        color: 'rgb(94 130 105)',
+    },
+    {
+        name: "Surfing",
+        ident: "surfing",
+        iconId: "surfing",
+        color: 'rgb(108 127 171)',
+    },
+    {
+        name: "Mountain",
+        ident: "mountain",
+        iconId: "landscape",
+        color: 'rgb(130 115 88)',
+    },
+    {
+        name: "Route",
+        ident: "route",
+        iconId: "pedal_bike",
+        color: 'rgb(110 130 88)',
+    },
+    {
+        name: "Terrace",
+        ident: "terrace",
+        iconId: "grass",
+        color: 'rgb(210 212 141)',
+    },
+    {
+        name: "Underground",
+        ident: "underground",
+        iconId: "fireplace",
+        color: 'rgb(113 104 127)',
+    },
+    {
+        name: "Castle",
+        ident: "castle",
+        iconId: "fort",
+        color: 'rgb(204 156 73)',
+    },
+    {
+        name: "Boss",
+        ident: "boss",
+        iconId: "dark_mode",
+        color: 'rgb(129 28 56)',
+    },
+    {
+        name: "Other",
+        ident: "other",
+        iconId: "dataset",
+        color: 'rgb(94 94 94)',
+    },
+];

@@ -300,8 +300,17 @@ function setUpAreas () {
         var areaImage = activeImages[i];
         generateAreaZone(area, areaImage);
 
-        var backgroundColor = area.type in iconColorDictionary ? iconColorDictionary[area.type] : 'rgb(0 0 0)';
-        var materialIcon = area.type in iconTypeDictionary ? iconTypeDictionary[area.type] : '';
+        // Get biome data
+        var backgroundColor = 'rgb(0 0 0)';
+        var materialIcon = '';
+        for (var j=0; j< biomes.length; j++) {
+            let biome = biomes[j];
+            if (biome.ident === area.type) {
+                backgroundColor = biome.color;
+                materialIcon = biome.iconId;
+                break;
+            }
+        }
 
         // Prep artist image HTML
         var areaArtist = area.artist.replace('@', '');

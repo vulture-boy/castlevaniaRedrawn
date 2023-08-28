@@ -22,6 +22,7 @@ var blankArea = {
     artistImageOverride: "",
     url: "",
     post_url: "",
+    animation: false,
     point: {
         x: 0,
         y: 0
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', init) // Run init when DOM has loa
 function init () {
     registerElems();
     createRegionMenus();
+    populateAreaTypes();
     setEventOnStaticInputs();
     updateAreaLists();
     selectArea(regionAreas[0][0][0]);   // Designate a starting area
@@ -112,6 +114,19 @@ function createRegionMenus() {
         `
 
         regionMenu.innerHTML += html;
+    }
+}
+
+/** Populates the area type option dropdown. */
+function populateAreaTypes() {
+
+    for (var i=0; i< biomes.length; i++) {
+        let html = `<option value="${biomes[i].ident}" `
+        if (i == 0) {
+            html += `selected`
+        }
+        html += `>${biomes[i].name}</option>`
+        elems.type.innerHTML += html;
     }
 }
 
