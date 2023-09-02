@@ -18,7 +18,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -42,7 +42,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -66,7 +66,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -90,7 +90,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -114,7 +114,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -138,7 +138,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -162,7 +162,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -186,7 +186,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -210,7 +210,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -234,7 +234,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -258,7 +258,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -282,7 +282,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -306,7 +306,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -330,7 +330,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -354,7 +354,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -378,7 +378,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -402,7 +402,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -426,7 +426,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -450,7 +450,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -474,7 +474,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -498,7 +498,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -522,7 +522,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -546,7 +546,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -570,7 +570,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -594,7 +594,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -618,7 +618,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -642,7 +642,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -666,7 +666,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -690,7 +690,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -714,7 +714,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -738,7 +738,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -762,7 +762,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -786,7 +786,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -810,7 +810,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -834,7 +834,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -858,7 +858,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -882,7 +882,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -906,7 +906,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -930,7 +930,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -954,7 +954,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -978,13 +978,37 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Underground",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 41,
+    title: "4-X",
+    ident: "1-1",
+    artist: "",
+    artistImageOverride: "",
+    url: "",
+    animation: false,
+    point: {
+      x: 5536,
+      y: 1184
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "other",
+    zoom: 1,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 42,
     title: "4-5",
     ident: "4-5",
     artist: "Toni M",
@@ -1002,13 +1026,13 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 42,
+    order: 43,
     title: "4-6",
     ident: "4-6",
     artist: "Lyzerus",
@@ -1026,13 +1050,13 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 43,
+    order: 44,
     title: "4-7",
     ident: "4-7",
     artist: "Curelapse",
@@ -1050,13 +1074,13 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 44,
+    order: 45,
     title: "4-8",
     ident: "4-8",
     artist: "HaywireJo",
@@ -1074,13 +1098,13 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 45,
+    order: 46,
     title: "4-9",
     ident: "4-9",
     artist: "Xanday",
@@ -1098,7 +1122,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1122,7 +1146,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1146,7 +1170,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1170,7 +1194,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1194,7 +1218,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1218,7 +1242,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1242,7 +1266,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1266,7 +1290,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1290,7 +1314,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1314,7 +1338,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1338,7 +1362,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1362,7 +1386,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1386,7 +1410,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1410,7 +1434,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1434,7 +1458,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1458,7 +1482,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1482,7 +1506,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1506,7 +1530,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1530,7 +1554,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1554,7 +1578,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1578,7 +1602,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1602,7 +1626,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1626,7 +1650,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1650,7 +1674,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1674,7 +1698,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Terrace",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1698,7 +1722,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Castle",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -1722,7 +1746,7 @@ var castleAreas = [
       height: null
     },
     pan: "horizontal",
-    type: "Boss",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
@@ -3404,7 +3428,7 @@ var interiorAreas = [
     order: 17
   },
   {
-    title: "Underground (North-South)",
+    title: "underground (North-South)",
     ident: "underground_ns",
     artist: "",
     artistImageOverride: "",
