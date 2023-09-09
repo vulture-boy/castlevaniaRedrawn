@@ -986,13 +986,13 @@ var castleAreas = [
   {
     order: 41,
     title: "4-X",
-    ident: "1-1",
-    artist: "",
+    ident: "4-X",
+    artist: "anima_nel",
     artistImageOverride: "",
     url: "",
     animation: false,
     point: {
-      x: 5536,
+      x: 5856,
       y: 1184
     },
     offset: {
@@ -1003,7 +1003,7 @@ var castleAreas = [
     },
     pan: "vertical",
     type: "other",
-    zoom: 1,
+    zoom: 4,
     teleporters: [],
     post_url: ""
   },
