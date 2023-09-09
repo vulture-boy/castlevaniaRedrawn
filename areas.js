@@ -337,32 +337,8 @@ var castleAreas = [
   },
   {
     order: 15,
-    title: "2-5",
-    ident: "2-5",
-    artist: "MobyPixel",
-    artistImageOverride: "",
-    url: "https://twitter.com/MobyPixel",
-    animation: false,
-    point: {
-      x: 2976,
-      y: 1264
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "castle",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 16,
-    title: "2-6",
-    ident: "2-6",
+    title: "2-5 & 2-6",
+    ident: "2-5_2-6",
     artist: "MobyPixel",
     artistImageOverride: "",
     url: "https://twitter.com/MobyPixel",
@@ -384,7 +360,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 17,
+    order: 16,
     title: "2-7",
     ident: "2-7",
     artist: "Coelacamth",
@@ -408,7 +384,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 18,
+    order: 17,
     title: "2-8",
     ident: "2-8",
     artist: "Marceles",
@@ -432,7 +408,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 19,
+    order: 18,
     title: "2-9",
     ident: "2-9",
     artist: "Donpo",
@@ -456,7 +432,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 20,
+    order: 19,
     title: "2-10",
     ident: "2-10",
     artist: "Donpo",
@@ -480,7 +456,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 21,
+    order: 20,
     title: "3-1",
     ident: "3-1",
     artist: "RyanKeeton",
@@ -504,7 +480,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 22,
+    order: 21,
     title: "3-2",
     ident: "3-2",
     artist: "KhyleThePixelPrince",
@@ -528,7 +504,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 23,
+    order: 22,
     title: "3-3",
     ident: "3-3",
     artist: "Toni M",
@@ -552,7 +528,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 24,
+    order: 23,
     title: "3-4",
     ident: "3-4",
     artist: "Neko",
@@ -576,7 +552,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 25,
+    order: 24,
     title: "3-5",
     ident: "3-5",
     artist: "Runtd",
@@ -600,7 +576,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 26,
+    order: 25,
     title: "3-6",
     ident: "3-6",
     artist: "Marceles",
@@ -624,7 +600,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 27,
+    order: 26,
     title: "3-7",
     ident: "3-7",
     artist: "Juanito",
@@ -648,7 +624,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 28,
+    order: 27,
     title: "3-8",
     ident: "3-8",
     artist: "Vierbit",
@@ -672,7 +648,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 29,
+    order: 28,
     title: "3-9",
     ident: "3-9",
     artist: "Ashton: Retrocade Media",
@@ -696,7 +672,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 30,
+    order: 29,
     title: "3-10",
     ident: "3-10",
     artist: "Foofarawr",
@@ -720,7 +696,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 31,
+    order: 30,
     title: "3-11",
     ident: "3-11",
     artist: "nasCobolo",
@@ -744,7 +720,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 32,
+    order: 31,
     title: "3-12",
     ident: "3-12",
     artist: "Rudy Flores",
@@ -768,7 +744,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 33,
+    order: 32,
     title: "P-1",
     ident: "P-1",
     artist: "Lombre",
@@ -792,7 +768,7 @@ var castleAreas = [
     post_url: ""
   },
   {
-    order: 34,
+    order: 33,
     title: "P-2",
     ident: "P-2",
     artist: "nasCobolo",
@@ -1747,6 +1723,30 @@ var castleAreas = [
     },
     pan: "horizontal",
     type: "boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 73,
+    title: "END",
+    ident: "END",
+    artist: "MetaruPX",
+    artistImageOverride: "",
+    url: "https://twitter.com/MetaruPX",
+    animation: false,
+    point: {
+      x: 192,
+      y: 192
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "other",
     zoom: 2,
     teleporters: [],
     post_url: ""
