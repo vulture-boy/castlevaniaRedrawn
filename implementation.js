@@ -16,17 +16,18 @@ var artistImgExtension = '.png';  // Image extension for artist images.
 // (having JavaScript self-determine if an image exists with a particular extension is difficult)
 
 // TODO: probably should use structs to contain this information
-var layerNames = ['kanto', 'interior', 'sevii', 'castlevania'];
+var layerNames = ['castlevania', 'kanto', 'interior', 'sevii'];
 var activeLayerIndex = 0;           // Currently active layer index (and initial index)
-var activeAreas = kantoAreas          // Active array of areas (and initial area)
-var areaLayers = [kantoAreas, interiorAreas, seviiAreas, castleAreas];
+var activeAreas = castleAreas          // Active array of areas (and initial area)
+var areaLayers = [castleAreas, kantoAreas, interiorAreas, seviiAreas];
 
 // Canvases
+var castleCanvas = {width: 10000, height: 2096}
 var kantoCanvas = {width: 5472, height: 5904}
 var interiorCanvas = {width: 5504, height: 5744}
 var seviiCanvas = {width: 4448, height: 6784}
-var castleCanvas = {width: 10000, height: 2096}
-var layerCanvases = [kantoCanvas, interiorCanvas, seviiCanvas, castleCanvas];
+
+var layerCanvases = [castleCanvas, kantoCanvas, interiorCanvas, seviiCanvas];
 
 /** Biome Data (Screen icons) */
 var biomes = [
