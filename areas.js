@@ -979,7 +979,7 @@ var castleAreas = [
     },
     pan: "vertical",
     type: "other",
-    zoom: 4,
+    zoom: 1,
     teleporters: [],
     post_url: ""
   },
