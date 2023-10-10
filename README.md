@@ -88,6 +88,4 @@ _A: We welcome feedback and want to make this as user friendly as we can! Please
 
 __Q: What's the project's license?__
 
-_A: The repository is the work of authors Jerky (HyperJerk) and Tyson Moll under Copyright and is provided on GitHub licensed under the GNU General Public License. Other licenses for this software must be negotiated with both authors. This license applies to all derivative works.
-
-The artwork is copyright of their respective artists, all rights reserved._
+_A: The repository is the work of authors Jerky (HyperJerk) and Tyson Moll under Copyright and is provided on GitHub licensed under the GNU General Public License. Other licenses for this software must be negotiated with both authors. This license applies to all derivative works. The artwork is copyright of their respective artists, all rights reserved._
