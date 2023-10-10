@@ -1635,9 +1635,9 @@ var castleAreas = [
     order: 69,
     title: "7-1",
     ident: "7-1",
-    artist: "Din",
+    artist: "TonyRedmer",
     artistImageOverride: "",
-    url: "https://dinpixels.newgrounds.com/",
+    url: "https://twitter.com/tonyredmer",
     animation: false,
     point: {
       x: 4832,

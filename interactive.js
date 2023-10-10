@@ -26,11 +26,14 @@ var currentPos = {x: 0, y: 0} //lerp
 // Map
 const NEW_STYLE_NAME = 'new';
 const OLD_STYLE_NAME = 'old';
+var activeAreas = redrawnLayers[activeLayerIndex].areas  // Active array of areas (and initial area)
+var layerCount = redrawnLayers.length;  // Total number of layers
+var canvasDimensions = redrawnLayers[activeLayerIndex].canvasSize; // Dimension of active canvas
 var map = null;
 var mapImages = null;
 var currentMapStyle = NEW_STYLE_NAME;
 var viewport = null;
-var canvasDimensions = layerCanvases[activeLayerIndex];
+
 
 // Filters
 var blurFilter = null
@@ -70,9 +73,10 @@ var cameraAnimation = {
 }
 
 // Layers
-var layerImages = fillWithArrays(Array.apply(null, Array(layerNames.length)));    // Array of length matching LayerNames
-var layerOldImages = fillWithArrays(Array.apply(null, Array(layerNames.length)));
-var layersCount = layerImages.length + layerOldImages.length;    // Total number of layers
+var layerNewImages = fillWithArrays(Array.apply(null, Array(layerCount)));    // Array of length matching Layer Names
+var layerOldImages = fillWithArrays(Array.apply(null, Array(layerCount)));
+var redrawImages = [layerNewImages, layerOldImages];
+var redrawsCount = redrawImages.length;    // Total number of redraw layers
 
 // Start up
 loadImages()
@@ -108,21 +112,25 @@ function loadLayer (areaArray, areaImageArray, areaOldImageArray, layerSubfolder
 
 /** Produces an image link from area details. */
 function createImageLink (layerName, mapStyle, areaName) {
-    var link = `img/${layerName}/${mapStyle}/${areaName}.png`;
+
+    var link = `img/${layerName}/${mapStyle}/${areaName}`;
+    link += `.png`; 
+    
     return link;
 }
 
 /** Loads all new & old images pertaining to each layer */
 function loadImages () {
 
-    for (var i = 0; i < areaLayers.length; i++) {
+    for (var i = 0; i < layerCount; i++) {
 
         // Need areas in the layer to load images
-        if (areaLayers[i].length != 0) {
-            loadLayer(areaLayers[i], layerImages[i], layerOldImages[i], layerNames[i]);
+        if (redrawnLayers[i].areas.length != 0) {
+            loadLayer(redrawnLayers[i].areas, layerNewImages[i], layerOldImages[i], redrawnLayers[i].name);
         }
         else {
-            layersCount -= 2;   // Ignore & subtract from this var, otherwise will never finish loading.
+            redrawsCount -= 2;   // Ignore & subtract from this var, otherwise will never finish loading.
+            // TODO: fix magic number reference
         }
     }
 }
@@ -133,7 +141,7 @@ function onAreaImageLoaded (areaImageArray) {
     document.querySelector('.loading-bar__inner').style.width = `${(loadedImages / areaImageArray.length) * 100}%`
     if (loadedImages === areaImageArray.length && loading) {
         layersLoaded += 1;
-        if (layersLoaded >= layersCount) {
+        if (layersLoaded >= redrawsCount) {
             completeLoading();
         }
     }
@@ -237,14 +245,20 @@ function setupCanvas () {
 }
 
 function buildMap () {
-    while(mapImages.children[0]) { 
+    while (mapImages.children[0]) { 
         mapImages.removeChild(mapImages.children[0]);
     }
     for (var i = 0; i < activeAreas.length; i++) {
-        var area = activeAreas[i]
-        var src = createImageLink(layerNames[activeLayerIndex], currentMapStyle, area.ident);
-        var sprite = new PIXI.Sprite.from(src)
-        sprite.name = `AREA: ${layerNames[activeLayerIndex]} (${currentMapStyle}) - ${area.ident}`;
+
+        // Get area image
+        var area = activeAreas[i];
+        var src = createImageLink(redrawnLayers[activeLayerIndex].name, currentMapStyle, area.ident);
+
+        var sprite = new PIXI.Sprite.from(src);
+        
+        sprite.name = `AREA: ${redrawnLayers[activeLayerIndex].name} (${currentMapStyle}) - ${area.ident}`;
+
+        // Apply offset to new versions (always relative to old versions)
         if (currentMapStyle === NEW_STYLE_NAME) {
             sprite.position.set(area.point.x + area.offset.x, area.point.y + area.offset.y)
         } else {
@@ -255,13 +269,24 @@ function buildMap () {
 }
 
 function toggleMapStyle () {
-    if (currentMapStyle === NEW_STYLE_NAME) {
-        currentMapStyle = OLD_STYLE_NAME;
-        buildMap();
-    } else {
+    var dropdown = document.getElementById('mapSelector')
+    var lastMapStyle = currentMapStyle;
+
+    if (dropdown.value === "redrawn") 
+    {
         currentMapStyle = NEW_STYLE_NAME;
+    }
+    if (dropdown.value === "original") 
+    {
+        currentMapStyle = OLD_STYLE_NAME;
+    }
+
+    // Build map if changed
+    if (!(lastMapStyle === currentMapStyle)) 
+    {
         buildMap();
     }
+
     updateActiveAreaZone()
 }
 
@@ -272,11 +297,12 @@ function getActiveLayerAreaImages(styleOverride = "") {
     var style = styleOverride === "" ? currentMapStyle : styleOverride;
 
     if (style === NEW_STYLE_NAME) {
-        return layerImages[activeLayerIndex];
+        return layerNewImages[activeLayerIndex];
     }
     if (style == OLD_STYLE_NAME) {
         return layerOldImages[activeLayerIndex];
     }
+
     log.error("current map style not defined as new or old");
     return null 
 }
@@ -1005,19 +1031,20 @@ function changeTourCameraSpeed (e) {
 function changeLayer (layer) {
 
     // Find and switch layer
-    var layerCount = this.areaLayers.length;
+    var layerCount = this.layerCount;
     for (var i=0; i< layerCount; i++) {
-        if (layer === this.layerNames[i]) {
+        if (layer === this.redrawnLayers[i].name) {
             this.activeLayerIndex = i;
-            this.activeAreas = this.areaLayers[i]
-            this.canvasDimensions = layerCanvases[i]
+            this.activeAreas = this.redrawnLayers[i].areas;
+            this.canvasDimensions = this.redrawnLayers[i].canvasSize;
             break;
         }
     }
 
     // Adjust tab visibility
     const tabs = document.querySelectorAll('#layers li button')
-    tabs.forEach((x) => { if (!x.classList.contains(this.layerNames[this.activeLayerIndex])) {x.classList.remove('active')} else {x.classList.add('active')} })
+    let activeLayerName = this.redrawnLayers[this.activeLayerIndex].name;
+    tabs.forEach((x) => { if (!x.classList.contains(activeLayerName)) {x.classList.remove('active')} else {x.classList.add('active')} })
     this.setupCanvas()
     
     // Adjust canvas focus

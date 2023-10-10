@@ -65,7 +65,11 @@
                     </div>
                     <div id="settings">
                         <div><input type="checkbox" id="disableBlur"><label for="disableBlur">Disable Zoom Blur</label> </div><br>
-                        <div><input type="checkbox" id="mapSwitch" onchange="toggleMapStyle()"><label for="mapSwitch">Show Original Map</label> </div>
+                        <div><label for="mapSelector">Change Map:</label>
+                        <select name="mapSelector" id="mapSelector" onchange="toggleMapStyle()">
+                            <option value="redrawn">Redrawn</option>
+                            <option value="original">Original</option>
+                        </select></div><br>
                         <hr>
                         <div>
                             <label>Camera Speed</label><br>

@@ -10,9 +10,11 @@
 *
 */
 
-var selectedArea = null
 
+var selectedArea = null
 var elems = null
+var layerCount = redrawnLayers.length;  // Total number of layers
+var regionAreas = []; // Stores region area & associated CSS ID
 
 // Template for an area
 var blankArea = {
@@ -60,6 +62,7 @@ function formSubmit (e) {
     e.preventDefault()
 }
 
+/** ... */
 function setEventOnStaticInputs () {
     var elems = document.querySelectorAll('input, select')
     for (var i = 0; i < elems.length; i++) {
@@ -94,20 +97,17 @@ function registerElems () {
     }
 }
 
-// Stores region area & associated CSS ID
-var regionAreas = [];
-
 /** Prepares menus for each region in the DOM. */
 function createRegionMenus() {
 
     regionAreas = [];   // Clear (in case populated)
 
-    for (var i=0; i<layerNames.length; i++)
+    for (var i=0; i < layerCount; i++)
     {
-        regionAreas.push([areaLayers[i], `AreaList${layerNames[i]}`])
+        regionAreas.push([redrawnlayers[i].areas, `AreaList${redrawnLayers[i].name}`])
 
         let html = `
-        <h4>${layerNames[i]} Areas</h4>
+        <h4>${redrawnLayers[i].name} Areas</h4>
         <ul id="${regionAreas[i][1]}">
         </ul>
         <button onclick="addRegionArea(${i})">Add</button>
@@ -341,9 +341,9 @@ function removeTeleporter (index) {
 /** Removes the actively selected area. */
 function removeArea () {
     if (selectedArea) {
-        for (var i=0; i<areaLayers.length; i++) 
+        for (var i=0; i<layerCount; i++) 
         {
-            var index = areaLayers[i].findIndex(x => x.ident === selectedArea.ident)
+            var index = redrawnlayers[i].areas.findIndex(x => x.ident === selectedArea.ident)
             if (index > -1) 
             {
                 regionAreas[i].splice(index, 1);
@@ -371,7 +371,7 @@ function doOutput () {
     if (elem) {
         var areas = ''
         for (var i=0; i<regionAreas.length; i++) {
-            areas +=  `var ${layerNames[i]} = ${JSON.stringify(regionAreas[i][0], null, 2)} \n`
+            areas +=  `var ${redrawnLayers[i].name} = ${JSON.stringify(regionAreas[i][0], null, 2)} \n`
         }
         elem.value = areas.replace(/^[\t ]*"[^:\n\r]+(?<!\\)":/gm, function (match) {
             return match.replace(/"/g, "").replace("'", '’');

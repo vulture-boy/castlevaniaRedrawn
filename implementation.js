@@ -5,8 +5,7 @@
 *   Frontend data container of the Redrawn Viewer. 
 *   Contains implementation data specific to a Redrawn project.
 *
-*   Originally written by Jerky.
-*   Refactored for reuse by Tyson Moll (vvvvvvv), 2023.
+*   by Tyson Moll (vvvvvvv), 2023.
 *
 */
 
@@ -15,19 +14,30 @@ var artistImgDir = "img/profiles/";
 var artistImgExtension = '.png';  // Image extension for artist images.
 // (having JavaScript self-determine if an image exists with a particular extension is difficult)
 
-// TODO: probably should use structs to contain this information
-var layerNames = ['castlevania', 'kanto', 'interior', 'sevii'];
+/** Content layers in the Redrawn */
 var activeLayerIndex = 0;           // Currently active layer index (and initial index)
-var activeAreas = castleAreas          // Active array of areas (and initial area)
-var areaLayers = [castleAreas, kantoAreas, interiorAreas, seviiAreas];
-
-// Canvases
-var castleCanvas = {width: 10000, height: 2096}
-var kantoCanvas = {width: 5472, height: 5904}
-var interiorCanvas = {width: 5504, height: 5744}
-var seviiCanvas = {width: 4448, height: 6784}
-
-var layerCanvases = [castleCanvas, kantoCanvas, interiorCanvas, seviiCanvas];
+var redrawnLayers = [
+    {
+        name: "castlevania",
+        canvasSize: {width: 10000, height: 2096},
+        areas: castleAreas
+    },
+    {
+        name: "kanto",
+        canvasSize: {width: 5472, height: 5904},
+        areas: kantoAreas
+    },
+    {
+        name: "interior",
+        canvasSize: {width: 5504, height: 5744},
+        areas: interiorAreas
+    },
+    {
+        name: "sevii",
+        canvasSize: {width: 4448, height: 6784},
+        areas: seviiAreas
+    },
+];
 
 /** Biome Data (Screen icons) */
 var biomes = [
