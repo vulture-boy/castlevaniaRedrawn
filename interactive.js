@@ -26,6 +26,7 @@ var currentPos = {x: 0, y: 0} //lerp
 // Map
 const NEW_STYLE_NAME = 'new';
 const OLD_STYLE_NAME = 'old';
+const GRID_CELL_IMAGE = 'img/website/grid_test.png';
 var activeAreas = redrawnLayers[activeLayerIndex].areas  // Active array of areas (and initial area)
 var layerCount = redrawnLayers.length;  // Total number of layers
 var canvasDimensions = redrawnLayers[activeLayerIndex].canvasSize; // Dimension of active canvas
@@ -200,7 +201,7 @@ function setupCanvas () {
     viewport.name = "Viewport"
 
     buildMap()
-    var mapbg = new PIXI.TilingSprite(new PIXI.Texture.from('grid_test.png'), canvasDimensions.width, canvasDimensions.height)
+    var mapbg = new PIXI.TilingSprite(new PIXI.Texture.from(GRID_CELL_IMAGE), canvasDimensions.width, canvasDimensions.height)
     mapbg.name = "Map Background"
     mapbg.zIndex = -1
     map.addChild(mapbg)

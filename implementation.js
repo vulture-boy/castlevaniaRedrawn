@@ -12,7 +12,7 @@
 // Directories
 var artistImgDir = "img/profiles/";
 var artistImgExtension = '.png';  // Image extension for artist images.
-// (having JavaScript self-determine if an image exists with a particular extension is difficult)
+// (having JavaScript self-determine if an image exists without a particular extension is difficult)
 
 /** Content layers in the Redrawn */
 var activeLayerIndex = 0;           // Currently active layer index (and initial index)

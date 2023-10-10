@@ -160,15 +160,16 @@ a{
     text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black; 
 }
 #layers li button.kanto{
-    background-image: url('kanto_button.png');
+    background-image: url('img/website/kanto_button.png');
 }
 #layers li button.interior{
-    /* font-size: .4em; */
-    background-image: url('interiors_button.png');
+    background-image: url('img/website/interiors_button.png');
 }
 #layers li button.sevii{
-    /* font-size: .4em; */
-    background-image: url('sevii_button.png');
+    background-image: url('img/website/sevii_button.png');
+}
+#layers li button.castlevania{
+    background-image: url('img/website/sevii_button.png');
 }
 #layers li button:hover{
     width:95%;
