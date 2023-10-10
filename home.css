@@ -159,15 +159,6 @@ a{
     border-top-right-radius: 5px;
     text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black; 
 }
-#layers li button.kanto{
-    background-image: url('img/website/kanto_button.png');
-}
-#layers li button.interior{
-    background-image: url('img/website/interiors_button.png');
-}
-#layers li button.sevii{
-    background-image: url('img/website/sevii_button.png');
-}
 #layers li button.castlevania{
     background-image: url('img/website/sevii_button.png');
 }
