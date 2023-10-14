@@ -14,6 +14,9 @@ var artistImgDir = "img/profiles/";
 var artistImgExtension = '.png';  // Image extension for artist images.
 // (having JavaScript self-determine if an image exists without a particular extension is difficult)
 
+// Audio
+var bgmTrack = null;
+
 /** Content layers in the Redrawn */
 var activeLayerIndex = 0;           // Currently active layer index (and initial index)
 var redrawnLayers = [
