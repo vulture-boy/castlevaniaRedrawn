@@ -33,7 +33,7 @@ var biomes = [
         name: "Terrace",
         ident: "terrace",
         iconId: "grass",
-        color: 'rgb(210 212 141)',
+        color: 'rgb(74 139 89)',
     },
     {
         name: "Underground",
@@ -45,7 +45,7 @@ var biomes = [
         name: "Castle",
         ident: "castle",
         iconId: "fort",
-        color: 'rgb(204 156 73)',
+        color: 'rgb(114 79 52)',
     },
     {
         name: "Boss",
