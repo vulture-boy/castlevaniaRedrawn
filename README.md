@@ -76,6 +76,7 @@ There are also some fields made for features that are currently not supported:
 __Q: Why are animations not supported?__
 
 _A: Short Answer: The project's backend does not support GIF animation natively and implementing animation is non-trivial. It may also have an undesirable memory overhead.
+
 This redrawn project uses PIXI, which is excellent for static image display and does come with the capability of displaying animation, but any images you wish to have animated must be in separate images, defined individually, then injected into a custom object. The scope of implementing this was larger than the amount of time I wanted to invest in it, but if you would like to investigate and implement this feature into the project you are more than welcome to make a pull request with the solution for this repository. In anticipation of such a solution, Castlevania Redrawn has several animations created by artists for a handful of the screens that you can use for testing purposes._
 
 __Q: Some of the information on this redrawn is out-of-date!__
@@ -88,4 +89,4 @@ _A: We welcome feedback and want to make this as user friendly as we can! Please
 
 __Q: What's the project's license?__
 
-_A: The repository is the work of authors Jerky (HyperJerk) and Tyson Moll under Copyright and is provided on GitHub licensed under the GNU General Public License. Other licenses for this software must be negotiated with both authors. This license applies to all derivative works. The artwork is copyright of their respective artists, all rights reserved._
+_A: The repository is the work of authors Jerky (HyperJerk) and Tyson Moll under Copyright and is provided on GitHub licensed under the GNU General Public License. Other licenses for this software must be negotiated with both authors. This license applies to all derivative works. The artwork is copyright of their respective artists, all rights reserved. We do not have the authority to license their work but assume the license to display and share their works in the context of this repository and Retro Redrawn._
