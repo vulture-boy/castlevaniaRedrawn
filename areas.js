@@ -965,7 +965,7 @@ var castleAreas = [
     ident: "4-X",
     artist: "anima_nel",
     artistImageOverride: "",
-    url: "",
+    url: "https://twitter.com/Aminapixels",
     animation: false,
     point: {
       x: 5856,
@@ -1469,7 +1469,7 @@ var castleAreas = [
     ident: "6-3",
     artist: "Rakun",
     artistImageOverride: "",
-    url: "",
+    url: "https://twitter.com/rakun01_",
     animation: false,
     point: {
       x: 6496,
