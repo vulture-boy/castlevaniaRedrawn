@@ -54,12 +54,12 @@
                 <div class="menu__content">
                     
                     <div id="areaList" class="active">
-                        <div><label for="mapSelector">Change Map:</label>
-                            <select name="mapSelector" id="mapSelector" onchange="toggleMapStyle()">
-                                <option value="redrawn">Redrawn</option>
-                                <option value="original">Original</option>
-                            </select>
-                        </div><br>
+                        <div style="text-align: center;">
+                            <input type="radio" id="mapSelectRedrawn" name="mapSelect" value="redrawn" checked onchange="toggleMapStyle()">
+                            <label for="mapSelectRedrawn">Redrawn</label>
+                            <input type="radio" id="mapSelectOriginal" name="mapSelect" value="original" onchange="toggleMapStyle()">
+                            <label for="mapSelectOriginal">Original</label>
+                        </div>
                         <hr>
                         <ul id="areas"></ul>
                     </div>
