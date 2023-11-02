@@ -12,6 +12,8 @@ Discord: https://discord.gg/ZN3297XBtU
 
 ## Creating a new Redrawn
 
+These instructions are a work in progress. Please reach out to vulture-boy if you run into any issues so that we can clarify the instructions and make the process streamlined for future users.
+
 1. Fork the repository to create your own copy
 2. Setup your areas file
     * Open areas.js and change the name of the first "area" array (e.g. 'var castleAreas') to something for your project (e.g. 'var myRedrawnAreas').
