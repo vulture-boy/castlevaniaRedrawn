@@ -14,7 +14,7 @@ Discord: https://discord.gg/ZN3297XBtU
 
 These instructions are a work in progress. Please reach out to vulture-boy if you run into any issues so that we can clarify the instructions and make the process streamlined for future users.
 
-1. Fork the repository to create your own copy
+1. Clone or Fork the repository to create your own copy. If you cloned, you may also want to initialize your own repository on Github with it.
 2. Setup your areas file
     * Open areas.js and change the name of the first "area" array (e.g. 'var castleAreas') to something for your project (e.g. 'var myRedrawnAreas').
     * Remove all but one of the entries inside the square braces ('[]'). Remove all other arrays.
