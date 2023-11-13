@@ -1491,9 +1491,9 @@ var castleAreas = [
     order: 63,
     title: "6-4",
     ident: "6-4",
-    artist: "Anonim",
+    artist: "Juanito",
     artistImageOverride: "",
-    url: "https://pixeljoint.com/p/245239.htm",
+    url: "https://twitter.com/juanitomedinart",
     animation: false,
     point: {
       x: 6112,
