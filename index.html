@@ -37,8 +37,11 @@
                         <img src="img/website/Castlevania_Redrawn_text.png" alt="Castlevania Redrawn" draggable="false" />
                     </a>
                 </div>
-                <div class="tour">
-                    <button id="tourButton" onclick="toggleTour()"><span class="material-icons">play_arrow</span> <span>Begin Tour</span></button>
+                <div style="text-align: center;">
+                    <input type="radio" id="mapSelectRedrawn" name="mapSelect" value="redrawn" checked onchange="toggleMapStyle()">
+                    <label for="mapSelectRedrawn">Redrawn</label>
+                    <input type="radio" id="mapSelectOriginal" name="mapSelect" value="original" onchange="toggleMapStyle()">
+                    <label for="mapSelectOriginal">Original</label>
                 </div>
                 <div class="menu__actions">
                     <button onclick="changeTab(0)" class="menu__tab active">
@@ -54,13 +57,6 @@
                 <div class="menu__content">
                     
                     <div id="areaList" class="active">
-                        <div style="text-align: center;">
-                            <input type="radio" id="mapSelectRedrawn" name="mapSelect" value="redrawn" checked onchange="toggleMapStyle()">
-                            <label for="mapSelectRedrawn">Redrawn</label>
-                            <input type="radio" id="mapSelectOriginal" name="mapSelect" value="original" onchange="toggleMapStyle()">
-                            <label for="mapSelectOriginal">Original</label>
-                        </div>
-                        <hr>
                         <ul id="areas"></ul>
                     </div>
                     <div id="settings">
@@ -100,6 +96,9 @@
                     <audio id="bgmPlayer" controls autoplay loop>
                         <source src="audio/castlevania_redrawn_medley_altV2_toribobs.mp3" type="audio/mpeg">
                     </audio>
+                </div>
+                <div class="tour">
+                    <button id="tourButton" onclick="toggleTour()"><span class="material-icons">play_arrow</span> <span>Begin Tour</span></button>
                 </div>
                 <div class="menu__disclaimer">
                     <hr>
