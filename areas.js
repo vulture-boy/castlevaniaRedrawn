@@ -317,7 +317,7 @@ var castleAreas = [
     ident: "2-4",
     artist: "DioShiba",
     artistImageOverride: "",
-    url: "https://andreworlukartanimations.wordpress.com/",
+    url: "https://dioshiba.newgrounds.com/",
     animation: false,
     point: {
       x: 2592,
@@ -989,7 +989,7 @@ var castleAreas = [
     ident: "4-5",
     artist: "DioShiba",
     artistImageOverride: "",
-    url: "https://andreworlukartanimations.wordpress.com/",
+    url: "https://dioshiba.newgrounds.com/",
     animation: false,
     point: {
       x: 5856,
