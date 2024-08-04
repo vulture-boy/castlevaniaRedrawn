@@ -1491,9 +1491,9 @@ var castleAreas = [
     order: 63,
     title: "6-4",
     ident: "6-4",
-    artist: "Juanito",
+    artist: "DonFastidius",
     artistImageOverride: "",
-    url: "https://twitter.com/juanitomedinart",
+    url: "",
     animation: false,
     point: {
       x: 6112,
