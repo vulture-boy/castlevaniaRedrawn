@@ -1493,7 +1493,7 @@ var castleAreas = [
     ident: "6-4",
     artist: "DonFastidius",
     artistImageOverride: "",
-    url: "https://www.instagram.com/donfastidius1337/",
+    url: "https://twitter.com/DonFastidius",
     animation: false,
     point: {
       x: 6112,
