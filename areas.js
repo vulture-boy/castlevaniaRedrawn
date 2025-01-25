@@ -29,7 +29,7 @@ var castleAreas = [
     ident: "1-2",
     artist: "Juanito",
     artistImageOverride: "",
-    url: "https://twitter.com/juanitomedinart",
+    url: "https://bsky.app/profile/juanitomedinart.bsky.social",
     animation: false,
     point: {
       x: 416,
@@ -77,7 +77,7 @@ var castleAreas = [
     ident: "1-4",
     artist: "Scooter",
     artistImageOverride: "",
-    url: "http://twitter.com/lorenradis",
+    url: "https://bsky.app/profile/lorenradis.bsky.social",
     animation: false,
     point: {
       x: 1200,
@@ -173,7 +173,7 @@ var castleAreas = [
     ident: "1-7B",
     artist: "Crowno",
     artistImageOverride: "",
-    url: "https://twitter.com/CrownoO",
+    url: "https://bsky.app/profile/crowno.bsky.social",
     animation: false,
     point: {
       x: 2336,
@@ -221,7 +221,7 @@ var castleAreas = [
     ident: "1-9",
     artist: "Ghoulee",
     artistImageOverride: "",
-    url: "https://twitter.com/ghouleebones",
+    url: "https://bsky.app/profile/ghouleebones.bsky.social",
     animation: false,
     point: {
       x: 3360,
@@ -317,7 +317,7 @@ var castleAreas = [
     ident: "2-4",
     artist: "DioShiba",
     artistImageOverride: "",
-    url: "https://dioshiba.newgrounds.com/",
+    url: "https://bsky.app/profile/dioshiba.newgrounds.com",
     animation: false,
     point: {
       x: 2592,
@@ -341,7 +341,7 @@ var castleAreas = [
     ident: "2-5_2-6",
     artist: "MobyPixel",
     artistImageOverride: "",
-    url: "https://twitter.com/MobyPixel",
+    url: "https://bsky.app/profile/mobypixel.bsky.social",
     animation: false,
     point: {
       x: 2592,
@@ -365,7 +365,7 @@ var castleAreas = [
     ident: "2-7",
     artist: "Coelacamth",
     artistImageOverride: "",
-    url: "https://twitter.com/COELACAMTH",
+    url: "https://bsky.app/profile/coelacamth.bsky.social",
     animation: false,
     point: {
       x: 2208,
@@ -413,7 +413,7 @@ var castleAreas = [
     ident: "2-9",
     artist: "Donpo",
     artistImageOverride: "",
-    url: "https://twitter.com/DonpoPixels",
+    url: "https://bsky.app/profile/donpixels.bsky.social",
     animation: false,
     point: {
       x: 2080,
@@ -437,7 +437,7 @@ var castleAreas = [
     ident: "2-10",
     artist: "Donpo",
     artistImageOverride: "",
-    url: "https://twitter.com/DonpoPixels",
+    url: "https://bsky.app/profile/donpixels.bsky.social",
     animation: false,
     point: {
       x: 1824,
@@ -461,7 +461,7 @@ var castleAreas = [
     ident: "3-1",
     artist: "RyanKeeton",
     artistImageOverride: "",
-    url: "https://twitter.com/ryankeeton",
+    url: "https://bsky.app/profile/ryankeeton.bsky.social",
     animation: false,
     point: {
       x: 1440,
@@ -509,7 +509,7 @@ var castleAreas = [
     ident: "3-3",
     artist: "Toni M",
     artistImageOverride: "ToniM",
-    url: "https://twitter.com/PixelsMil",
+    url: "https://bsky.app/profile/pixelsmil.bsky.social",
     animation: true,
     point: {
       x: 1056,
@@ -533,7 +533,7 @@ var castleAreas = [
     ident: "3-4",
     artist: "Neko",
     artistImageOverride: "",
-    url: "https://twitter.com/nekocrocodile",
+    url: "https://bsky.app/profile/nekocrocodile.bsky.social",
     animation: false,
     point: {
       x: 1440,
@@ -557,7 +557,7 @@ var castleAreas = [
     ident: "3-5",
     artist: "Runtd",
     artistImageOverride: "",
-    url: "https://twitter.com/RuntdArt",
+    url: "https://bsky.app/profile/runtd.bsky.social",
     animation: false,
     point: {
       x: 1824,
@@ -605,7 +605,7 @@ var castleAreas = [
     ident: "3-7",
     artist: "Juanito",
     artistImageOverride: "",
-    url: "https://twitter.com/juanitomedinart",
+    url: "https://bsky.app/profile/juanitomedinart.bsky.social",
     animation: true,
     point: {
       x: 2080,
@@ -653,7 +653,7 @@ var castleAreas = [
     ident: "3-9",
     artist: "Ashton: Retrocade Media",
     artistImageOverride: "AshtonArnold",
-    url: "https://retrocademedia.itch.io/",
+    url: "https://bsky.app/profile/retrocademedia.bsky.social",
     animation: false,
     point: {
       x: 3104,
@@ -725,7 +725,7 @@ var castleAreas = [
     ident: "3-12",
     artist: "Rudy Flores",
     artistImageOverride: "RudyFlores",
-    url: "https://twitter.com/Rudyf93",
+    url: "https://bsky.app/profile/rudyflores93.bsky.social",
     animation: false,
     point: {
       x: 4384,
@@ -989,7 +989,7 @@ var castleAreas = [
     ident: "4-5",
     artist: "DioShiba",
     artistImageOverride: "",
-    url: "https://dioshiba.newgrounds.com/",
+    url: "https://bsky.app/profile/dioshiba.newgrounds.com",
     animation: false,
     point: {
       x: 5856,
@@ -1013,7 +1013,7 @@ var castleAreas = [
     ident: "4-6",
     artist: "Lyzerus",
     artistImageOverride: "",
-    url: "https://twitter.com/AaronLyzerus",
+    url: "https://bsky.app/profile/lyzerus.bsky.socials",
     animation: false,
     point: {
       x: 6240,
@@ -1037,7 +1037,7 @@ var castleAreas = [
     ident: "4-7",
     artist: "Curelapse",
     artistImageOverride: "",
-    url: "https://twitter.com/curelapsed",
+    url: "https://bsky.app/profile/curelapse.bsky.social",
     animation: false,
     point: {
       x: 6624,
@@ -1109,7 +1109,7 @@ var castleAreas = [
     ident: "4-10",
     artist: "Batfeula",
     artistImageOverride: "",
-    url: "https://twitter.com/batfeula",
+    url: "https://bsky.app/profile/batfeula.bsky.social",
     animation: false,
     point: {
       x: 8160,
@@ -1253,7 +1253,7 @@ var castleAreas = [
     ident: "5-6",
     artist: "Juanito",
     artistImageOverride: "",
-    url: "https://twitter.com/juanitomedinart",
+    url: "https://bsky.app/profile/juanitomedinart.bsky.social",
     animation: false,
     point: {
       x: 9440,
@@ -1301,7 +1301,7 @@ var castleAreas = [
     ident: "5-8",
     artist: "Robin Quinn",
     artistImageOverride: "RobinQuinn",
-    url: "https://twitter.com/bobbytries/",
+    url: "https://bsky.app/profile/robinquinn.bsky.social",
     animation: false,
     point: {
       x: 8672,
@@ -1325,7 +1325,7 @@ var castleAreas = [
     ident: "5-9",
     artist: "Looloopaa",
     artistImageOverride: "",
-    url: "https://twitter.com/looloopaa",
+    url: "https://bsky.app/profile/looloopaa.bsky.social",
     animation: false,
     point: {
       x: 8160,
@@ -1349,7 +1349,7 @@ var castleAreas = [
     ident: "5-10",
     artist: "DaNinjaManZ",
     artistImageOverride: "",
-    url: "https://twitter.com/DaNinjaManZ",
+    url: "https://bsky.app/profile/daninjamanz.bsky.social",
     animation: true,
     point: {
       x: 8288,
@@ -1397,7 +1397,7 @@ var castleAreas = [
     ident: "5-12",
     artist: "StrawBe",
     artistImageOverride: "",
-    url: "https://twitter.com/StrawPact",
+    url: "https://bsky.app/profile/strawpact.bsky.socialt",
     animation: true,
     point: {
       x: 7648,
@@ -1469,7 +1469,7 @@ var castleAreas = [
     ident: "6-3",
     artist: "Rakun",
     artistImageOverride: "",
-    url: "https://twitter.com/rakun01_",
+    url: "https://bsky.app/profile/rakun01.bsky.social",
     animation: false,
     point: {
       x: 6496,
@@ -1517,7 +1517,7 @@ var castleAreas = [
     ident: "6-5",
     artist: "MattStov",
     artistImageOverride: "",
-    url: "https://twitter.com/MattstovArt",
+    url: "https://bsky.app/profile/mattstov.bsky.social",
     animation: false,
     point: {
       x: 5856,
@@ -1541,7 +1541,7 @@ var castleAreas = [
     ident: "6-6",
     artist: "Barosaros",
     artistImageOverride: "",
-    url: "https://twitter.com/barosaros",
+    url: "https://bsky.app/profile/barosaros.bsky.social",
     animation: false,
     point: {
       x: 5856,
@@ -1589,7 +1589,7 @@ var castleAreas = [
     ident: "6-8_6-9",
     artist: "MetaruPX",
     artistImageOverride: "",
-    url: "https://twitter.com/MetaruPX",
+    url: "https://bsky.app/profile/metarupx.bsky.social",
     animation: true,
     point: {
       x: 5344,
@@ -1637,7 +1637,7 @@ var castleAreas = [
     ident: "7-1",
     artist: "TonyRedmer",
     artistImageOverride: "",
-    url: "https://twitter.com/tonyredmer",
+    url: "https://bsky.app/profile/tonyredmer.bsky.social",
     animation: false,
     point: {
       x: 4832,
@@ -1733,7 +1733,7 @@ var castleAreas = [
     ident: "END",
     artist: "MetaruPX",
     artistImageOverride: "",
-    url: "https://twitter.com/MetaruPX",
+    url: "https://bsky.app/profile/metarupx.bsky.social",
     animation: false,
     point: {
       x: 192,
