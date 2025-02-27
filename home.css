@@ -159,9 +159,7 @@ a{
     border-top-right-radius: 5px;
     text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black; 
 }
-#layers li button.castlevania{
-    background-image: url('img/website/sevii_button.png');
-}
+
 #layers li button:hover{
     width:95%;
 }
