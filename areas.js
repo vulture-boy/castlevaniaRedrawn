@@ -1397,7 +1397,7 @@ var castleAreas = [
     ident: "5-12",
     artist: "StrawBe",
     artistImageOverride: "",
-    url: "https://bsky.app/profile/strawpact.bsky.socialt",
+    url: "https://bsky.app/profile/strawpact.bsky.social",
     animation: true,
     point: {
       x: 7648,
