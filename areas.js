@@ -1,4 +1,4 @@
-var castleAreas = [
+var areas = [
   {
     order: 1,
     title: "1-1",

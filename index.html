@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Castlevania Redrawn</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--App should handle scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> 
     <meta property="og:title" content="Castlevania Redrawn">
     <meta property="og:site_name" content="Retro Redrawn">
     <meta property="og:url" content="http://retroredrawn.com/">
@@ -19,13 +19,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--PIXI-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.12/pixi.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pixi-filters@4.2/dist/pixi-filters.js"></script>
-
+    
     <!--Retro Redrawn: CSS-->
     <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="content">
     <div id="app">
         <canvas id="canvas"></canvas>
         <div id="error"></div>
@@ -38,10 +38,13 @@
                     </a>
                 </div>
                 <div style="text-align: center;">
-                    <input type="radio" id="mapSelectRedrawn" name="mapSelect" value="redrawn" checked onchange="toggleMapStyle()">
-                    <label for="mapSelectRedrawn">Redrawn</label>
-                    <input type="radio" id="mapSelectOriginal" name="mapSelect" value="original" onchange="toggleMapStyle()">
-                    <label for="mapSelectOriginal">Original</label>
+                    <p>
+                    Redrawn
+                    <label class="switch">
+                        <input type="CheckBox" id="mapSelectRedrawn" onclick="toggleMapStyle()">
+                        <span class="slider"></span>
+                    </label>
+                    Original
                 </div>
                 <div class="menu__actions">
                     <button onclick="changeTab(0)" class="menu__tab active">
@@ -57,10 +60,15 @@
                 <div class="menu__content">
                     
                     <div id="areaList" class="active">
+                        <hr>
                         <ul id="areas"></ul>
                     </div>
                     <div id="settings">
-                        <div><input type="checkbox" id="disableBlur"><label for="disableBlur">Disable Zoom Blur</label> </div><br>
+                        <hr>
+                        <div>
+                            <input class="settings__checkbox" type="checkbox" id="disableBlur"><label for="disableBlur">Disable Zoom Blur</label> <br><br>
+                            <input class="settings__checkbox" type="checkbox" id="areaBorderToggle" oninput="onAreaBorderToggled(this.checked)"><label for="areaBorderToggle">Hide Area Border</label> 
+                        </div><br>
                         <hr>
                         <div>
                             <label>Camera Speed</label><br>
@@ -78,6 +86,11 @@
                         <p>Castlevania Redrawn is a collaborative art project by a group of passionate pixel artists from across the world.</p>
                         <p>The project is an artistic reimagining of Castlevania NES with the same palette restrictions but without its hardware limitations.</p>
                         <hr>
+                        Check out more projects at...
+                        <div class="rrlogo">
+                            <a href="http://retroredrawn.com/"><img id="rrlogo_img" src="img/website/retro_redrawn_logo.png" alt = "Retroredrawn Logo"></a>
+                        </div>
+                        <hr>
                         <p>Pan and zoom the map the same you would on sites like Google Maps.</p>
                         <p>Map requires WebGL compatible browsers - Chrome may require you <a href="https://www.howtogeek.com/412738/how-to-turn-hardware-acceleration-on-and-off-in-chrome/" target="_blank">enable hardware acceleration.</a></p>
                         <p>Check out the <a href="https://github.com/vulture-boy/castlevaniaRedrawn">Github Page</a> for bug reports, feature requests, and to browse the code!</p>
@@ -85,10 +98,11 @@
                         <p><b>Credits</b></p>
                         <p>Project Organized by Juanito Medina (<a href="https://bsky.app/profile/juanitomedinart.bsky.social" target="_blank">@juanitomedinart</a>)</p>
                         <p>Retro Redrawn administrated by <a href="https://bsky.app/profile/foofarawr.bsky.social" target="_blank">@foofarawr</a></p>
-                        <p>Backend development and refactoring by <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">Tyson Moll (vvvultures)</a></p>
-                        <p>Based on Johto Redrawn, developed by <a href="https://bsky.app/profile/hyperjerk.bsky.social" target="_blank">@HyperJerk</a></p>
-                        <p>Audio by Tori Roberts (<a href="https://bsky.app/profile/toribobs.bsky.social" target="_blank">@Torrybobs</a>)</p>
+                        <p>Koholint feature update by <a href="https://github.com/dodocommando" target="_blank">@Dodocommando</a></p>
+                        <p>Based on the Retro Redrawn core project by <a href="https://bsky.app/profile/hyperjerk.bsky.social" target="_blank">@HyperJerk</a> and <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">Tyson Moll (vvvultures)</a></p>
+                        <p>Audio by Tori Roberts (<a href="https://bsky.app/profile/did:plc:r7s7m4vev43y4eqbkvp3epvu" target="_blank">@Torrybobs</a>)</p>
                         <p>Thumbnail and logo text by Juanito Medina</p>
+                        <p>Any and all artists who contributed to this project!</p>
                     </div>
                 </div>
                 <br>
@@ -116,6 +130,18 @@
                 </div>
             </div>
         </div>
+      
+        <div class="artist_mobile area__info__inner">
+            <div class="area__info__img">
+                <a href="" target="_blank" title="">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="area__info__name">
+                <a href="" target="_blank" title=""></a>
+            </div>
+        </div>
+
         <div id="loading" class="active">
             <div>
                 <img src="img/website/Castlevania_Redrawn_text.png" alt="Castlevania Redrawn" draggable="false" />
@@ -133,5 +159,6 @@
 <script src="areas.js"></script>
 <script src="implementation.js"></script>
 <script src="interactive.js"></script>
+<script src="maputils.js"></script>
 
 </html>

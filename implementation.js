@@ -21,9 +21,9 @@ var bgmTrack = null;
 var activeLayerIndex = 0;           // Currently active layer index (and initial index)
 var redrawnLayers = [
     {
-        name: "castlevania",
+        name: "game",
         canvasSize: {width: 10000, height: 2096},
-        areas: castleAreas
+        areas: areas
     }
 ];
 
