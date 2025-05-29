@@ -147,9 +147,9 @@ var areas = [
     order: 7,
     title: "1-7A",
     ident: "1-7A",
-    artist: "maruki",
+    artist: "Clarissa",
     artistImageOverride: "",
-    url: "https://twitter.com/MarukiHurakami",
+    url: "https://x.com/clarigaricus",
     animation: false,
     point: {
       x: 2336,
@@ -1131,9 +1131,9 @@ var areas = [
     order: 48,
     title: "5-1",
     ident: "5-1",
-    artist: "maruki",
+    artist: "Clarissa",
     artistImageOverride: "",
-    url: "https://twitter.com/MarukiHurakami",
+    url: "https://x.com/clarigaricus",
     animation: false,
     point: {
       x: 8416,
