@@ -10,9 +10,7 @@
 */
 
 // Directories
-var artistImgDir = "img/profiles/";
-var artistImgExtension = '.png';  // Image extension for artist images.
-// (having JavaScript self-determine if an image exists without a particular extension is difficult)
+const GRID_CELL_IMAGE = 'img/website/grid_test.png'; // Tiled background image (blank if none)
 
 // Audio
 var bgmTrack = null;

@@ -5,6 +5,8 @@
 *   Backend operations of the Redrawn Viewer. 
 *   Uses Implementation script for data related to a particular implementation.
 *
+*   Dependencies: RedrawnArtistDataUtils.js, ArtistData.js (https://vulture-boy.github.io/Retro-Redrawn-Data/)
+*
 *   Authors: Jerky, Tyson Moll (vvvvvvv)
 *
 *   Contributors: dodocommando
@@ -13,23 +15,22 @@
 */
 
 // Core
-var app = null
+var app = null;
 var loading = true; // Whether data is being loaded (e.g. images)
 var layersLoaded = 0;
 
 // Navigation
-var zoomLevel = 1 // must be whole number
+var zoomLevel = 1; // must be whole number
 var zoomMin = 0.25;
 var zoomMax = 4;
-var currentZoom = 1 //lerp
-var zoomCenter = {x: 0, y: 0} // must be whole numbers
-var currentPos = {x: 0, y: 0} //lerp
+var currentZoom = 1; //lerp
+var zoomCenter = {x: 0, y: 0}; // must be whole numbers
+var currentPos = {x: 0, y: 0}; //lerp
 
 // Map
 const NEW_STYLE_NAME = 'new';
 const OLD_STYLE_NAME = 'old';
-const GRID_CELL_IMAGE = 'img/website/grid_test.png';
-var activeAreas = redrawnLayers[activeLayerIndex].areas  // Active array of areas (and initial area)
+var activeAreas = redrawnLayers[activeLayerIndex].areas;  // Active array of areas (and initial area)
 var layerCount = redrawnLayers.length;  // Total number of layers
 var canvasDimensions = redrawnLayers[activeLayerIndex].canvasSize; // Dimension of active canvas
 var map = null;
@@ -44,30 +45,30 @@ var autoHighlight = true;
 var highlightedArea = null;
 
 // Filters
-var blurFilter = null       // Motion blue used when zooming
-var bulgeFilter = null
-var colorFilter = null      // Used for fade-to-black sequences (e.g. in tour mode)
+var blurFilter = null;      // Motion blue used when zooming
+var bulgeFilter = null;
+var colorFilter = null;      // Used for fade-to-black sequences (e.g. in tour mode)
 
 // Interaction
-var mouseDown = false
-var dragging = false
-var dragVelocity = { x: 0, y: 0 }
-var zoomMousePos = { x: 0, y: 0 }
-var previousTouch = null
-var previousPinchDistance = 0
-var pinchForTick = null
+var mouseDown = false;
+var dragging = false;
+var dragVelocity = { x: 0, y: 0 };
+var zoomMousePos = { x: 0, y: 0 };
+var previousTouch = null;
+var previousPinchDistance = 0;
+var pinchForTick = null;
 
 // Tour
-var tourMode = false
-var tourTransition = false
-var areasToTour = []
-var tourFadeTimer = 100
+var tourMode = false;
+var tourTransition = false;
+var areasToTour = [];
+var tourFadeTimer = 100;
 
 // Camera movement
-var _defaultCameraSpeed = 0.008
-var _defaultTourCameraSpeed = 0.002
-var cameraSpeed = _defaultCameraSpeed
-var tourCameraSpeed = _defaultTourCameraSpeed
+var _defaultCameraSpeed = 0.008;
+var _defaultTourCameraSpeed = 0.002;
+var cameraSpeed = _defaultCameraSpeed;
+var tourCameraSpeed = _defaultTourCameraSpeed;
 
 var cameraAnimation = {
     speed: cameraSpeed,
@@ -88,10 +89,9 @@ var redrawsCount = redrawImages.length;    // Total number of redraw layers
 
 // Start up
 loadImages()
-window.addEventListener('wheel', onMouseWheel)
-window.addEventListener('resize', onResize)
+window.addEventListener('wheel', onMouseWheel);
+window.addEventListener('resize', onResize);
 window.addEventListener('keydown', onKeyDown);
-
 //
 
 /** Loads new & old images pertaining to a single layer.
@@ -299,6 +299,7 @@ function buildMap () {
     }
 }
 
+/** Switches between Old and New map styles */
 function toggleMapStyle () {
     var lastMapStyle = currentMapStyle;
 
@@ -392,22 +393,15 @@ function setUpAreas () {
         }
 
         // Prep artist image HTML
-        var areaArtist = area.artist.replace('@', '');
+        var artistData = GetArtistData(area.artistId);
+        var artistName = artistData.name;
+        var artistUrl = artistData.url;
+        var artistImgPath = GetArtistImagePath(artistData);
         var artistImageHTML = '';
-        if (areaArtist === '') {
-            console.log("Area artist is undefined, skipping artist image.");
-        }
-        else
-        {
-            // Get artist image
-            var areaArtistImage = area.artistImageOverride;
-            if (areaArtistImage === '') {
-                areaArtistImage = areaArtist;   // Fallback if no artist image is defined
-            }
-            var artistImgPath = artistImgDir + areaArtistImage + artistImgExtension;
-        
-            var artistImageHTML = area.url ? `<a href="${area.url}" target="_blank" title="${area.artist}">
-                <img src="${artistImgPath}" alt="${area.artist}" /></a>` : `<img src="${artistImgPath}" alt="${area.artist}" />`;
+    
+        if (!(artistImgPath === '')) {
+            artistImageHTML = artistUrl ? `<a href="${artistUrl}" target="_blank" title="${artistName}">
+                <img src="${artistImgPath}" alt="${artistName}" /></a>` : `<img src="${artistImgPath}" alt="${artistName}" />`;
         }
         
         // Prepare the HTML block corresponding to an area and its associated credts
@@ -427,7 +421,7 @@ function setUpAreas () {
                         ${artistImageHTML}
                     </div>
                     <div class="area__info__name">
-                        ${area.url ? `<a href="${area.url}" target="_blank" title="${area.artist}">${area.artist}</a>` : `<a>${area.artist}</a>`}
+                        ${artistUrl ? `<a href="${artistUrl}" target="_blank" title="${artistName}">${artistName}</a>` : `<a>${artistName}</a>`}
                         ${area.post_url ? `<a href="${area.post_url}" target="_blank" title="View Post">[View Post]</a>` : ''}
                     </div>
                 </div>
@@ -437,16 +431,14 @@ function setUpAreas () {
     }
 }
 
+/** Creates a rectangular fill relative to a PIXIjs graphic (effectively its outline) */
 function UpdateFill(graphic, areaBox) {
-    graphic.beginFill(0xffffff, 0)
     if (!bordersDisabled) { // Outline properties
+        graphic.beginFill(0xffffff, 0)
         graphic.lineStyle(4, 0xffffff, 0.5, 1, false)
+        graphic.drawRect(areaBox.x, areaBox.y, areaBox.width, areaBox.height);
+        graphic.endFill()
     }
-    else {
-        graphic.lineStyle(4, 0xffffff, 0, 1, false)
-    }
-    graphic.drawRect(areaBox.x, areaBox.y, areaBox.width, areaBox.height);
-    graphic.endFill()
 }
 
 /** Creates PIXI Graphics corresponding to new and old versions of an area. */
@@ -927,29 +919,24 @@ function openAreaInDOM (a) {
 }
 function updateMobileArtist(area) {
     
-    var areaArtist = area.artist.replace('@', '');
+    var artistData = GetArtistData(area.artistId);
+    var artistImgPath = GetArtistImagePath(artistData);
+    var areaArtist = artistData.name;
+    var areaArtistUrl = artistData.url;
     document.querySelector('.artist_mobile').style.display = areaArtist === '' ? 'none' : isMenuOpen() ? 'none' : '';
 
     var containerName = document.querySelector('.artist_mobile .area__info__name');
     containerName.innerHTML = `
-        ${area.url ? `<a href="${area.url}" target="_blank" title="${area.artist}">${area.artist}</a>` : `<a>${area.artist}</a>`}
+        ${areaArtistUrl ? `<a href="${areaArtistUrl}" target="_blank" title="${areaArtist}">${areaArtist}</a>` : `<a>${areaArtist}</a>`}
         ${area.post_url ? `<a href="${area.post_url}" target="_blank" title="View Post">[View Post]</a>` : ''}
     `;
     var containerImage = document.querySelector('.artist_mobile .area__info__img');
     var a = document.querySelector('.artist_mobile .area__info__img');
     a.innerHTML = `
-        ${area.url ? `<a href="${area.url}" target="_blank" title="${area.artist}">
-                <img src="${artistImgPath}" alt="${area.artist}" /></a>` : `<img src="${artistImgPath}" alt="${area.artist}" />`}
+        ${areaArtistUrl ? `<a href="${areaArtistUrl}" target="_blank" title="${areaArtist}">
+                <img src="${artistImgPath}" alt="${areaArtist}" /></a>` : `<img src="${artistImgPath}" alt="${areaArtist}" />`}
     `;
     var image = document.querySelector('.artist_mobile .area__info__img img');
-
-    var areaArtistImage = area.artistImageOverride;
-    if (areaArtistImage === '') {
-        areaArtistImage = areaArtist;   // Fallback if no artist image is defined
-    }
-    var artistImgPath = artistImgDir + areaArtistImage + artistImgExtension;
-    image.src = artistImgPath;
-    image.alt = area.artist;
 
     containerImage.style.display = 'none';
     image.onload = function(){
