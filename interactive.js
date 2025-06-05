@@ -108,22 +108,25 @@ function loadLayer (areaArray, areaImageArray, areaOldImageArray, layerSubfolder
 
         // Load new images
         var img = new Image();
-        img.src = createImageLink(layerSubfolder, NEW_STYLE_NAME, area.ident);
+        img.src = createImageLink(layerSubfolder, NEW_STYLE_NAME, area.ident, NEW_SLICE_SUFFIX);
         checkImageLoaded(img, function () { onAreaImageLoaded(areaImageArray); });
         areaImageArray.push(img);
         
         // Load old images
         var oldimg = new Image();
-        oldimg.src = createImageLink(layerSubfolder, OLD_STYLE_NAME, area.ident);
+        oldimg.src = createImageLink(layerSubfolder, OLD_STYLE_NAME, area.ident, OLD_SLICE_SUFFIX);
         checkImageLoaded(oldimg, function () { onAreaImageLoaded(areaImageArray); });
         areaOldImageArray.push(oldimg);
     }
 }
 
 /** Produces an image link from area details. */
-function createImageLink (layerName, mapStyle, areaName) {
+function createImageLink (layerName, mapStyle, areaName, mapSuffix) {
 
     var link = `img/${layerName}/${mapStyle}/${areaName}`;
+    if (!(mapSuffix === undefined || mapSuffix === '')) {
+        link += mapSuffix;
+    }
     link += `.png`; 
     
     return link;
